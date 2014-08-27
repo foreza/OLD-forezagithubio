@@ -57,6 +57,10 @@ h3 { /* This defines the nature of all the "header 3" portions, which is to say,
   margin: 0px 0 5px 0;
 }
 
+#wrapper {
+border: 1px solid red;
+}
+
 
 .mainnav { /* This defines the nature of the lists which will control the nav bar. */
   text-align: right;
@@ -73,16 +77,12 @@ h3 { /* This defines the nature of all the "header 3" portions, which is to say,
 
 
     #navdiv1 {
-
-
+       background: rgba(0,0,0,0.2);
      border: 1px solid green;
      display: inline-block;
     width:550px;
     height:50px;
-    
-
- 
-}
+  }
   #navdiv2 {
     border: 1px solid green;
     vertical-align:top;
@@ -96,9 +96,7 @@ a{ /* This defines the nature of all the hyperlinks */
 	text-decoration: none; /* Remove the underline of the hyperlinks */
 }
 
-#wrapper {
-border: 1px solid red;
-}
+
 
 /* This section is for the about me portion of this page */
 
@@ -163,7 +161,7 @@ border: 1px solid red;
  
 
 
-<div class="wrapper">
+<div id="wrapper">
   <div id="navdiv1">
  <h2>Developer and Organizer</h2>
 </div>
