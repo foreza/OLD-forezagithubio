@@ -345,6 +345,22 @@ $( "#dialog" ).dialog({
   ]
 });
 
+$( "#dialog2" ).dialog({
+  autoOpen: false,
+  width: 400,
+  buttons: [
+    {
+      text: "Close Window2",
+      click: function() {
+        $( this ).dialog( "close" );
+      }
+    }
+    
+  ]
+});
+
+
+
 // Link to open the dialog
 $( "#dialog-link" ).click(function( event ) {
   $( "#dialog" ).dialog( "open" );
