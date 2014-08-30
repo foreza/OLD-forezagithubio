@@ -221,6 +221,15 @@ border: 1px solid red;
   <div id="tabs-3">Nam dui erat, auctor a, dignissim quis, sollicitudin eu, felis. Pellentesque nisi urna, interdum eget, sagittis et, consequat vestibulum, lacus. Mauris porttitor ullamcorper augue.</div>
 </div>
 
+<h2 class="demoHeaders">Dialog</h2>
+<p><a href="#" id="dialog-link" class="ui-state-default ui-corner-all"><span class="ui-icon ui-icon-newwin"></span>Open Happiness</a></p>
+
+<!-- ui-dialog -->
+<div id="dialog" title="Dialog Title">
+  <p>Lorem lorem idk what that even is.</p>
+</div>
+
+
 
 <br>
 <br>
@@ -275,11 +284,38 @@ border: 1px solid red;
 
 </script>
 
+<!-- As you add in more UI elements for jQuery, be sure to mark it as such in commits -->
 
 <script src="/jqueryui/jquery-ui.js"></script>
 <script>
 
 $( "#tabs" ).tabs();
+
+$( "#dialog" ).dialog({
+  autoOpen: false,
+  width: 400,
+  buttons: [
+    {
+      text: "Ok",
+      click: function() {
+        $( this ).dialog( "close" );
+      }
+    },
+    {
+      text: "Cancel",
+      click: function() {
+        $( this ).dialog( "close" );
+      }
+    }
+  ]
+});
+
+// Link to open the dialog
+$( "#dialog-link" ).click(function( event ) {
+  $( "#dialog" ).dialog( "open" );
+  event.preventDefault();
+});
+
 
 
 </script>
