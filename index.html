@@ -57,6 +57,27 @@ h3 { /* This defines the nature of all the "header 3" portions, which is to say,
   margin: 0px 0 5px 0;
 }
 
+/* Jason's vanity */ 
+
+#webmaster{
+    margin: -40px 0 0 0;
+     height: 200px;
+     width: 200px;
+    background-size: cover;
+  background-image: url("http://taouci.com/2014SummerWebsite/BoardImages20142015/webmaster.png"); 
+  box-shadow: 5px 5px 2px #888888;
+}
+
+.frame {
+  height: 200px;
+  width: 200px;
+  background-size: cover; 
+  position: relative; 
+  margin: 40px 0 0 0;
+  border-radius: 12px;
+}
+
+
 /* jQueryUI */ 
 
   #dialog-link {
@@ -199,21 +220,6 @@ border: 1px solid red;
 -->
 
 
-<br>
-<br>
-<br>
-
-
-
-<br>
-<br>
-<br>
-
-
-<header>
-<h2 id="s2">Projects</h2>
-</header>
-
 
 <h2>Tabs</h2>
 <div id="tabs">
@@ -231,51 +237,85 @@ border: 1px solid red;
             </header>
 
             <div id="wrapper">
+
+
+
+
             <div id="aboutdiv1">
+                <div id="webmaster">
+              <div class="frame">
+        </div>
+        </div>
 
            
             </div>
             <div id="aboutdiv2">
-             <p> insert meaningful text here! </p> 
+             <p> I'm Jason, and this is my simple description.  </p> 
             </div>
             </div>
             </div>
   </div>
-  <div id="tabs-2">Phasellus mattis tincidunt nibh. Cras orci urna, blandit id, pretium vel, aliquet ornare, felis. Maecenas scelerisque sem non nisl. Fusce sed lorem in enim dictum bibendum.
-
-
-<h2>Dialog</h2>
+  <div id="tabs-2"> 
+<p>
+  Skills: <br>
+  Experience: <br>
+</p>
+<br>
 <div>
-<p><a href="#" id="dialog-link2" class="ui-state-default ui-corner-all">Open more Happiness</a></p>
+<p><a href="#" id="dialog-link2" class="ui-state-default ui-corner-all">View my resume!</a></p>
 </div>
+  <br>
+
+  <p> <a href="#">Alternatively, you may download it in PDF form here. </a> <p>
+
+
+<div>
 
 
   </div>
-  <div id="tabs-3">Nam dui erat, auctor a, dignissim quis, sollicitudin eu, felis. Pellentesque nisi urna, interdum eget, sagittis et, consequat vestibulum, lacus. Mauris porttitor ullamcorper augue.</div>
-  <div id="tabs-4">Nam dui erat, auctor a, dignissim quis, sollicitudin eu, felis. Pellentesque nisi urna, interdum eget, sagittis et, consequat vestibulum, lacus. Mauris porttitor ullamcorper augue.</div>
+  <!-- Projects! -->
+  <div id="tabs-3"> Click on each project to learn more! 
+
+
+
+  </div>
+  
+<!-- CONTACT ME -->
+  <div id="tabs-4">
+
+  <p> You can reach me at jchiu5@uci.edu, I check my email daily! Be sure to include your full name in the email. <br>
+  Please connect with me on LinkedIn here: <br>
+  Readyforce here:
+</p>
+
+  </div>
 </div>
 
+
+
+
+
+<!-- Sample button usage -->
 <h2>Dialog</h2>
 <div>
 <p><a href="#" id="dialog-link" class="ui-state-default ui-corner-all">Open Happiness</a></p>
 </div>
-<!-- ui-dialog -->
+
+
+<!-- ui-dialog management, remember to also edit the JS below!  -->
 <div id="dialog" title="Dialog Title">
 <p>Lorem lorem idk what that even is.</p>
 </div>
+<div id="dialog2" title="Resume: Jason Chiu">
+<p>Lorem lorem LORAXXXXX.
 
+NOXUS!
 
-
-
-<h2>Dialog</h2>
-<div>
-<p><a href="#" id="dialog-link2" class="ui-state-default ui-corner-all">Open more Happiness</a></p>
-</div>
-<!-- ui-dialog -->
-<div id="dialog2" title="Dialog Titlesss">
-<p>Lorem lorem LORAXXXXX.</p>
+</p>
 
 </div>
+
+
 
 
 
@@ -298,7 +338,7 @@ border: 1px solid red;
 <header>
 <h2 id="s4">Contact Me</h2>
 </header>
-<p> You can reach me at jchiu5@uci.edu, I check my email daily. Alternatively, you may fill out the form below: 
+
 <br>
 <br>
 <br>
@@ -345,6 +385,8 @@ $( "#tabs" ).tabs();
 
 
 
+/* Dialogue JS, have one for each popup window and clearly label! */
+
 $( "#dialog" ).dialog({
   autoOpen: false,
   width: 400,
@@ -359,23 +401,38 @@ $( "#dialog" ).dialog({
   ]
 });
 
+
+/* This dialogue is the one for the "about page" and deals with the resume showing/hiding. */
+
 $( "#dialog2" ).dialog({
   autoOpen: false,
-  width: 400,
+  width: 800,
   buttons: [
     {
-      text: "Close Window2",
+      text: "Close Window",
+      click: function() {
+        $( this ).dialog( "close" );
+      }
+    },
+
+    {
+      text: "Download PDF:",
       click: function() {
         $( this ).dialog( "close" );
       }
     }
+
+
     
   ]
 });
 
 
 
-// Link to open the dialog
+// Link to open the dialog, make one for each button. 
+
+
+
 $( "#dialog-link" ).click(function( event ) {
   $( "#dialog" ).dialog( "open" );
   event.preventDefault();
