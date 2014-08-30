@@ -65,7 +65,7 @@ h3 { /* This defines the nature of all the "header 3" portions, which is to say,
     position: relative;
   }
   #dialog-link span.ui-icon {
-    margin: 0 5px 0 0;
+    margin: 0 5px 0 100px;
     position: absolute;
     left: .2em;
     top: 50%;
@@ -313,22 +313,20 @@ border: 1px solid red;
 
 $( "#tabs" ).tabs();
 
+
+
+
 $( "#dialog" ).dialog({
   autoOpen: false,
   width: 400,
   buttons: [
     {
-      text: "Ok",
-      click: function() {
-        $( this ).dialog( "close" );
-      }
-    },
-    {
-      text: "Cancel",
+      text: "Close Window",
       click: function() {
         $( this ).dialog( "close" );
       }
     }
+    
   ]
 });
 
