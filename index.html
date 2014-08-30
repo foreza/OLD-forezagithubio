@@ -256,10 +256,10 @@ border: 1px solid red;
 
 <h2>Dialog</h2>
 <div>
-<p><a href="#" id="dialog-link" class="ui-state-default ui-corner-all">Open more Happiness</a></p>
+<p><a href="#" id="dialog-link2" class="ui-state-default ui-corner-all">Open more Happiness</a></p>
 </div>
 <!-- ui-dialog -->
-<div id="dialog" title="Dialog Title">
+<div id="dialog2" title="Dialog Titlesss">
 <p>Lorem lorem LORAXXXXX.</p>
 </div>
 
@@ -348,6 +348,11 @@ $( "#dialog" ).dialog({
 // Link to open the dialog
 $( "#dialog-link" ).click(function( event ) {
   $( "#dialog" ).dialog( "open" );
+  event.preventDefault();
+});
+
+$( "#dialog-link2" ).click(function( event ) {
+  $( "#dialog2" ).dialog( "open" );
   event.preventDefault();
 });
 
