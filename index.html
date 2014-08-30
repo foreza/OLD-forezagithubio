@@ -57,6 +57,27 @@ h3 { /* This defines the nature of all the "header 3" portions, which is to say,
   margin: 0px 0 5px 0;
 }
 
+/* jQueryUI */ 
+
+  #dialog-link {
+    padding: .4em 1em .4em 20px;
+    text-decoration: none;
+    position: relative;
+  }
+  #dialog-link span.ui-icon {
+    margin: 0 5px 0 0;
+    position: absolute;
+    left: .2em;
+    top: 50%;
+    margin-top: -8px;
+  }
+
+  #icons span.ui-icon {
+    float: left;
+    margin: 0 4px;
+  }
+
+
 #wrapper {
 border: 1px solid red;
 }
@@ -221,9 +242,10 @@ border: 1px solid red;
   <div id="tabs-3">Nam dui erat, auctor a, dignissim quis, sollicitudin eu, felis. Pellentesque nisi urna, interdum eget, sagittis et, consequat vestibulum, lacus. Mauris porttitor ullamcorper augue.</div>
 </div>
 
-<h2 class="demoHeaders">Dialog</h2>
-<p><a href="#" id="dialog-link" class="ui-state-default ui-corner-all"><span class="ui-icon ui-icon-newwin"></span>Open Happiness</a></p>
-
+<h2>Dialog</h2>
+<div>
+<p><a href="#" id="dialog-link" class="ui-state-default ui-corner-all">Open Happiness</a></p>
+</div>
 <!-- ui-dialog -->
 <div id="dialog" title="Dialog Title">
   <p>Lorem lorem idk what that even is.</p>
