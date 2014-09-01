@@ -55,6 +55,8 @@ body {
   /*font-size: 16px; */
   font-family: 'Myriad Pro', Calibri, Helvetica, Arial, sans-serif;
   line-height: 1.5;
+  max-width: 1000px; /* Setting max width to 1200 px */ 
+  background: #F8F8FF ; /* Change to background image if you need to */
   -webkit-font-smoothing: antialiased;
 }
 
@@ -62,15 +64,18 @@ h1, h2, h3, h4, h5, h6 {
   margin: 10px 0;
   font-weight: 700;
   color:#222222;
-  /* font-family: 'Lucida Grande', 'Calibri', Helvetica, Arial, sans-serif; */
+  font-family: 'Lucida Grande', 'Calibri', Helvetica, Arial, sans-serif; */
   letter-spacing: -1px;
 }
 
 h1 {
-  /*
-  font-size: 72px;
-  font-weight: 700;
-  */
+
+  font-family: 'Londrina Shadow', cursive; /* set fonts for header 1 SPECIFICALLY */ 
+  text-align: center; /* centers the header 1 */
+  font-size: 100px; 
+  margin: 60px 0 0 0; /* margin sets header 60 pixels from top */
+
+
 }
 
 h2 {
