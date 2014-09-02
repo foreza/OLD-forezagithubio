@@ -11,9 +11,9 @@
 <link href='http://fonts.googleapis.com/css?family=Exo:100,500' rel='stylesheet' type='text/css'>
 <link href='http://fonts.googleapis.com/css?family=Kaushan+Script' rel='stylesheet' type='text/css'>
 <link href='http://fonts.googleapis.com/css?family=Economica' rel='stylesheet' type='text/css'>
-<link rel="stylesheet" type="text/css" href="/slick-master/slick/slick.css">
 <link href="/jqueryui/jquery-ui.css" rel="stylesheet">
 <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css"> <!-- May be useful to keep this in future ones! -->
+<link rel="stylesheet" type="text/css" href="/slick-master/slick/slick.css">
 
 
 
@@ -79,22 +79,10 @@ h3 { /* This defines the nature of all the "header 3" portions, which is to say,
 .mySlider
 {
 border: 1px solid green;
-max-width: 800px;
-max-length: 900px;
+max-width: 400px;
 margin: 0 auto;
 
 }
-
-#sliderElement
-{
-background-size: cover;
-border: 1px solid red;
-max-width: 600px;
-max-length: 800px;
-margin: 0 auto; 
-
-}
-
 
 /* jQueryUI */ 
 
@@ -181,16 +169,11 @@ a{ /* This defines the nature of all the hyperlinks */
 <br><br>
 
 <div class="mySlider">
-
   <div><a href="#"><img src="http://i.imgur.com/K0f1NVz.jpg" alt =""></a></div>
   <div><a href="#"><img src="http://i.imgur.com/UwtD6WI.jpg" alt =""></a></div>
   <div><a href="#"><img src="http://i.imgur.com/PgCKVzx.jpg" alt =""></a></div>
-  
 </div>
-
 <br><br>
-
-
 <div id="tabs">
   <ul>
     <li><a href="#tabs-1">About</a></li>
@@ -198,61 +181,47 @@ a{ /* This defines the nature of all the hyperlinks */
     <li><a href="#tabs-3">Projects</a></li>
     <li><a href="#tabs-4">Contact</a></li>
   </ul>
-  <div id="tabs-1">
+          <div id="tabs-1">
 
-          <div class="about">
-            <header>
-            <h2 id="s1">About Jason</h2>
-            </header>
-
-            <div id="wrapper">
-
-
-
-
-            <div id="aboutdiv1">
-                <div id="webmaster">
-              <div class="frame">
-        </div>
-        </div>
-
-           
+                  <div class="about">
+                    <header>
+                    <h2 id="s1">About Jason</h2>
+                    </header>
+                    <div id="wrapper">
+                    <div id="aboutdiv1">
+                        <div id="webmaster">
+                      <div class="frame">
+                </div>
+                </div>
+                    </div>
+                    <div id="aboutdiv2">
+                     I'm Jason, and this is my simple description. I'm Jason, and this is my simple description. I'm Jason, and this is my simple description. I'm Jason, and this is my simple description. I'm Jason, and this is my simple description. I'm Jason, and this is my simple description. I'm Jason, and this is my simple description.
+                    </div>
+                    </div>
+                    </div>
+          </div>
+            <div id="tabs-2"> 
+          <p>
+            Skills: <br>
+            Experience: <br>
+          </p>
+          <br>
+          <div>
+          <p><a href="#" id="dialog-link2" class="ui-state-default ui-corner-all">View my resume!</a></p>
+          </div>
+            <br>
+            <p> <a href="#">Alternatively, you may download it in PDF form here. </a> <p>
             </div>
-            <div id="aboutdiv2">
-             I'm Jason, and this is my simple description. I'm Jason, and this is my simple description. I'm Jason, and this is my simple description. I'm Jason, and this is my simple description. I'm Jason, and this is my simple description. I'm Jason, and this is my simple description. I'm Jason, and this is my simple description.
-            </div>
-            </div>
-            </div>
-  </div>
-  <div id="tabs-2"> 
-<p>
-  Skills: <br>
-  Experience: <br>
-</p>
-<br>
-<div>
-<p><a href="#" id="dialog-link2" class="ui-state-default ui-corner-all">View my resume!</a></p>
-</div>
-  <br>
-
-  <p> <a href="#">Alternatively, you may download it in PDF form here. </a> <p>
-  </div>
   <!-- Projects! -->
-  <div id="tabs-3"> Click on each project to learn more! 
-
-
-
-  </div>
-  
+            <div id="tabs-3"> Click on each project to learn more! 
+            </div>
 <!-- CONTACT ME -->
-  <div id="tabs-4">
-
-  <p> You can reach me at jchiu5@uci.edu, I check my email daily! Be sure to include your full name in the email. <br>
-  Please connect with me on LinkedIn here: <br>
-  Readyforce here:
-</p>
-
-  </div>
+            <div id="tabs-4">
+                  <p> You can reach me at jchiu5@uci.edu, I check my email daily! Be sure to include your full name in the email. <br>
+                  Please connect with me on LinkedIn here: <br>
+                  Readyforce here:
+                </p>
+            </div>
 </div>
 
 
@@ -261,8 +230,6 @@ a{ /* This defines the nature of all the hyperlinks */
 <div>
 <p><a href="#" id="dialog-link" class="ui-state-default ui-corner-all">Open Happiness</a></p>
 </div>
-
-
 <!-- ui-dialog management, remember to also edit the JS below!  -->
 <div id="dialog" title="Dialog Title">
 <p>Lorem lorem idk what that even is.</p>
@@ -292,37 +259,11 @@ NOXUS!
    <!-- We'll be using this copy of jQuery for the smoothScroll  -->
   <!-- Note: 2.1.1 is incompatible with IE 6/7/8, but oh well! -->
    <script type='text/javascript' src='http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js'></script>
-  <!-- <script src="/jquery/jquery-2.1.1.js"></script> -->
-
-  <script src="/js/smoothScroll/jquery.smooth-scroll.js"></script>
-  <script>
-    $(document).ready(function() {
-
-      $('ul.mainnav a').smoothScroll();
-
-      $('p.subnav a').click(function(event) {
-        event.preventDefault();
-        var link = this;
-        $.smoothScroll({
-          scrollTarget: link.hash
-        });
-      });
-});
-
-</script>
-
-<!-- As you add in more UI elements for jQuery, be sure to mark it as such in commits -->
 
 <script src="/jqueryui/jquery-ui.js"></script>
 <script>
-
 $( "#tabs" ).tabs();
-
-
-
-
 /* Dialogue JS, have one for each popup window and clearly label! */
-
 $( "#dialog" ).dialog({
   autoOpen: false,
   width: 400,
@@ -333,13 +274,9 @@ $( "#dialog" ).dialog({
         $( this ).dialog( "close" );
       }
     }
-    
   ]
 });
-
-
 /* This dialogue is the one for the "about page" and deals with the resume showing/hiding. */
-
 $( "#dialog2" ).dialog({
   autoOpen: false,
   width: 400,
@@ -356,34 +293,19 @@ $( "#dialog2" ).dialog({
       click: function() {
         $( this ).dialog( "close" );
       }
-    }
-
-
-    
+    }  
   ]
 });
-
-
-
 // Link to open the dialog, make one for each button. 
-
-
-
 $( "#dialog-link" ).click(function( event ) {
   $( "#dialog" ).dialog( "open" );
   event.preventDefault();
 });
-
 $( "#dialog-link2" ).click(function( event ) {
   $( "#dialog2" ).dialog( "open" );
   event.preventDefault();
 });
-
-
-
 </script>
-
-
 
 <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
 <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
