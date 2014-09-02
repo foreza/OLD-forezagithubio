@@ -7,11 +7,11 @@
     <meta http-equiv="X-UA-Compatible" content="chrome=1">
     <meta name="description" content="Jason Chiu : Portfolio Site">
 
-<!-- Londrina Shadow -->
-<link href='https://fonts.googleapis.com/css?family=Londrina+Shadow' rel='stylesheet' type='text/css'>
+<!-- -->
+<link href='http://fonts.googleapis.com/css?family=Exo:100,500' rel='stylesheet' type='text/css'>
 <link href='http://fonts.googleapis.com/css?family=Kaushan+Script' rel='stylesheet' type='text/css'>
 <link href='http://fonts.googleapis.com/css?family=Economica' rel='stylesheet' type='text/css'>
-<link rel="stylesheet" type="text/css" href="/slick/slick/slick.css">
+<link rel="stylesheet" type="text/css" href="/slick-master/slick/slick.css">
 <link href="/jqueryui/jquery-ui.css" rel="stylesheet">
 <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css"> <!-- May be useful to keep this in future ones! -->
 
@@ -32,15 +32,15 @@ body {
 header{ /* removed so it doesn't overlap with css stylesheet */}
 p{/* removed so it doesn't overlap with css stylesheet*/ } 
 h1 { 
-  color: #696969;
- font-family: 'Londrina Shadow', sans-serif; /* set fonts for header 1 SPECIFICALLY */ 
+  color: rgb(143,250,255);
+ font-family: 'Exo', sans-serif; /* set fonts for header 1 SPECIFICALLY */ 
   text-align: center; /* centers the header 1 */
   font-size: 100px; 
-  margin: 20px 0 0 0; /* margin sets header 60 pixels from top */
+  margin: 20px 0px 0px 0px; /* margin sets header 60 pixels from top */
   }
 h2 { /* This defines the nature of all the "header 2" portions, which is to say, every h2. */
   font-family: 'Economica', sans-serif;
-  font-size: 50px; 
+  font-size: 30px; 
   margin-top: 20px;
   text-align: center; /* centers the header 2 */
   color: #696969;
@@ -72,6 +72,27 @@ h3 { /* This defines the nature of all the "header 3" portions, which is to say,
   position: relative; 
   margin: 40px 0 0 0;
   border-radius: 12px;
+}
+
+/* Slider slick */
+
+.mySlider
+{
+border: 1px solid green;
+max-width: 800px;
+max-length: 900px;
+margin: 0 auto;
+
+}
+
+#sliderElement
+{
+background-size: cover;
+border: 1px solid red;
+max-width: 600px;
+max-length: 800px;
+margin: 0 auto; 
+
 }
 
 
@@ -157,6 +178,17 @@ a{ /* This defines the nature of all the hyperlinks */
         </header>
     </div>
 
+<br><br>
+
+<div class="mySlider">
+
+  <div><a href="#"><img src="http://i.imgur.com/K0f1NVz.jpg" alt =""></a></div>
+  <div><a href="#"><img src="http://i.imgur.com/UwtD6WI.jpg" alt =""></a></div>
+  <div><a href="#"><img src="http://i.imgur.com/PgCKVzx.jpg" alt =""></a></div>
+  
+</div>
+
+<br><br>
 
 
 <div id="tabs">
@@ -350,6 +382,25 @@ $( "#dialog-link2" ).click(function( event ) {
 
 
 </script>
+
+
+
+<script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+<script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+<script type="text/javascript" src="/slick/slick/slick.min.js"></script>
+      
+<script>  
+$('.mySlider').slick({
+  slidesToShow: 1,
+  slidesToScroll: 1,
+  autoplay: true,
+  autoplaySpeed: 2000,
+   dots: true,
+   arrows: true,
+  cssEase: 'linear'
+});
+</script>
+
 
 
 
