@@ -55,7 +55,7 @@ body {
   /*font-size: 16px; */
   font-family: 'Myriad Pro', Calibri, Helvetica, Arial, sans-serif;
   line-height: 1.5;
-  max-width: 1000px; /* Setting max width to 1200 px */ 
+  /*max-width: 1000px; */ /* Setting max width to 1200 px */ 
   background: #F8F8FF ; /* Change to background image if you need to */
   -webkit-font-smoothing: antialiased;
 }
