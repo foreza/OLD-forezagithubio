@@ -5,7 +5,7 @@
   <meta http-equiv="X-UA-Compatible" content="chrome=1">
   <meta name="description" content="Jason Chiu : Portfolio Site">
 <!-- -->
-  <link href='http://fonts.googleapis.com/css?family=Exo:300' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Lato:300' rel='stylesheet' type='text/css'>
   <link href='http://fonts.googleapis.com/css?family=Kaushan+Script' rel='stylesheet' type='text/css'>
   <link href='http://fonts.googleapis.com/css?family=Economica' rel='stylesheet' type='text/css'>
   <link href="/jqueryui/jquery-ui.css" rel="stylesheet">
@@ -17,17 +17,27 @@
 /* ------------ General Tags ------------------*/
     body {
       /*margin: 0 auto; */
-       background: -webkit-linear-gradient(top, #373737, #212121);
+       background-color: #D3D3D3;
       font-size: 16px; 
       font-family: 'Myriad Pro', Calibri, Helvetica, Arial, sans-serif;
       /* line-height: 1.5;  Change this to modify line height in the body */ 
       /*background: #F8F8FF;  Change to modify background color */ 
     }
-    header{}
+    header{
+      height: 150px;
+      width: 90%;
+      border-radius: 12px;
+      background: -moz-linear-gradient(top, #373737, #212121);
+      background: -webkit-linear-gradient(top, #373737, #212121);
+      background: -ms-linear-gradient(top, #373737, #212121);
+      background: -o-linear-gradient(top, #373737, #212121);
+      background: linear-gradient(top, #373737, #212121);
+
+    }
     p{} 
     h1 { 
       color: rgb(143,250,255); /* Change to modify header 1 colors */
-      font-family: 'Exo', sans-serif; /* set fonts for header 1 */ 
+      font-family: 'Lato', sans-serif; /* set fonts for header 1 */ 
       text-align: center; /* centers header 1 */
       font-size: 70px; /* Change to modify header1 font size */
       margin: 20px 0px 0px 0px; /* margin sets header1 20 pixels from top */
@@ -50,6 +60,9 @@
       text-decoration: none; /* Remove the underline of the hyperlinks */
     }
     footer{
+      height: 100px;
+      width: 90%;
+      border-radius: 12px;
       color: rgb(143,250,255); /* Change to modify header 1 colors */
       text-align: center; /* centers header 2 */
       font-family: 'Exo', sans-serif; /* set fonts for header 1 */
@@ -59,6 +72,7 @@
       background: -ms-linear-gradient(top, #373737, #212121);
       background: -o-linear-gradient(top, #373737, #212121);
       background: linear-gradient(top, #373737, #212121);
+
     }
 /* ------------ Classes (.class) ------------------*/ 
     .myframe{
@@ -79,14 +93,6 @@
     .sliderItem{
     }
     /* ------------ ID (#id) ------------------*/ 
-    #header_wrap{
-      height: 200px;
-      background: -moz-linear-gradient(top, #373737, #212121);
-      background: -webkit-linear-gradient(top, #373737, #212121);
-      background: -ms-linear-gradient(top, #373737, #212121);
-      background: -o-linear-gradient(top, #373737, #212121);
-      background: linear-gradient(top, #373737, #212121);
-    }
     #webmaster{ /* Profile Picture, pic, Jason */
       margin: -40px 0px 0px 0px; 
       height: 200px;
@@ -117,10 +123,10 @@
 </head>
 
 <body vlink="yellow" link="yellow">
-  <div id="header_wrap">
+  <header>
     <h1>Jason Chiu</h1>
     <h2>Programmer. Web Developer. Animator. Producer.</h2>
-  </div>
+  </header>
   <!--
   <div class="mySlider">
     <div class="sliderItem"><a href="#"><img src="http://i.imgur.com/K0f1NVz.jpg" alt =""></a></div>
