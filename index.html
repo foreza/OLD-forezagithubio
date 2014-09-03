@@ -61,10 +61,21 @@
       border: 1px solid green; /* For debug */
       padding: 2px;
       height: 100px;
-      width: auto;
+      width: 500px;
       margin: 0 auto;
     }
+    .sliderItem{
+
+    }
     /* ------------ ID (#id) ------------------*/ 
+    #header_wrap{
+      background: #DCDCDC;
+      background: -moz-linear-gradient(top, #373737, #212121);
+      background: -webkit-linear-gradient(top, #373737, #212121);
+      background: -ms-linear-gradient(top, #373737, #212121);
+      background: -o-linear-gradient(top, #373737, #212121);
+      background: linear-gradient(top, #373737, #212121);
+    }
     #webmaster{ /* Profile Picture, pic, Jason */
       margin: -40px 0px 0px 0px; 
       height: 200px;
@@ -73,27 +84,8 @@
       background-image: url("http://taouci.com/2014SummerWebsite/BoardImages20142015/webmaster.png"); 
       box-shadow: 10px 10px 5px #888888;
     }
-    /* jQueryUI */ 
-    #dialog-link {
-      padding: .4em 1em .4em 20px;
-      text-decoration: none;
-      position: relative;
-    }
-    #dialog-link span.ui-icon {
-      margin: 0 5px 0 100px;
-      position: absolute;
-      left: .2em;
-      top: 50%;
-      margin-top: -8px;
-      }
-
-    #icons span.ui-icon {
-      float: left;
-      margin: 0 4px;
-    }
     #wrapper { /*ID used for wrapping divs that I want to overlap, currently empty. */
     }
-
     /* This section is for the about me portion of this page */
     #aboutdiv1 {  
       padding: 20px 20px 20px 20px;
@@ -114,20 +106,20 @@
 </head>
 
 <body vlink="yellow" link="yellow">
-  <div id="header_wrap" class="outer">
-    <header class="inner">
+  <div id="header_wrap">
+    <header>
       <h1>Jason Chiu</h1>
       <h2>Programmer. Web Developer. Animator. Producer.</h2>
     </header>
   </div>
   <br>
   <div class="mySlider">
-    <a href="#"><img src="http://i.imgur.com/K0f1NVz.jpg" alt =""></a>
-    <a href="#"><img src="http://i.imgur.com/UwtD6WI.jpg" alt =""></a>
-    <a href="#"><img src="http://i.imgur.com/PgCKVzx.jpg" alt =""></a>
-    <a href="#"><img src="http://i.imgur.com/K0f1NVz.jpg" alt =""></a>
-    <a href="#"><img src="http://i.imgur.com/UwtD6WI.jpg" alt =""></a>
-    <a href="#"><img src="http://i.imgur.com/PgCKVzx.jpg" alt =""></a>
+    <div class="sliderItem"><a href="#"><img src="http://i.imgur.com/K0f1NVz.jpg" alt =""></a></div>
+    <div class="sliderItem"><a href="#"><img src="http://i.imgur.com/UwtD6WI.jpg" alt =""></a></div>
+    <div class="sliderItem"><a href="#"><img src="http://i.imgur.com/PgCKVzx.jpg" alt =""></a></div>
+    <div class="sliderItem"><a href="#"><img src="http://i.imgur.com/K0f1NVz.jpg" alt =""></a></div>
+    <div class="sliderItem"><a href="#"><img src="http://i.imgur.com/UwtD6WI.jpg" alt =""></a></div>
+    <div class="sliderItem"><a href="#"><img src="http://i.imgur.com/PgCKVzx.jpg" alt =""></a></div>
   </div>
   <div id="tabs">
     <ul>
@@ -178,19 +170,6 @@
     </div>
   </div>
 <!-- Sample button usage -->
-  <h2>Dialog</h2>
-  <div>
-    <p><a href="#" id="dialog-link" class="ui-state-default ui-corner-all">Open Happiness</a></p>
-  </div>
-<!-- ui-dialog management, remember to also edit the JS below!  -->
-  <div id="dialog" title="Dialog Title">
-    <p>Lorem lorem idk what that even is.</p>
-  </div>
-  <div id="dialog2" title="Resume: Jason Chiu">
-    <p>Lorem lorem LORAXXXXX.NOXUS!
-    </p>
-  </div>
-
 <!-- FOOTER  -->
  
   <footer>
