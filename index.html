@@ -1,357 +1,265 @@
 <!DOCTYPE html>
 <html>
-
-
 <head>
-    <meta charset='utf-8'>
-    <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <meta name="description" content="Jason Chiu : Portfolio Site">
-
+  <meta charset='utf-8'>
+  <meta http-equiv="X-UA-Compatible" content="chrome=1">
+  <meta name="description" content="Jason Chiu : Portfolio Site">
 <!-- -->
-<link href='http://fonts.googleapis.com/css?family=Exo:100,500' rel='stylesheet' type='text/css'>
-<link href='http://fonts.googleapis.com/css?family=Kaushan+Script' rel='stylesheet' type='text/css'>
-<link href='http://fonts.googleapis.com/css?family=Economica' rel='stylesheet' type='text/css'>
-<link href="/jqueryui/jquery-ui.css" rel="stylesheet">
-<link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css"> <!-- May be useful to keep this in future ones! -->
-<link rel="stylesheet" type="text/css" href="/slick-master/slick/slick.css">
-
-
-
+  <link href='http://fonts.googleapis.com/css?family=Exo:100,500' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Kaushan+Script' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Economica' rel='stylesheet' type='text/css'>
+  <link href="/jqueryui/jquery-ui.css" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="/slick-master/slick/slick.css">
+<!-- -->
   <title>Jason Chiu</title>
+<!-- -->
+  <style>
+/* ------------ General Tags ------------------*/
+    body {
+      margin: 0 auto;
+      font-size: 16px; 
+      font-family: 'Myriad Pro', Calibri, Helvetica, Arial, sans-serif;
+      line-height: 1.5; /* Change this to modify line height in the body */
+      background: #F8F8FF; /* Change to modify background color */
+    }
+    header{}
+    p{} 
+    h1 { 
+      color: rgb(143,250,255); /* Change to modify header 1 colors */
+      font-family: 'Exo', sans-serif; /* set fonts for header 1 */ 
+      text-align: center; /* centers header 1 */
+      font-size: 70px; /* Change to modify header1 font size */
+      margin: 20px 0px 0px 0px; /* margin sets header1 20 pixels from top */
+    }
+    h2 { 
+      color: #696969;
+      font-family: 'Economica', sans-serif; /* set fonts for header 2 */ 
+      text-align: center; /* centers header 2 */
+      font-size: 30px; /* Change to modify header1 font size */
+      margin: 0px 0px 0px 0px; /* margin none */
+    }
+    h3 {
+      color: #bbbbbb;
+      font-family: 'Kaushan Script', cursive; /* set fonts for header 3 */ 
+      text-align: left; /* makes all header3 swing to the left */
+      font-size: 20px; /* Change to modify header1 font size */
+      margin: 0px 0px 0px 0px; /* margin none */
+    }
+    a{ /* This defines the nature of all the hyperlinks */
+      text-decoration: none; /* Remove the underline of the hyperlinks */
+    }
+/* ------------ Classes (.class) ------------------*/ 
+    .frame {
+      height: 200px;
+      width: 200px;
+      background-size: cover; 
+      position: relative; 
+      margin: 40px 0 0 0;
+      border-radius: 12px;
+    }
+    .mySlider{ /* Slider, slick */
+      border: 1px solid green; /* For debug */
+      padding: 2px;
+      height: 100px;
+      width: auto;
+      margin: 0 auto;
+    }
+    /* ------------ ID (#id) ------------------*/ 
+    #webmaster{ /* Profile Picture, pic, Jason */
+      margin: -40px 0px 0px 0px; 
+      height: 200px;
+      width: 200px;
+      background-size: cover;
+      background-image: url("http://taouci.com/2014SummerWebsite/BoardImages20142015/webmaster.png"); 
+      box-shadow: 10px 10px 5px #888888;
+    }
+    /* jQueryUI */ 
+    #dialog-link {
+      padding: .4em 1em .4em 20px;
+      text-decoration: none;
+      position: relative;
+    }
+    #dialog-link span.ui-icon {
+      margin: 0 5px 0 100px;
+      position: absolute;
+      left: .2em;
+      top: 50%;
+      margin-top: -8px;
+      }
 
-<style>
-body {
- 
-   margin: 0 auto;
-  font-size: 16px; 
-  font-family: 'Myriad Pro', Calibri, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  background: #F8F8FF ; /* Change to background image if you need to */
- 
-}
-header{ /* removed so it doesn't overlap with css stylesheet */}
-p{/* removed so it doesn't overlap with css stylesheet*/ } 
-h1 { 
-  color: rgb(143,250,255);
- font-family: 'Exo', sans-serif; /* set fonts for header 1 SPECIFICALLY */ 
-  text-align: center; /* centers the header 1 */
-  font-size: 70px; 
-  margin: 20px 0px 0px 0px; /* margin sets header 60 pixels from top */
-  }
-h2 { /* This defines the nature of all the "header 2" portions, which is to say, every h2. */
-  font-family: 'Economica', sans-serif;
-  font-size: 30px; 
-  margin-top: 10px;
-  text-align: center; /* centers the header 2 */
-  color: #696969;
-  margin: 0px 0px 5px 0px;
-}
+    #icons span.ui-icon {
+      float: left;
+      margin: 0 4px;
+    }
+    #wrapper { /*ID used for wrapping divs that I want to overlap, currently empty. */
+    }
 
-h3 { /* This defines the nature of all the "header 3" portions, which is to say, every h3. */
-  margin-top: 20px;
-  text-align: left; /* makes the header 3 swing to the left */
-  color: #bbbbbb;
-  margin: 0px 0 5px 0;
-}
-
-/* Jason's vanity */ 
-
-#webmaster{
-    margin: -40px 0 0 0;
-     height: 200px;
-     width: 200px;
-    background-size: cover;
-  background-image: url("http://taouci.com/2014SummerWebsite/BoardImages20142015/webmaster.png"); 
-  box-shadow: 10px 10px 5px #888888;
-}
-
-.frame {
-  height: 200px;
-  width: 200px;
-  background-size: cover; 
-  position: relative; 
-  margin: 40px 0 0 0;
-  border-radius: 12px;
-}
-
-/* Slider slick */
-
-.mySlider
-{
-border: 1px solid green;
-padding: 2px;
-height: 100px;
-width: auto;
-margin: 0 auto;
-
-}
-
-#sliderElement{
-border: 1px solid yellow;
-padding: 2px;
-margin: 0 auto;
-
-}
-
-
-/* jQueryUI */ 
-
-  #dialog-link {
-    padding: .4em 1em .4em 20px;
-    text-decoration: none;
-    position: relative;
-  }
-  #dialog-link span.ui-icon {
-    margin: 0 5px 0 100px;
-    position: absolute;
-    left: .2em;
-    top: 50%;
-    margin-top: -8px;
-  }
-
-  #icons span.ui-icon {
-    float: left;
-    margin: 0 4px;
-  }
-
-
-#wrapper {
-}
-
-
-.mainnav { /* This defines the nature of the lists which will control the nav bar. */
-  text-align: right;
-  padding: 7px;
-  background: rgba(0,0,0,0.8);
- }
-
-.lispecial { /* This defines the nature of all the list items in the nav , which in this case I want the list items to be centered.  */
-    display: inline;
-    padding: 0px 7px 0px 0px;
-    /* This is generally bad since I might need to have unordered lists later on. I should be making a div class for this but I'll let this slide for now. */
-}
-
-
-a{ /* This defines the nature of all the hyperlinks */
-	text-decoration: none; /* Remove the underline of the hyperlinks */
-}
-
-
-
-/* This section is for the about me portion of this page */
-
-    #aboutdiv1 {
-
-      /* change the picture in the "webmaster" class */
+    /* This section is for the about me portion of this page */
+    #aboutdiv1 {  
       padding: 20px 20px 20px 20px;
-     display: inline-block;
-    width:250px;
-    height:250px;
-    
-
- 
-}
-	#aboutdiv2 {
-  padding: 10px;
- max-width: 600px;
- word-wrap: break-word; /* should stop words from overflowing? */ 
-    vertical-align:top;
-    display: inline-block;
-    width: auto;
-    height:300px;
-}
-
-
-
-</style>
-
+      display: inline-block;
+      width:250px;
+      height:250px;
+    }
+    #aboutdiv2 {
+      padding: 10px;
+      max-width: 600px;
+      word-wrap: break-word; /* should stop words from overflowing? */ 
+      vertical-align:top;
+      display: inline-block;
+      width: auto;
+      height:300px;
+    }
+  </style>
 </head>
 
 <body vlink="yellow" link="yellow">
-
-<div id="header_wrap" class="outer">
-        <header class="inner">
-          <h1>Jason Chiu</h1>
-          <h2>Programmer. Web Developer. Animator. Producer.</h2>
-
+  <div id="header_wrap" class="outer">
+    <header class="inner">
+      <h1>Jason Chiu</h1>
+      <h2>Programmer. Web Developer. Animator. Producer.</h2>
+    </header>
+  </div>
+  <br>
+  <div class="mySlider">
+    <a href="#"><img src="http://i.imgur.com/K0f1NVz.jpg" alt =""></a>
+    <a href="#"><img src="http://i.imgur.com/UwtD6WI.jpg" alt =""></a>
+    <a href="#"><img src="http://i.imgur.com/PgCKVzx.jpg" alt =""></a>
+    <a href="#"><img src="http://i.imgur.com/K0f1NVz.jpg" alt =""></a>
+    <a href="#"><img src="http://i.imgur.com/UwtD6WI.jpg" alt =""></a>
+    <a href="#"><img src="http://i.imgur.com/PgCKVzx.jpg" alt =""></a>
+  </div>
+  <div id="tabs">
+    <ul>
+      <li><a href="#tabs-1">About</a></li>
+      <li><a href="#tabs-2">Resume</a></li>
+      <li><a href="#tabs-3">Projects</a></li>
+      <li><a href="#tabs-4">Contact</a></li>
+    </ul>
+    <div id="tabs-1">
+      <div class="about">
+        <header>
+          <h2 id="s1">About Jason</h2>
         </header>
-
-
-    </div>
-
-<br>
-
-<div class="mySlider">
-  <div id="sliderElement"><a href="#"><img src="http://i.imgur.com/K0f1NVz.jpg" alt =""></a></div>
-  <div id="sliderElement"><a href="#"><img src="http://i.imgur.com/UwtD6WI.jpg" alt =""></a></div>
-  <div id="sliderElement"><a href="#"><img src="http://i.imgur.com/PgCKVzx.jpg" alt =""></a></div>
-  <div id="sliderElement"><a href="#"><img src="http://i.imgur.com/K0f1NVz.jpg" alt =""></a></div>
-  <div id="sliderElement"><a href="#"><img src="http://i.imgur.com/UwtD6WI.jpg" alt =""></a></div>
-  <div id="sliderElement"><a href="#"><img src="http://i.imgur.com/PgCKVzx.jpg" alt =""></a></div>
-</div>
-
-<div id="tabs">
-  <ul>
-    <li><a href="#tabs-1">About</a></li>
-    <li><a href="#tabs-2">Resume</a></li>
-    <li><a href="#tabs-3">Projects</a></li>
-    <li><a href="#tabs-4">Contact</a></li>
-  </ul>
-          <div id="tabs-1">
-
-                  <div class="about">
-                    <header>
-                    <h2 id="s1">About Jason</h2>
-                    </header>
-                    <div id="wrapper">
-                    <div id="aboutdiv1">
-                        <div id="webmaster">
-                      <div class="frame">
-                </div>
-                </div>
-                    </div>
-                    <div id="aboutdiv2">
-                     I'm Jason, and this is my simple description. I'm Jason, and this is my simple description. I'm Jason, and this is my simple description. I'm Jason, and this is my simple description. I'm Jason, and this is my simple description. I'm Jason, and this is my simple description. I'm Jason, and this is my simple description.
-                    </div>
-                    </div>
-                    </div>
-          </div>
-            <div id="tabs-2"> 
-          <p>
-            Skills: <br>
-            Experience: <br>
-          </p>
-          <br>
-          <div>
-          <p><a href="#" id="dialog-link2" class="ui-state-default ui-corner-all">View my resume!</a></p>
-          </div>
-            <br>
-            <p> <a href="#">Alternatively, you may download it in PDF form here. </a> <p>
+        <div id="wrapper">
+          <div id="aboutdiv1">
+            <div id="webmaster">
+              <div class="frame">
+              </div>
             </div>
+          </div>
+          <div id="aboutdiv2">
+          I'm Jason, and this is my simple description. I'm Jason, and this is my simple description. I'm Jason, and this is my simple description. I'm Jason, and this is my simple description. I'm Jason, and this is my simple description. I'm Jason, and this is my simple description. I'm Jason, and this is my simple description.
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="tabs-2"> 
+      <p>
+        Skills: <br>
+        Experience: <br>
+      </p>
+      <br>
+      <div>
+        <p><a href="#" id="dialog-link2" class="ui-state-default ui-corner-all">View my resume!</a></p>
+      </div>
+      <br>
+      <p> <a href="#">Alternatively, you may download it in PDF form here. </a> <p>
+    </div>
   <!-- Projects! -->
-            <div id="tabs-3"> Click on each project to learn more! 
-            </div>
-<!-- CONTACT ME -->
-            <div id="tabs-4">
-                  <p> You can reach me at jchiu5@uci.edu, I check my email daily! Be sure to include your full name in the email. <br>
-                  Please connect with me on LinkedIn here: <br>
-                  Readyforce here:
-                </p>
-            </div>
-</div>
-
-
-<!-- Sample button usage -->
-<h2>Dialog</h2>
-<div>
-<p><a href="#" id="dialog-link" class="ui-state-default ui-corner-all">Open Happiness</a></p>
-</div>
-<!-- ui-dialog management, remember to also edit the JS below!  -->
-<div id="dialog" title="Dialog Title">
-<p>Lorem lorem idk what that even is.</p>
-</div>
-<div id="dialog2" title="Resume: Jason Chiu">
-<p>Lorem lorem LORAXXXXX.
-
-NOXUS!
-
-</p>
-
-</div>
-
-
-
-    <!-- FOOTER  -->
-    <div id="footer_wrap" class="outer">
-      <footer class="inner">
-        <p class="copyright">This website is maintained by Jason, aka <a href="https://github.com/foreza">foreza</a></p>
-        <p>Published with love from <a href="http://pages.github.com">GitHub Pages</a></p>
-      </footer>
+    <div id="tabs-3"> Click on each project to learn more! 
     </div>
+  <!-- CONTACT ME -->
+    <div id="tabs-4">
+      <p> You can reach me at jchiu5@uci.edu, I check my email daily! Be sure to include your full name in the email. <br>
+          Please connect with me on LinkedIn here: <br>
+          Readyforce here:
+      </p>
+    </div>
+  </div>
+<!-- Sample button usage -->
+  <h2>Dialog</h2>
+  <div>
+    <p><a href="#" id="dialog-link" class="ui-state-default ui-corner-all">Open Happiness</a></p>
+  </div>
+<!-- ui-dialog management, remember to also edit the JS below!  -->
+  <div id="dialog" title="Dialog Title">
+    <p>Lorem lorem idk what that even is.</p>
+  </div>
+  <div id="dialog2" title="Resume: Jason Chiu">
+    <p>Lorem lorem LORAXXXXX.NOXUS!
+    </p>
+  </div>
 
+<!-- FOOTER  -->
+ 
+  <footer>
+    <p class="copyright">This website is maintained by Jason, aka <a href="https://github.com/foreza">foreza</a></p>
+    <p>Published with love from <a href="http://pages.github.com">GitHub Pages</a></p>
+  </footer>
+ 
 
-
-
-   <!-- We'll be using this copy of jQuery for the smoothScroll  -->
-  <!-- Note: 2.1.1 is incompatible with IE 6/7/8, but oh well! -->
-   <script type='text/javascript' src='http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js'></script>
-
+<!-- We'll be using this copy of jQuery for the smoothScroll  -->
+<!-- Note: 2.1.1 is incompatible with IE 6/7/8, but oh well! -->
+<script type='text/javascript' src='http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js'></script>
 <script src="/jqueryui/jquery-ui.js"></script>
 <script>
 $( "#tabs" ).tabs();
 /* Dialogue JS, have one for each popup window and clearly label! */
 $( "#dialog" ).dialog({
-  autoOpen: false,
-  width: 400,
-  buttons: [
-    {
-      text: "Close Window",
-      click: function() {
-        $( this ).dialog( "close" );
-      }
-    }
-  ]
+autoOpen: false,
+width: 400,
+buttons: [
+{
+text: "Close Window",
+click: function() {
+$( this ).dialog( "close" );
+}
+}
+]
 });
 /* This dialogue is the one for the "about page" and deals with the resume showing/hiding. */
 $( "#dialog2" ).dialog({
-  autoOpen: false,
-  width: 400,
-  buttons: [
-    {
-      text: "Close Window",
-      click: function() {
-        $( this ).dialog( "close" );
-      }
-    },
-
-    {
-      text: "Download PDF:",
-      click: function() {
-        $( this ).dialog( "close" );
-      }
-    }  
-  ]
+autoOpen: false,
+width: 400,
+buttons: [
+{
+text: "Close Window",
+click: function() {
+$( this ).dialog( "close" );
+}
+},
+{
+text: "Download PDF:",
+click: function() {
+$( this ).dialog( "close" );
+}
+}  
+]
 });
 // Link to open the dialog, make one for each button. 
 $( "#dialog-link" ).click(function( event ) {
-  $( "#dialog" ).dialog( "open" );
-  event.preventDefault();
+$( "#dialog" ).dialog( "open" );
+event.preventDefault();
 });
 $( "#dialog-link2" ).click(function( event ) {
-  $( "#dialog2" ).dialog( "open" );
-  event.preventDefault();
+$( "#dialog2" ).dialog( "open" );
+event.preventDefault();
 });
 </script>
-
 <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
 <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
-<script type="text/javascript" src="/slick-master/slick/slick.min.js"></script>
-      
+<script type="text/javascript" src="/slick-master/slick/slick.min.js"></script>     
 <script>  
 $('.mySlider').slick({
-  slidesToShow: 1,
-  slidesToScroll: 1,
-  autoplay: true,
-  autoplaySpeed: 2000,
-   dots: true,
-   arrows: true,
-  cssEase: 'linear'
+slidesToShow: 1,
+slidesToScroll: 1,
+autoplay: true,
+autoplaySpeed: 2000,
+dots: true,
+arrows: true,
+cssEase: 'linear'
 });
 </script>
-
-
-
-
- 
-
-  
-  <!--<script type='text/javascript' src='scrollTo/1.4.13/jquery.scrollTo-min.js'></script>-->
-  <!--<script type='text/javascript' src='scrollTo/1.4.13/jquery.serialScroll-min.js?1.2.4'></script>-->
-  <!--<script type='text/javascript' src='scrollTo/1.4.13/init.js'></script>-->
- 
-  <!-- Trying out scrollTo here -->
-
-
-
 </body>
 </html>
