@@ -97,6 +97,18 @@ body {
       margin: 0 auto;
 
       /*ID used for wrapping divs that I want to overlap, currently empty. */
+
+    }
+
+    #navBarAllocation{
+    	height: 200px;
+    }
+
+    #aboutMe_Section{
+    	height: 500px;
+    	width: 90%;
+    	border: 1px solid black;
+    	border-radius: 5px;
     }
     /* This section is for the about me portion of this page */
 
@@ -104,7 +116,7 @@ body {
 
     body {
       margin: 0 auto;
-      background-color: #D3D3D3;
+      /*background-color: #D3D3D3; */
       font-size: 12px; 
       font-family: 'Myriad Pro', Calibri, Helvetica, Arial, sans-serif;
       /* line-height: 1.5;  Change this to modify line height in the body */ 
@@ -113,14 +125,14 @@ body {
     h1 { 
       color: rgb(143,250,255); /* Change to modify header 1 colors */
       font-family: 'Lato', sans-serif; /* set fonts for header 1 */ 
-      text-align: center; /* centers header 1 */
+      text-align: left; /* lwft header 1 */
       font-size: 35px; /* Change to modify header1 font size */
       margin: 20px 0px 0px 0px; /* margin sets header1 20 pixels from top */
     }
     h2 { 
       color: #696969;
       font-family: 'Economica', sans-serif; /* set fonts for header 2 */ 
-      text-align: center; /* centers header 2 */
+      text-align: left; /* centers header 2 */
       font-size: 20px; /* Change to modify header1 font size */
       margin: 0px 0px 0px 0px; /* margin none */
     }
@@ -148,5 +160,9 @@ body {
       background: -ms-linear-gradient(top, #373737, #212121);
       background: -o-linear-gradient(top, #373737, #212121);
       background: linear-gradient(top, #373737, #212121);
+    }
+    li {
+		font-family: 'Economica', sans-serif;
+
     }
     }
