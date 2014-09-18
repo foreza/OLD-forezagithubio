@@ -1,0 +1,152 @@
+body {
+      margin: 0 auto;
+       background-color: #D3D3D3;
+      font-size: 16px; 
+      font-family: 'Myriad Pro', Calibri, Helvetica, Arial, sans-serif;
+      /* line-height: 1.5;  Change this to modify line height in the body */ 
+      /*background: #F8F8FF;  Change to modify background color */ 
+    }
+
+      header{
+      margin: 0 auto;
+      height: 130px;
+      width: 95%;
+      border-radius: 12px;
+      background: -moz-linear-gradient(top, #373737, #212121);
+      background: -webkit-linear-gradient(top, #373737, #212121);
+      background: -ms-linear-gradient(top, #373737, #212121);
+      background: -o-linear-gradient(top, #373737, #212121);
+      background: linear-gradient(top, #373737, #212121);
+
+    }
+    p{} 
+    h1 { 
+      color: rgb(143,250,255); /* Change to modify header 1 colors */
+      font-family: 'Economica', sans-serif; /* set fonts for header 1 */ 
+      text-align: center; /* centers header 1 */
+      font-size: 70px; /* Change to modify header1 font size */
+      margin: 20px 0px 0px 0px; /* margin sets header1 20 pixels from top */
+    }
+    h2 { 
+      color: #696969;
+      font-family: 'Economica', sans-serif; /* set fonts for header 2 */ 
+      text-align: center; /* centers header 2 */
+      font-size: 30px; /* Change to modify header1 font size */
+      margin: 0px 0px 0px 0px; /* margin none */
+    }
+    h3 {
+      color: #bbbbbb;
+      font-family: 'Kaushan Script', cursive; /* set fonts for header 3 */ 
+      text-align: left; /* makes all header3 swing to the left */
+      font-size: 20px; /* Change to modify header1 font size */
+      margin: 0px 0px 0px 0px; /* margin none */
+    }
+    a{ /* This defines the nature of all the hyperlinks */
+      text-decoration: none; /* Remove the underline of the hyperlinks */
+    }
+    footer{
+      margin: 0 auto;
+      height: 100px;
+      width: 95%;
+      border-radius: 12px;
+      color: rgb(143,250,255); /* Change to modify header 1 colors */
+      text-align: center; /* centers header 2 */
+      font-family: 'Lato', sans-serif; /* set fonts for header 1 */
+      font-size: 15px; /* Change to modify header1 font size */
+      background: -moz-linear-gradient(top, #373737, #212121);
+      background: -webkit-linear-gradient(top, #373737, #212121);
+      background: -ms-linear-gradient(top, #373737, #212121);
+      background: -o-linear-gradient(top, #373737, #212121);
+      background: linear-gradient(top, #373737, #212121);
+    }
+/* ------------ Classes (.class) ------------------*/ 
+    .myframe{
+      height: 200px;
+      width: 200px;
+      background-size: cover; 
+      position: relative; 
+      margin: 40px 0 0 0;
+      border-radius: 12px;
+    }
+    .mySlider{ /* Slider, slick */
+      border: 1px solid green; /* For debug */
+      padding: 2px;
+      width: 400px;
+      height: 200px;
+      margin: 0 auto;
+      overflow: visible;
+    }
+    .slieeederItem{
+      max-height: 200px;
+      width: auto; /* you can use % */
+    }
+    .insideTab{
+      text-align: left;
+    }
+    /* ------------ ID (#id) ------------------*/ 
+    #webmaster{ /* Profile Picture, pic, Jason */
+      height: 200px;
+      width: 200px;
+      background-size: cover;
+      background-image: url("http://taouci.com/2014SummerWebsite/BoardImages20142015/webmaster.png"); 
+      box-shadow: 10px 10px 5px #888888;
+    }
+    #wrapper {
+      border: 1px solid red; /* For debug */
+      min-height: 300px;
+      margin: 0 auto;
+
+      /*ID used for wrapping divs that I want to overlap, currently empty. */
+    }
+    /* This section is for the about me portion of this page */
+
+    @media (max-width: 500px)  {
+
+    body {
+      margin: 0 auto;
+      background-color: #D3D3D3;
+      font-size: 12px; 
+      font-family: 'Myriad Pro', Calibri, Helvetica, Arial, sans-serif;
+      /* line-height: 1.5;  Change this to modify line height in the body */ 
+      /*background: #F8F8FF;  Change to modify background color */ 
+    }
+    h1 { 
+      color: rgb(143,250,255); /* Change to modify header 1 colors */
+      font-family: 'Lato', sans-serif; /* set fonts for header 1 */ 
+      text-align: center; /* centers header 1 */
+      font-size: 35px; /* Change to modify header1 font size */
+      margin: 20px 0px 0px 0px; /* margin sets header1 20 pixels from top */
+    }
+    h2 { 
+      color: #696969;
+      font-family: 'Economica', sans-serif; /* set fonts for header 2 */ 
+      text-align: center; /* centers header 2 */
+      font-size: 20px; /* Change to modify header1 font size */
+      margin: 0px 0px 0px 0px; /* margin none */
+    }
+    header{
+      margin: 0 auto;
+      height: 70px;
+      width: 100%;
+      border-radius: 5px;
+      background: -moz-linear-gradient(top, #373737, #212121);
+      background: -webkit-linear-gradient(top, #373737, #212121);
+      background: -ms-linear-gradient(top, #373737, #212121);
+      background: -o-linear-gradient(top, #373737, #212121);
+      background: linear-gradient(top, #373737, #212121);
+    }
+    footer{
+      margin: 0 auto;
+      height: 100px;
+      width: 100%;
+      border-radius: 5px;z
+      text-align: center; /* centers header 2 */
+      font-family: 'Lato', sans-serif; /* set fonts for header 1 */
+      font-size: 12px; /* Change to modify header1 font size */
+      background: -moz-linear-gradient(top, #373737, #212121);
+      background: -webkit-linear-gradient(top, #373737, #212121);
+      background: -ms-linear-gradient(top, #373737, #212121);
+      background: -o-linear-gradient(top, #373737, #212121);
+      background: linear-gradient(top, #373737, #212121);
+    }
+    }

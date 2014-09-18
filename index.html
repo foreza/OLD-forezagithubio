@@ -2,297 +2,72 @@
 <html>
 <head>
   <meta charset='utf-8'>
-  <meta http-equiv="X-UA-Compatible" content="chrome=1">
-  <meta name="description" content="Jason Chiu : Portfolio Site">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <meta name="author" content="Jason Chiu">
+    <meta property="og:title" content="Jason Chiu">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="images/tao_logo.gif"> <!-- need a logo. -->
+    <meta property="og:url" content="foreza.github.io">
+    <meta property="og:site_name" content="Jason Chiu">
+    <meta property="og:description" content="Check out what I do!"> <!-- change as you see fit -->
 <!-- -->
   <link href='http://fonts.googleapis.com/css?family=Lato:300' rel='stylesheet' type='text/css'>
   <link href='http://fonts.googleapis.com/css?family=Kaushan+Script' rel='stylesheet' type='text/css'>
   <link href='http://fonts.googleapis.com/css?family=Economica' rel='stylesheet' type='text/css'>
-  <link href="/jqueryui/jquery-ui.css" rel="stylesheet">
+
   <link rel="stylesheet" type="text/css" href="/slick-master/slick/slick.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+  <link rel="shortcut icon" href="images/tao_logo-favicon.ico"> <!-- used http://www.favicongenerator.com/ --> 
+      <!-- Stylesheet for website -->
+  <link rel="stylesheet" type="text/css" media="screen" href="jay.css"/>
+
+      <!-- Website title -->
 <!-- -->
   <title>Jason Chiu</title>
 <!-- -->
-  <style>
-/* ------------ General Tags ------------------*/
-    body {
-      margin: 0 auto;
-       background-color: #D3D3D3;
-      font-size: 16px; 
-      font-family: 'Myriad Pro', Calibri, Helvetica, Arial, sans-serif;
-      /* line-height: 1.5;  Change this to modify line height in the body */ 
-      /*background: #F8F8FF;  Change to modify background color */ 
-    }
-    header{
-      margin: 0 auto;
-      height: 130px;
-      width: 95%;
-      border-radius: 12px;
-      background: -moz-linear-gradient(top, #373737, #212121);
-      background: -webkit-linear-gradient(top, #373737, #212121);
-      background: -ms-linear-gradient(top, #373737, #212121);
-      background: -o-linear-gradient(top, #373737, #212121);
-      background: linear-gradient(top, #373737, #212121);
-
-    }
-    p{} 
-    h1 { 
-      color: rgb(143,250,255); /* Change to modify header 1 colors */
-      font-family: 'Lato', sans-serif; /* set fonts for header 1 */ 
-      text-align: center; /* centers header 1 */
-      font-size: 70px; /* Change to modify header1 font size */
-      margin: 20px 0px 0px 0px; /* margin sets header1 20 pixels from top */
-    }
-    h2 { 
-      color: #696969;
-      font-family: 'Economica', sans-serif; /* set fonts for header 2 */ 
-      text-align: center; /* centers header 2 */
-      font-size: 30px; /* Change to modify header1 font size */
-      margin: 0px 0px 0px 0px; /* margin none */
-    }
-    h3 {
-      color: #bbbbbb;
-      font-family: 'Kaushan Script', cursive; /* set fonts for header 3 */ 
-      text-align: left; /* makes all header3 swing to the left */
-      font-size: 20px; /* Change to modify header1 font size */
-      margin: 0px 0px 0px 0px; /* margin none */
-    }
-    a{ /* This defines the nature of all the hyperlinks */
-      text-decoration: none; /* Remove the underline of the hyperlinks */
-    }
-    footer{
-      margin: 0 auto;
-      height: 100px;
-      width: 95%;
-      border-radius: 12px;
-      color: rgb(143,250,255); /* Change to modify header 1 colors */
-      text-align: center; /* centers header 2 */
-      font-family: 'Lato', sans-serif; /* set fonts for header 1 */
-      font-size: 15px; /* Change to modify header1 font size */
-      background: -moz-linear-gradient(top, #373737, #212121);
-      background: -webkit-linear-gradient(top, #373737, #212121);
-      background: -ms-linear-gradient(top, #373737, #212121);
-      background: -o-linear-gradient(top, #373737, #212121);
-      background: linear-gradient(top, #373737, #212121);
-    }
-/* ------------ Classes (.class) ------------------*/ 
-    .myframe{
-      height: 200px;
-      width: 200px;
-      background-size: cover; 
-      position: relative; 
-      margin: 40px 0 0 0;
-      border-radius: 12px;
-    }
-    .mySlider{ /* Slider, slick */
-      border: 1px solid green; /* For debug */
-      padding: 2px;
-      width: 400px;
-      height: 200px;
-      margin: 0 auto;
-      overflow: visible;
-    }
-    .slieeederItem{
-      max-height: 200px;
-      width: auto; /* you can use % */
-    }
-    .insideTab{
-      text-align: left;
-    }
-    /* ------------ ID (#id) ------------------*/ 
-    #webmaster{ /* Profile Picture, pic, Jason */
-      height: 200px;
-      width: 200px;
-      background-size: cover;
-      background-image: url("http://taouci.com/2014SummerWebsite/BoardImages20142015/webmaster.png"); 
-      box-shadow: 10px 10px 5px #888888;
-    }
-    #wrapper {
-      border: 1px solid red; /* For debug */
-      min-height: 300px;
-      margin: 0 auto;
-
-      /*ID used for wrapping divs that I want to overlap, currently empty. */
-    }
-    /* This section is for the about me portion of this page */
-    #aboutdiv1 {  
-      border: 1px solid green; /* For debug */
-      padding-top: 10px;
-      display: inline-block;
-      min-width: 250px;
-      height:200px;
-    }
-    #aboutdiv2 {
-      padding-top: 20px;
-      width:auto;
-      max-width: 600px;
-      height:auto;
-      min-height:200px;
-      word-wrap: break-word; /* should stop words from overflowing? */ 
-      vertical-align:top;
-      display: inline-block;
-    }
-    #tabs {
-      margin: 0 auto;
-      width:98%;
-    }
-
-
-
-    @media (max-width: 500px)  {
-
-    body {
-      margin: 0 auto;
-      background-color: #D3D3D3;
-      font-size: 12px; 
-      font-family: 'Myriad Pro', Calibri, Helvetica, Arial, sans-serif;
-      /* line-height: 1.5;  Change this to modify line height in the body */ 
-      /*background: #F8F8FF;  Change to modify background color */ 
-    }
-    h1 { 
-      color: rgb(143,250,255); /* Change to modify header 1 colors */
-      font-family: 'Lato', sans-serif; /* set fonts for header 1 */ 
-      text-align: center; /* centers header 1 */
-      font-size: 35px; /* Change to modify header1 font size */
-      margin: 20px 0px 0px 0px; /* margin sets header1 20 pixels from top */
-    }
-    h2 { 
-      color: #696969;
-      font-family: 'Economica', sans-serif; /* set fonts for header 2 */ 
-      text-align: center; /* centers header 2 */
-      font-size: 20px; /* Change to modify header1 font size */
-      margin: 0px 0px 0px 0px; /* margin none */
-    }
-    header{
-      margin: 0 auto;
-      height: 70px;
-      width: 100%;
-      border-radius: 5px;
-      background: -moz-linear-gradient(top, #373737, #212121);
-      background: -webkit-linear-gradient(top, #373737, #212121);
-      background: -ms-linear-gradient(top, #373737, #212121);
-      background: -o-linear-gradient(top, #373737, #212121);
-      background: linear-gradient(top, #373737, #212121);
-    }
-    footer{
-      margin: 0 auto;
-      height: 100px;
-      width: 100%;
-      border-radius: 5px;z
-      text-align: center; /* centers header 2 */
-      font-family: 'Lato', sans-serif; /* set fonts for header 1 */
-      font-size: 12px; /* Change to modify header1 font size */
-      background: -moz-linear-gradient(top, #373737, #212121);
-      background: -webkit-linear-gradient(top, #373737, #212121);
-      background: -ms-linear-gradient(top, #373737, #212121);
-      background: -o-linear-gradient(top, #373737, #212121);
-      background: linear-gradient(top, #373737, #212121);
-    }
-    .insideTab{
-      text-align: center;
-    }
-    #aboutdiv1 {  
-      border: 1px solid green; /* For debug */
-      padding-top: 10px;
-      display: inline-block;
-      min-width: 400px;
-      height:200px;
-    }
-    #aboutdiv2 {
-      padding-top: 20px;
-      width:auto;
-      max-width: 600px;
-      height:auto;
-      min-height:200px;
-      word-wrap: break-word; /* should stop words from overflowing? */ 
-      vertical-align:top;
-      display: inline-block;
-    }
-
-
-
-
-
-
-
-
-
-
-
-
-
-    }
-  </style>
 </head>
 
-<body vlink="yellow" link="yellow">
-  <header>
-    <h1>Jason Chiu</h1>
-    <h2>Programmer. Web Developer. Animator. Producer.</h2>
-  </header>
-  <br>
-  
-  <div class="mySlider">
-    <div class="sliderItem"><a href="#"><img src="http://i.imgur.com/K0f1NVz.jpg" width="400" height="200"  alt =""></a></div>
-    <div class="sliderItem"><a href="#"><img src="http://i.imgur.com/UwtD6WI.jpg" width="400" height="200"  alt =""></a></div>
-    <div class="sliderItem"><a href="#"><img src="http://i.imgur.com/PgCKVzx.jpg" width="400" height="200"  alt =""></a></div>
-    <div class="sliderItem"><a href="#"><img src="http://i.imgur.com/K0f1NVz.jpg" width="400" height="200"  alt =""></a></div>
-    <div class="sliderItem"><a href="#"><img src="http://i.imgur.com/UwtD6WI.jpg" width="400" height="200"  alt =""></a></div>
-    <div class="sliderItem"><a href="#"><img src="http://i.imgur.com/PgCKVzx.jpg" width="400" height="200"  alt =""></a></div>
-  </div>
-  <br>
-  <br>
+<body>
+ 
 
-  <div id="tabs">
-    <ul>
-      <li><a href="#tabs-1">About</a></li>
-      <li><a href="#tabs-2">Resume</a></li>
-      <li><a href="#tabs-3">Projects</a></li>
-      <li><a href="#tabs-4">Contact</a></li>
-    </ul>
-    <div id="tabs-1">
-      <div class="about">
-   <h2 id="s1" class="insideTab">About Jason</h2>
-        <div id="wrapper">
-          <div id="aboutdiv1">
-            <div id="webmaster">
-              <div class="frame">
-              </div>
-            </div>
-          </div>
-          <div id="aboutdiv2">
-          I'm Jason, and this is my simple description. I'm Jason, and this is my simple description. I'm Jason, and this is my simple description. I'm Jason, and this is my simple description. I'm Jason, and this is my simple description. I'm Jason, and this is my simple description. I'm Jason, and this is my simple description.
-          </div>
-        </div>
-      </div>
-    </div>
-    <div id="tabs-2"> 
-      <p>
-        Skills: <br>
-        Experience: <br>
-      </p>
-      <br>
-      <div>
-        <p><a href="#" id="dialog-link2" class="ui-state-default ui-corner-all">View my resume!</a></p>
-      </div>
-      <br>
-      <p> <a href="#">Alternatively, you may download it in PDF form here. </a> <p>
-    </div>
-  <!-- Projects! -->
-    <div id="tabs-3"> Click on each project to learn more! 
-    </div>
-  <!-- CONTACT ME -->
-    <div id="tabs-4">
-      <p> You can reach me at jchiu5@uci.edu, I check my email daily! Be sure to include your full name in the email. <br>
-          Please connect with me on LinkedIn here: <br>
-          Readyforce here:
-      </p>
-    </div>
+<div id="home">
+
+<div class="fixedheader">
+<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+<div class="m1 menu">
+<div class="navbar-inner">
+<div class="container">
+                      <h1>Jason Chiu</h1>
+                      <h2>Programmer. Developer.</h2>
+                      <h3>Summoner and Questing Adventurer</h3>
+            <ul class="nav nav-pills navbar-right">
+                <li><a class="active" href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Experience</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#Contact">Contact</a></li>
+                <li><a href="#">Blog</a></li>
+            </ul>
+</div>
+</div>
+</div>
+</nav>
+</div>
+
+<div class="col-lg-3">
+  <h4>Avout </h4>
   </div>
-<!-- Sample button usage -->
-<!-- FOOTER  -->
-    <br>
-    <br>
+
+
+
+
+
+
+
+
+
+
+
   <footer>
     <br>
     <p class="copyright">This website is maintained by Jason Chiu, @github: <a href="https://github.com/foreza">foreza</a></p>
@@ -301,54 +76,62 @@
   </footer>
  
 
+</body>
+
+
 <!-- We'll be using this copy of jQuery for the smoothScroll  -->
 <!-- Note: 2.1.1 is incompatible with IE 6/7/8, but oh well! -->
 <script type='text/javascript' src='http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js'></script>
-<script src="/jqueryui/jquery-ui.js"></script>
-<script>
-$( "#tabs" ).tabs();
-/* Dialogue JS, have one for each popup window and clearly label! */
-$( "#dialog" ).dialog({
-autoOpen: false,
-width: 400,
-buttons: [
-{
-text: "Close Window",
-click: function() {
-$( this ).dialog( "close" );
-}
-}
-]
+
+
+<!-- Begin javascript for smoothscroll and dynamic active class -->
+<!-- Credits: http://jsfiddle.net/Dxtyu/140/ -->
+<script>  
+$(document).ready(function () {
+    $(document).on("scroll", onScroll);
+    
+    //smoothscroll
+    $('a[href^="#"]').on('click', function (e) {
+        e.preventDefault();
+        $(document).off("scroll");
+        
+        $('a').each(function () {
+            $(this).removeClass('active');
+        })
+        $(this).addClass('active');
+      
+        var target = this.hash,
+            menu = target;
+        $target = $(target);
+        $('html, body').stop().animate({
+            'scrollTop': $target.offset().top
+        }, 500, 'swing', function () {
+            window.location.hash = target;
+            $(document).on("scroll", onScroll);
+        });
+    });
 });
-/* This dialogue is the one for the "about page" and deals with the resume showing/hiding. */
-$( "#dialog2" ).dialog({
-autoOpen: false,
-width: 400,
-buttons: [
-{
-text: "Close Window",
-click: function() {
-$( this ).dialog( "close" );
+
+
+function onScroll(event){
+    var scrollPos = $(document).scrollTop();
+    $('.navbar-inner a').each(function () {
+        var currLink = $(this);
+        var refElement = $(currLink.attr("href"));
+        if (refElement.position().top <= scrollPos && refElement.position().top + refElement.height() > scrollPos) {
+            currLink.addClass("active");
+        }
+        else{
+            currLink.removeClass("active");
+        }
+    });
 }
-},
-{
-text: "Download PDF:",
-click: function() {
-$( this ).dialog( "close" );
-}
-}  
-]
-});
-// Link to open the dialog, make one for each button. 
-$( "#dialog-link" ).click(function( event ) {
-$( "#dialog" ).dialog( "open" );
-event.preventDefault();
-});
-$( "#dialog-link2" ).click(function( event ) {
-$( "#dialog2" ).dialog( "open" );
-event.preventDefault();
-});
+
 </script>
+
+
+
+
 <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
 <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
 <script type="text/javascript" src="/slick-master/slick/slick.min.js"></script>     
