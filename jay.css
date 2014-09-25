@@ -57,6 +57,12 @@ body {
       background: linear-gradient(top, #373737, #212121);
     }
 /* ------------ Classes (.class) ------------------*/ 
+    .bogus{
+      height:130px;
+      width:100%;
+    }
+
+
     .myframe{
       height: 200px;
       width: 200px;
