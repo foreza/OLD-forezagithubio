@@ -1,7 +1,6 @@
 body {
       margin: 0 auto;
-       background-color: #D3D3D3;
-      font-size: 16px; 
+      font-size: 22px; 
       font-family: 'Myriad Pro', Calibri, Helvetica, Arial, sans-serif;
       /* line-height: 1.5;  Change this to modify line height in the body */ 
       /*background: #F8F8FF;  Change to modify background color */ 
@@ -10,7 +9,6 @@ body {
       header{
       margin: 0 auto;
       height: 130px;
-      width: 95%;
       border-radius: 12px;
       background: -moz-linear-gradient(top, #373737, #212121);
       background: -webkit-linear-gradient(top, #373737, #212121);
@@ -31,7 +29,7 @@ body {
       color: #696969;
       font-family: 'Economica', sans-serif; /* set fonts for header 2 */ 
       text-align: center; /* centers header 2 */
-      font-size: 30px; /* Change to modify header1 font size */
+      font-size: 50px; /* Change to modify header1 font size */
       margin: 0px 0px 0px 0px; /* margin none */
     }
     h3 {
@@ -47,7 +45,6 @@ body {
     footer{
       margin: 0 auto;
       height: 100px;
-      width: 95%;
       border-radius: 12px;
       color: rgb(143,250,255); /* Change to modify header 1 colors */
       text-align: center; /* centers header 2 */
@@ -100,6 +97,19 @@ body {
 
     }
 
+    #about{
+        height: 500px;
+    } 
+
+    #experience{
+      height: 500px;
+
+    } 
+
+    #resume{
+      height: 300px;
+
+    }
     #navBarAllocation{
     	height: 200px;
     }
