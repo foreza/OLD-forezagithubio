@@ -1,5 +1,6 @@
 body {
       margin: 0 auto;
+      background-color: rgb(240,240,240); 
       font-size: 22px; 
       font-family: 'Myriad Pro', Calibri, Helvetica, Arial, sans-serif;
       /* line-height: 1.5;  Change this to modify line height in the body */ 
@@ -17,7 +18,10 @@ body {
       background: linear-gradient(top, #373737, #212121);
 
     }
-    p{} 
+    p{
+        background-color: rgb(200,200,200);
+
+    } 
     h1 { 
       color: rgb(143,250,255); /* Change to modify header 1 colors */
       font-family: 'Economica', sans-serif; /* set fonts for header 1 */ 
@@ -62,6 +66,12 @@ body {
       width:100%;
     }
 
+    .constrain80{
+      width:80%;
+
+    }
+
+    .
 
     .myframe{
       height: 200px;
