@@ -18,8 +18,12 @@ body {
       background: linear-gradient(top, #373737, #212121);
 
     }
-    p{
+    p{  
+        font-family: 'Economica', sans-serif; /* set fonts for header 1 */ 
         background-color: rgb(200,200,200);
+        border-radius: 5px;
+        padding: 10px;
+
 
     } 
     h1 { 
@@ -62,16 +66,13 @@ body {
     }
 /* ------------ Classes (.class) ------------------*/ 
     .bogus{
-      height:130px;
+      height:200px;
       width:100%;
     }
 
     .constrain80{
       width:80%;
-
     }
-
-    .
 
     .myframe{
       height: 200px;
