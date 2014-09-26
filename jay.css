@@ -39,7 +39,7 @@ body {
       text-align: center; /* centers header 2 */
       font-size: 50px; /* Change to modify header1 font size */
       margin: 0px 0px 0px 0px; /* margin none */
-      margin-bottom: 10px;
+      margin-bottom: 10px; 
     }
     h3 {
       color: #bbbbbb;
@@ -126,7 +126,7 @@ body {
     } 
 
     #resume{
-      height: 300px;
+      height: 400px;
 
     }
     #navBarAllocation{
