@@ -39,6 +39,7 @@ body {
       text-align: center; /* centers header 2 */
       font-size: 50px; /* Change to modify header1 font size */
       margin: 0px 0px 0px 0px; /* margin none */
+      margin-bottom: 10px;
     }
     h3 {
       color: #bbbbbb;
@@ -71,6 +72,7 @@ body {
     }
 
     .constrain80{
+      margin: 0 auto;
       width:80%;
     }
 
@@ -162,6 +164,7 @@ body {
       text-align: left; /* centers header 2 */
       font-size: 20px; /* Change to modify header1 font size */
       margin: 0px 0px 0px 0px; /* margin none */
+      margin-bottom: 10px;
     }
     header{
       margin: 0 auto;
