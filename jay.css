@@ -21,8 +21,15 @@ body {
     p{  
         font-family: 'Economica', sans-serif; /* set fonts for header 1 */ 
         font-size: 18px;
-        min-height: 600px;
+        min-height: 400px;
+        line-height: 20px;
+        text-align: justify;
     } 
+    .pold
+    {
+        font-size: 24px;
+    }
+
     h1 { 
       color: rgb(143,250,255); /* Change to modify header 1 colors */
       font-family: 'Economica', sans-serif; /* set fonts for header 1 */ 
