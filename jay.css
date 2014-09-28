@@ -21,7 +21,8 @@ body {
     p{  
         font-family: 'Economica', sans-serif; /* set fonts for header 1 */ 
         font-size: 20px;
-        min-height: 400px;
+        min-height: 600px;
+
     }
 
     h1 { 
@@ -48,14 +49,9 @@ body {
     }
 
     h4 {
-
       color: #696969;
       font-family: 'Economica', sans-serif;
       font-size: 30px;
-
-
-
-
     }
     a{ /* This defines the nature of all the hyperlinks */
       text-decoration: none; /* Remove the underline of the hyperlinks */
