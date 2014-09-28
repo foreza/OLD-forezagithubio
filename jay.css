@@ -20,13 +20,12 @@ body {
     }
     p{  
         font-size: 20px;
-        min-height: 500px;
+        height: 500px;
         font-family: 'Open Sans', sans-serif;
     }
 
     p .pod
     {
-    min-height:300px;
     height: 300px;
     }
 
