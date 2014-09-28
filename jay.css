@@ -20,14 +20,10 @@ body {
     }
     p{  
         font-family: 'Economica', sans-serif; /* set fonts for header 1 */ 
-        font-size: 18px;
+        font-size: 20px;
         min-height: 400px;
         line-height: 20px;
         text-align: justify;
-    } 
-    .pold
-    {
-        font-size: 24px;
     }
 
     h1 { 
@@ -51,6 +47,17 @@ body {
       text-align: left; /* makes all header3 swing to the left */
       font-size: 20px; /* Change to modify header1 font size */
       margin: 0px 0px 0px 0px; /* margin none */
+    }
+
+    h4 {
+
+      color: #696969;
+      font-family: 'Economica', sans-serif;
+      font-size: 30px;
+
+
+
+
     }
     a{ /* This defines the nature of all the hyperlinks */
       text-decoration: none; /* Remove the underline of the hyperlinks */
