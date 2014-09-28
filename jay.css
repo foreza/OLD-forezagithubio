@@ -21,6 +21,7 @@ body {
     p{  
         font-family: 'Economica', sans-serif; /* set fonts for header 1 */ 
         font-size: 18px;
+        min-height: 600px;
     } 
     h1 { 
       color: rgb(143,250,255); /* Change to modify header 1 colors */
@@ -69,14 +70,13 @@ body {
 
     .greyLay{
       border-radius: 5px;
-      padding: 10px;
+      padding: 15px;
       background-color: rgb(200,200,200);
     }
 
     .constrain80{
       margin: 0 auto;
       width:80%;
-      max-height: 800px;
     }
 
     .myframe{
