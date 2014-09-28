@@ -20,7 +20,6 @@ body {
     }
     p{  
         font-family: 'Economica', sans-serif; /* set fonts for header 1 */ 
-        background-color: rgb(200,200,200);
         border-radius: 5px;
         padding: 10px;
 
@@ -74,6 +73,8 @@ body {
     .constrain80{
       margin: 0 auto;
       width:80%;
+      background-color: rgb(200,200,200);
+      max-height: 800px;
     }
 
     .myframe{
