@@ -22,8 +22,6 @@ body {
         font-family: 'Economica', sans-serif; /* set fonts for header 1 */ 
         border-radius: 5px;
         padding: 10px;
-
-
     } 
     h1 { 
       color: rgb(143,250,255); /* Change to modify header 1 colors */
@@ -70,10 +68,13 @@ body {
       width:100%;
     }
 
+    .greyLay{
+      background-color: rgb(200,200,200);
+    }
+
     .constrain80{
       margin: 0 auto;
       width:80%;
-      background-color: rgb(200,200,200);
       max-height: 800px;
     }
 
