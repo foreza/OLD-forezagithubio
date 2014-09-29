@@ -24,12 +24,12 @@ body {
         font-family: 'Open Sans', sans-serif;
     }
 
-    p .oversize
+    p.oversize
     {
     height: 1000px;
 
     }
-    p .pod
+    p.pod
     {
     height: 500px;
     }
