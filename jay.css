@@ -25,12 +25,12 @@ body {
 
     p .oversize
     {
-    height: 650px;
+    min-height: 650px;
 
     }
     p .pod
     {
-    height: 500px;
+    min-height: 500px;
     }
 
     h1 { 
