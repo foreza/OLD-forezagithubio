@@ -19,18 +19,19 @@ body {
 
     }
     p{  
+        height: 0px;
         font-size: 20px;
         font-family: 'Open Sans', sans-serif;
     }
 
     p .oversize
     {
-    min-height: 650px;
+    height: 1000px;
 
     }
     p .pod
     {
-    min-height: 500px;
+    height: 500px;
     }
 
     h1 { 
