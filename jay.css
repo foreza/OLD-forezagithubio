@@ -26,12 +26,12 @@ body {
 
     p.oversize
     {
-    height: 530px;
+    height: 510px;
 
     }
     p.pod
     {
-    height: 300px;
+    height: 200px;
     }
 
     h1 { 
@@ -141,7 +141,7 @@ body {
     } 
 
     #experience{
-      height: 500px;
+      height: 800px;
 
     } 
 
