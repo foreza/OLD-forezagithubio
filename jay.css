@@ -9,7 +9,7 @@ body {
 
   body::after{
 background: url("images/bg.jpg");
-  opacity: 0.5;
+  opacity: 0.2;
   top: 0;
   left: 0;
   bottom: 0;
