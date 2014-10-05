@@ -1,7 +1,7 @@
 body {
       margin: 0 auto;
-      background-color: rgb(240,240,240); 
-      font-size: 22px; 
+      background-color: #3A3A3A; 
+      font-size: 18px; 
       font-family: 'Myriad Pro', Calibri, Helvetica, Arial, sans-serif;
       /* line-height: 1.5;  Change this to modify line height in the body */ 
       /*background: #F8F8FF;  Change to modify background color */ 
@@ -35,10 +35,10 @@ body {
     }
 
     h1 { 
-      color: rgb(143,250,255); /* Change to modify header 1 colors */
+      color: gray; /* Change to modify header 1 colors */
       font-family: 'Economica', sans-serif; /* set fonts for header 1 */ 
       text-align: center; /* centers header 1 */
-      font-size: 70px; /* Change to modify header1 font size */
+      font-size: 50px; /* Change to modify header1 font size */
       margin: 20px 0px 0px 0px; /* margin sets header1 20 pixels from top */
     }
     h2 { 
@@ -60,7 +60,7 @@ body {
     h4 {
       color: #696969;
       font-family: 'Economica', sans-serif;
-      font-size: 30px;
+      font-size: 20px;
     }
     a{ /* This defines the nature of all the hyperlinks */
       text-decoration: none; /* Remove the underline of the hyperlinks */
