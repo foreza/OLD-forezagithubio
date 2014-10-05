@@ -138,7 +138,7 @@ background: url("images/bg.jpg") no-repeat center center fixed;
     }
     /* ------------ ID (#id) ------------------*/ 
     #about{
-        height: 570px;
+        height: 500px;
         border: 10px;
         border-style: solid;
         border-color: red;
