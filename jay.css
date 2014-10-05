@@ -7,6 +7,19 @@ body {
       /*background: #F8F8FF;  Change to modify background color */ 
     }
 
+  body::after{
+background: url("images/bg.jpg");
+  opacity: 0.5;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  position: absolute;
+  z-index: -1;  
+  content: "";
+
+  }
+
       header{
       margin: 0 auto;
       height: 130px;
@@ -31,7 +44,7 @@ body {
     }
     p.pod
     {
-    height: 150px;
+    height: 120px;
     }
 
     fontastic{
