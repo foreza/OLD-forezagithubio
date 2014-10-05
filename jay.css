@@ -34,6 +34,12 @@ body {
     height: 200px;
     }
 
+    fontastic{
+      font-family: 'Myriad Pro', Calibri, Helvetica, Arial, sans-serif;
+      font-size: 30px;
+      text-align: justify;
+    }
+
     h1 { 
       color: gray; /* Change to modify header 1 colors */
       font-family: 'Economica', sans-serif; /* set fonts for header 1 */ 
@@ -42,10 +48,10 @@ body {
       margin: 20px 0px 0px 0px; /* margin sets header1 20 pixels from top */
     }
     h2 { 
-      color: #696969;
+      color: #F0F0F0;
       font-family: 'Economica', sans-serif; /* set fonts for header 2 */ 
       text-align: center; /* centers header 2 */
-      font-size: 50px; /* Change to modify header1 font size */
+      font-size: 40px; /* Change to modify header1 font size */
       margin: 0px 0px 0px 0px; /* margin none */
       margin-bottom: 10px; 
     }
@@ -81,19 +87,19 @@ body {
     }
 /* ------------ Classes (.class) ------------------*/ 
     .bogus{
-      height:200px;
+      height:150px;
       width:100%;
     }
 
     .greyLay{
       border-radius: 5px;
       padding: 15px;
-      background-color: rgb(200,200,200);
+      background-color: #EFEFEF;
     }
 
     .constrain80{
       margin: 0 auto;
-      width:90%;
+      width:85%;
     }
 
     .myframe{
@@ -172,14 +178,13 @@ body {
       /*background: #F8F8FF;  Change to modify background color */ 
     }
     h1 { 
-      color: rgb(143,250,255); /* Change to modify header 1 colors */
       font-family: 'Lato', sans-serif; /* set fonts for header 1 */ 
       text-align: left; /* lwft header 1 */
       font-size: 35px; /* Change to modify header1 font size */
       margin: 20px 0px 0px 0px; /* margin sets header1 20 pixels from top */
     }
     h2 { 
-      color: #696969;
+      color: #F0F0F0;
       font-family: 'Economica', sans-serif; /* set fonts for header 2 */ 
       text-align: left; /* centers header 2 */
       font-size: 20px; /* Change to modify header1 font size */
@@ -211,6 +216,8 @@ body {
       background: -o-linear-gradient(top, #373737, #212121);
       background: linear-gradient(top, #373737, #212121);
     }
+
+
     li {
 		font-family: 'Economica', sans-serif;
 
