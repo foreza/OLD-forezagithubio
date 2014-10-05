@@ -44,9 +44,9 @@ body {
       color: gray; /* Change to modify header 1 colors */
       font-family: 'Economica', sans-serif; /* set fonts for header 1 */ 
       text-align: left; /* centers header 1 */
-      font-size: 60px; /* Change to modify header1 font size */
+      font-size: 70px; /* Change to modify header1 font size */
       margin: 20px; /* margin sets header1 20 pixels from top */
-      word-spacing: 5px;
+      word-spacing: 15px;
     }
     h2 { 
       max-width: 40%;
