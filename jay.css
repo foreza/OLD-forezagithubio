@@ -138,7 +138,7 @@ background: url("images/bg.jpg") no-repeat center center fixed;
     }
     /* ------------ ID (#id) ------------------*/ 
     #about{
-        height: 400px;
+        height: 430px;
         border: 10px;
         border-style: solid;
         border-color: red;
@@ -223,6 +223,6 @@ background: url("images/bg.jpg") no-repeat center center fixed;
 		font-family: 'Economica', sans-serif;
 
     }
-
+}
 
 
