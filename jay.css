@@ -36,8 +36,15 @@ body {
 
     fontastic{
       font-family: 'Myriad Pro', Calibri, Helvetica, Arial, sans-serif;
-      font-size: 30px;
+      font-size: 40px;
+      font-weight: 700px;
+      letter-spacing: 3px;
       text-align: justify;
+    }
+
+    centrolink{
+      margin: 0 auto;
+
     }
 
     h1 { 
