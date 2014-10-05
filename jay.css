@@ -113,44 +113,13 @@ body {
       margin: 40px 0 0 0;
       border-radius: 12px;
     }
-    .mySlider{ /* Slider, slick */
-      border: 1px solid green; /* For debug */
-      padding: 2px;
-      width: 400px;
-      height: 200px;
-      margin: 0 auto;
-      overflow: visible;
-    }
-    .slieeederItem{
-      max-height: 200px;
-      width: auto; /* you can use % */
-    }
-    .insideTab{
-      text-align: left;
-    }
     /* ------------ ID (#id) ------------------*/ 
-    #webmaster{ /* Profile Picture, pic, Jason */
-      height: 200px;
-      width: 200px;
-      background-size: cover;
-      background-image: url("http://taouci.com/2014SummerWebsite/BoardImages20142015/webmaster.png"); 
-      box-shadow: 10px 10px 5px #888888;
-    }
-    #wrapper {
-      border: 1px solid red; /* For debug */
-      min-height: 300px;
-      margin: 0 auto;
-
-      /*ID used for wrapping divs that I want to overlap, currently empty. */
-
-    }
-
     #about{
-        height: 400px;
+        height: 300px;
     } 
 
     #experience{
-      height: 600px;
+      height: 400px;
 
     } 
 
