@@ -49,6 +49,7 @@ body {
       word-spacing: 5px;
     }
     h2 { 
+      max-width: 80%;
       color: #F0F0F0;
       font-family: 'Economica', sans-serif; /* set fonts for header 2 */ 
       text-align: left; /* centers header 2 */
@@ -57,6 +58,7 @@ body {
       margin-bottom: 10px; 
     }
     h3 {
+      max-width: 80%;
       color: #bbbbbb;
       font-family: 'Kaushan Script', cursive; /* set fonts for header 3 */ 
       text-align: left; /* makes all header3 swing to the left */
@@ -88,7 +90,7 @@ body {
     }
 /* ------------ Classes (.class) ------------------*/ 
     .bogus{
-      height:120px;
+      height:140px;
       width:100%;
     }
 
@@ -161,7 +163,7 @@ body {
     }
 
     #aboutMe_Section{
-    	height: 500px;
+    	height: 300px;
     	width: 90%;
     	border: 1px solid black;
     	border-radius: 5px;
