@@ -139,6 +139,7 @@ background: url("images/bg.jpg") no-repeat center center fixed;
     /* ------------ ID (#id) ------------------*/ 
     #about{
         height: 570px;
+        border: 2px red;
     } 
 
     #experience{
