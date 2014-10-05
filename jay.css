@@ -43,14 +43,15 @@ body {
     h1 { 
       color: gray; /* Change to modify header 1 colors */
       font-family: 'Economica', sans-serif; /* set fonts for header 1 */ 
-      text-align: center; /* centers header 1 */
-      font-size: 50px; /* Change to modify header1 font size */
-      margin: 20px 0px 0px 0px; /* margin sets header1 20 pixels from top */
+      text-align: left; /* centers header 1 */
+      font-size: 60px; /* Change to modify header1 font size */
+      margin: 20px; /* margin sets header1 20 pixels from top */
+      word-spacing: 5px;
     }
     h2 { 
       color: #F0F0F0;
       font-family: 'Economica', sans-serif; /* set fonts for header 2 */ 
-      text-align: center; /* centers header 2 */
+      text-align: left; /* centers header 2 */
       font-size: 40px; /* Change to modify header1 font size */
       margin: 0px 0px 0px 0px; /* margin none */
       margin-bottom: 10px; 
@@ -87,7 +88,7 @@ body {
     }
 /* ------------ Classes (.class) ------------------*/ 
     .bogus{
-      height:150px;
+      height:120px;
       width:100%;
     }
 
@@ -143,11 +144,11 @@ body {
     }
 
     #about{
-        height: 500px;
+        height: 400px;
     } 
 
     #experience{
-      height: 800px;
+      height: 600px;
 
     } 
 
@@ -156,7 +157,7 @@ body {
 
     }
     #navBarAllocation{
-    	height: 200px;
+    	height: 150px;
     }
 
     #aboutMe_Section{
