@@ -26,7 +26,7 @@ body {
 
     p.oversize
     {
-    height: 300px;
+    height: 270px;
 
     }
     p.pod
@@ -57,7 +57,7 @@ body {
       margin-bottom: 10px; 
     }
     h3 {
-      max-width: 40%;
+      max-width: 30%;
       color: #bbbbbb;
       font-family: 'Kaushan Script', cursive; /* set fonts for header 3 */ 
       font-size: 20px; /* Change to modify header1 font size */
@@ -113,7 +113,7 @@ body {
     }
     /* ------------ ID (#id) ------------------*/ 
     #about{
-        height: 300px;
+        height: 270px;
     } 
 
     #experience{
@@ -129,12 +129,6 @@ body {
     	height: 150px;
     }
 
-    #aboutMe_Section{
-    	height: 300px;
-    	width: 90%;
-    	border: 1px solid black;
-    	border-radius: 5px;
-    }
     /* This section is for the about me portion of this page */
 
     @media (max-width: 500px)  {
