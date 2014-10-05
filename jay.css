@@ -31,7 +31,7 @@ body {
     }
     p.pod
     {
-    height: 200px;
+    height: 150px;
     }
 
     fontastic{
@@ -93,7 +93,7 @@ body {
     }
 
     .greyLay{
-      border-radius: 5px;
+      border-radius: 15px;
       padding: 15px;
       background-color: #EFEFEF;
     }
@@ -117,7 +117,7 @@ body {
     } 
 
     #experience{
-      height: 400px;
+      height: 300px;
 
     } 
 
