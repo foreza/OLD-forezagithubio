@@ -51,6 +51,10 @@ body {
     {
     height: 90px;
     }
+    p.end
+    {
+      height:50px;
+    }
 
     fontastic{
       font-family: 'Myriad Pro', Calibri, Helvetica, Arial, sans-serif;
