@@ -146,31 +146,22 @@ body {
     #about{
 
         height: 430px;
-        border: 10px;
-        border-style: solid;
-        border-color: red;
+
     } 
 
     #experience{
       height: 500px;
-         border: 10px;
-         border-style: solid;
-        border-color: green;
 
     } 
 
     #resume{
       height: 400px;
-         border: 10px;
-         border-style: solid;
-        border-color: blue;
+
 
     }
     #navBarAllocation{
     	height: 150px;
-         border: 10px;
-         border-style: solid;
-        border-color: yellow;
+
     }
 
     /* This section is for the about me portion of this page */
