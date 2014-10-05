@@ -152,6 +152,7 @@ body {
     }
 
     #about{
+      opacity: 1;
         height: 430px;
         border: 10px;
         border-style: solid;
