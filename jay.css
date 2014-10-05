@@ -2,6 +2,15 @@ body {
       margin: 0 auto;
       background-color: #3A3A3A; 
       background: url("images/bg.jpg") no-repeat center center fixed; 
+        -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  opacity: 0.2;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
       font-size: 16px; 
       font-family: 'Myriad Pro', Calibri, Helvetica, Arial, sans-serif;
       /* line-height: 1.5;  Change this to modify line height in the body */ 
