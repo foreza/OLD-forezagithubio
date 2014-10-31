@@ -222,6 +222,29 @@ body {
 
     }
 
+
+    #resume-Banner {
+margin: 0 auto;
+width: 50%;
+height:auto;
+}  
+
+#resumeBannerImage
+{
+height: 100%;
+width: 100%;
+margin: 0 auto;
+
+}
+
+#resumeButton
+{
+margin: 0 auto;
+margin-bottom: -100px;
+width: 100%;
+height: 40px;
+}
+
 }
 
 
