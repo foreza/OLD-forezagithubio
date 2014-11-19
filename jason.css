@@ -41,6 +41,15 @@ img{
 }
 
 
+}
 
-  	}
+  @media (max-width: 480px)  {
 
+.navSpec
+{
+
+	font-size: 20px;
+}
+
+}
+ 
