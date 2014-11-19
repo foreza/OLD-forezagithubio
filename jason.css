@@ -24,7 +24,12 @@ h4
 }
 
 
-  @media (max-width: 600px)  {
+  @media (max-width: 800px)  {
+
+#elementSmall{
+	margin: 0 auto;
+	margin-top: 200px;
+}
 
 #centerSmall{ /* Applies to only text to center it, resizing can be done elsewhere */
 	text-align: center;
