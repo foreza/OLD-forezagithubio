@@ -32,7 +32,7 @@ img{
 
   @media (max-width: 800px)  {
 
-.navbar-brand{
+img.hidden{
 	display: none;
 }
 
