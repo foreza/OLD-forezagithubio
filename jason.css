@@ -24,6 +24,11 @@ h4
 }
 
 
+img{
+	 border-style: solid;
+    border-color: #0000ff;
+}
+
   @media (max-width: 800px)  {
 
 #elementSmall{
@@ -38,3 +43,4 @@ h4
 
 
   	}
+
