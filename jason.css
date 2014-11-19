@@ -10,3 +10,20 @@ border-radius: 12px;
 	margin: 0 auto;
 	width: 90%;
 }
+
+h3
+{
+	margin: 0 auto;
+}
+
+
+  @media (max-width: 600px)  {
+
+#centerSmall{
+	margin: 0 auto;
+	text-align: center;
+}
+
+
+
+  	}
