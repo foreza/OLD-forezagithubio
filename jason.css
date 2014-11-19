@@ -3,6 +3,7 @@
 #headerImg
 {
 border-radius: 12px;
+margin-bottom: 10px;
 }
 
 .center90
@@ -31,6 +32,10 @@ img{
 
   @media (max-width: 800px)  {
 
+.navbar-brand{
+	display: none;
+}
+
 #elementSmall{
 	margin: 0 auto;
 	margin-top: 200px;
@@ -40,16 +45,17 @@ img{
 	text-align: center;
 }
 
+.navSpec
+{
+font-size: 40px;
+text-align: center;
+}
+
 
 }
 
   @media (max-width: 480px)  {
 
-.navSpec
-{
-
-	font-size: 30px;
-}
 
 }
  
