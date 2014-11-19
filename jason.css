@@ -24,17 +24,7 @@ h4
 	font-size: 25px;
 }
 
-
-img{
-	 border-style: solid;
-    border-color: #0000ff;
-}
-
   @media (max-width: 800px)  {
-
-img.hidden{
-	display: none;
-}
 
 #elementSmall{
 	margin: 0 auto;
