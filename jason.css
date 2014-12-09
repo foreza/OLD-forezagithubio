@@ -1,4 +1,11 @@
 
+.navSpec
+{
+font-size: 20px;
+text-align: center;
+}
+
+
 
 #headerImg
 {
@@ -14,7 +21,7 @@ margin-bottom: 10px;
 .center90
 {
 	margin: 0 auto;
-	width: 90%;
+	width: 80%;
 }
 
 h3
