@@ -5,7 +5,11 @@ font-size: 20px;
 text-align: center;
 }
 
-
+.bogus
+{
+	height: 70px;
+	width:100%;
+}
 
 #headerImg
 {
@@ -34,6 +38,16 @@ h4
 {
 
 	font-size: 25px;
+}
+
+#g1-box {
+    clear: both;
+    background: #ffcc00;
+}
+
+#g2-box {
+    clear: both;
+    background: #ff0000;
 }
 
   @media (max-width: 800px)  {

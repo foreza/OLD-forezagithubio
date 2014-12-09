@@ -62,12 +62,7 @@
         In my spare time, I enjoy climbing the ladder in League of Legends, Hearthstone arena runs, piano improvisation, and chugging down large quantities of iced coffee.<br></p>
     </div> 
    </div>
-   <div class="row">
-    <div id="resume" class="well well-sm" style="width:50%"> 
-      <a id="resume" class="btn btn-primary btn-block btn-lg" href="resume.pdf" role="button" style="width:80%" >Resume (PDF)</a>
-    </div>
-  </div>
-
+   
 
 
 <!-- 
@@ -131,30 +126,31 @@
 
 -->
 
+<div class="bogus"> <!-- using this to push down the page -->
+</div>
+
  <h1 id="gameproj">Game Projects</h1>
- <h2>Click each image to see more. </h2>
+ <h2>Click each image to see more and download the game.</h2>
 
  <div class="well well-sm"> 
 
 <div class="row">
   <div class="col-xs-12 col-md-3">
-  <div class="well well-sm"> 
     <a href="#" class="thumbnail">
-      <img src="images/hackLogo.jpg" alt="...">
+      <img id="g1-trigger" src="images/hackLogo.jpg" alt="...">
           </a>
         <div class="caption">
           <h3>Project: Blood</h3>
-          <p> I was one of the organizers for UCI's hackathon held for the first time ever - 300+ students for a 36 hour long coding event! </p>
+          <p> [PLACEHOLDER] </p>
            </div>
-        </div>
   </div>
 <div class="col-xs-12 col-md-3">
     <a href="#" class="thumbnail">
-      <img src="images/vgdc.jpg" alt="...">
+      <img id="g2-trigger" src="images/vgdc.jpg" alt="...">
           </a>
         <div class="caption">
           <h3>Project: Food Run</h3>
-          <p> As the  VP of the Video Game Development Club @ UCI, I organize and run game projects, run and assist with programming/development workshops, and host speaker events and game jams.  </p>
+          <p> [PLACEHOLDER]  </p>
       
         </div>
 
@@ -165,7 +161,7 @@
           </a>
         <div class="caption">
           <h3>Project: On with the Show! </h3>
-          <p> As the Campus Ambassador for ReadyForce, I marketed the professional networking platform to UCI students through Facebook, and represented them at the Engineering Career fair. </p>
+          <p> [PLACEHOLDER] </p>
       
         </div>
 
@@ -177,19 +173,54 @@
           </a>
         <div class="caption">
           <h3>Project: Painbuddy </h3>
-          <p> As the Campus Ambassador for ReadyForce, I marketed the professional networking platform to UCI students through Facebook, and represented them at the Engineering Career fair. </p>
+          <p> [PLACEHOLDER] </p>
+      
+        </div>
+
+  </div>
+</div>
+
+
+<div id="g1-box" class="hide">
+    <p>I'm yellow</p>
+</div>
+<div id="g2-box" class="hide">
+    <p>I'm red</p>
+</div>
+
+</div>
+
+ <div class="well well-sm"> 
+
+<div class="row">
+  <div class="col-xs-12 col-md-3">
+    <a href="#" class="thumbnail">
+      <img src="images/hackLogo.jpg" alt="...">
+          </a>
+        <div class="caption">
+          <h3>Project: Loki</h3>
+          <p> [PLACEHOLDER] </p>
+           </div>
+  </div>
+<div class="col-xs-12 col-md-3">
+    <a href="#" class="thumbnail">
+      <img src="images/vgdc.jpg" alt="...">
+          </a>
+        <div class="caption">
+          <h3>Temple Zal</h3>
+          <p> [PLACEHOLDER]  </p>
       
         </div>
 
   </div>
   
-
-
-  
+</div>
 </div>
 
-</div>
 
+
+<div class="bogus"> <!-- using this to push down the page -->
+</div>
 
  <h1 id="otherproj">Other Projects, Work Experience</h1>
  <h2>Click each image to learn more.</h2>
@@ -231,9 +262,14 @@
 </div>
 </div>
 
+<div class="bogus"> <!-- using this to push down the page -->
+</div>
 
-
-
+<div class="row"> <!-- putting resume near the bottom -->
+    <div id="resume" class="well well-sm" style="width:50%"> 
+      <a id="resume" class="btn btn-primary btn-block btn-lg" href="resume.pdf" role="button" style="width:80%" > Download Resume (PDF)</a>
+    </div>
+  </div>
 
 
 
@@ -241,4 +277,21 @@
 
 
 
+
 </body>
+
+$(document).ready(function () {
+    $('#g1-trigger').click(function () {
+        $('#g2-box').hide();
+        $('#g3-box').hide();
+        $('#g4-box').hide();
+        $('#g1-box').fadeIn('slow');
+    });
+
+     $('#g2-trigger').click(function () {
+        $('#g1-box').hide();
+        $('#g3-box').hide();
+        $('#g4-box').hide();
+        $('#g2-box').fadeIn('slow');
+    });
+});
