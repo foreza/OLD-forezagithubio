@@ -33,10 +33,10 @@
 <script type='text/javascript' src='http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js'></script>
 
 
-  <nav class="navbar navbar-inverse navbar-fixed-top constrain80" role="navigation">
+  <nav class="navbar navbar-inverse navbar-fixed-top center90" role="navigation">
   <div class="container-fluid">
     <div class="navbar-header">
-       <ul class="nav navbar-nav">
+       <ul class="nav navbar-nav ">
        <li><a class="navbar-brand" href="#">
         <img class="hidden" alt="Brand" src="images/omu.jpg"></a></li>
         <li><a class="navSpec" href="#">About</a></li>
@@ -51,7 +51,7 @@
 </nav>
 
 
-<div class="jumbotron center90"><br>
+<div class="jumbotron"><br>
 
   <div class="row"> <!-- Intro  row! -->
     <div class="col-xs-12 col-md-4"> <!-- Image Div -->
@@ -73,13 +73,12 @@
 </div>
 
  <h1>Game Projects</h1>
- <h2>Click each image to see more and download the game.</h2>
 
  <div class="well well-sm"> 
 
 <div class="row">
-  <div id="g1-trigger" class="col-xs-12 col-md-3">
-    <a href="#g1-box" class="thumbnail">
+  <div class="col-xs-12 col-md-3">
+    <a href="#gameproj" class="thumbnail">
       <img src="images/hackLogo.jpg" alt="...">
           </a>
         <div class="caption">
@@ -87,8 +86,8 @@
           <p> [PLACEHOLDER] </p>
            </div>
   </div>
-<div id="g2-trigger" class="col-xs-12 col-md-3">
-    <a href="#g2-box" class="thumbnail">
+<div class="col-xs-12 col-md-3">
+    <a href="#gameproj" class="thumbnail">
       <img src="images/vgdc.jpg" alt="...">
           </a>
         <div class="caption">
@@ -99,7 +98,7 @@
 
   </div>
   <div class="col-xs-12 col-md-3">
-    <a href="#" class="thumbnail">
+    <a href="#gameproj" class="thumbnail">
       <img src="images/moreready.jpg" alt="...">
           </a>
         <div class="caption">
@@ -111,7 +110,7 @@
   </div>
 
   <div class="col-xs-12 col-md-3">
-    <a href="#" class="thumbnail">
+    <a href="#gameproj" class="thumbnail">
       <img src="images/moreready.jpg" alt="...">
           </a>
         <div class="caption">
@@ -123,41 +122,14 @@
   </div>
 </div>
 
-<div class="row">
-<div id="g1-box" class="">
-   <div class="well well-sm"> 
-
-  <div class="row">
-    <div id="project1" class="col-xs-12 col-md-12">
-      <a href="" class="thumbnail">
-       <img src="images/hackLogo.jpg" alt="...">
-           </a>
-         <div class="caption">
-           <h3>Project: Blood</h3>
-           <p> <p>BLOOD IS FUN.</p> </p>
-             </div>
-  </div>
+<div id="gameproj2" class="bogus"> <!-- using this to push down the page -->
 </div>
-</div> 
-</div>
-
-<div id="g2-box" class="">
-    <p>FOOD FIGHT!</p>
-</div>
-</div>
-
-
-</div>
-
-
-
-
 
  <div class="well well-sm"> 
 
 <div class="row">
   <div class="col-xs-12 col-md-3">
-    <a href="#" class="thumbnail">
+    <a href="#gameproj2" class="thumbnail">
       <img src="images/hackLogo.jpg" alt="...">
           </a>
         <div class="caption">
@@ -242,22 +214,6 @@
 <script type='text/javascript' src='http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js'></script>
 
 <script> 
-
-$(document).ready(function () {
-    $('#g1-trigger').click(function () {
-        $('#g2-box').hide();
-        $('#g3-box').hide();
-        $('#g4-box').hide();
-        $('#g1-box').fadeIn('slow');
-    });
-
-     $('#g2-trigger').click(function () {
-        $('#g1-box').hide();
-        $('#g3-box').hide();
-        $('#g4-box').hide();
-        $('#g2-box').fadeIn('slow');
-    });
-});
 
 </script>
 </body>
