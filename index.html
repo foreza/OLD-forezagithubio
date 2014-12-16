@@ -227,14 +227,16 @@
 <script>
   $(document).ready(function(){
   $("gameProj1").click(function(){
-    $("#gameproj").fadeIn();
-    $("#gameproj").fadeIn("slow");
-    $("#gameproj").fadeIn(3000);
+    $("#game1").fadeIn();
+    $("#game1").fadeIn("slow");
+    $("#game1").fadeIn(3000);
+    $("#game2").fadeOut();
   });
   $("gameProj2").click(function(){
-    $("#gameproj2").fadeIn();
-    $("#gameproj2").fadeIn("slow");
-    $("#gameproj2").fadeIn(3000);
+    $("#game2").fadeIn();
+    $("#game2").fadeIn("slow");
+    $("#game2").fadeIn(3000);
+    $("#game1").fadeOut();
   });
 });
 
