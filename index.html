@@ -32,6 +32,25 @@ var allElements = [] // Array of all elements on the pages.
 allElements.push("#game1")
 allElements.push("#game2")
 
+function reply_click(clicked_id)
+{
+ for(var i = 0; i < allElements.length; i++)
+    {
+      $(allElements[i]).fadeOut(); // fades out all elements in case multiple are open.
+    }
+
+    var getID = "gamewindow_" + ((clicked_id).split("_"))[1] 
+    // gets the id of the button, should be of the format game_1, game_2.. etc
+    // then splits it into an array with game and number
+    // accesses the second element which should be the number
+
+    $(getID).fadeIn();
+    $(getID).fadeIn("slow");
+    $(getID).fadeIn(3000);
+
+}
+
+/*
   $(document).ready(function(){
   $("#gameProj1").click(function(){
 
@@ -57,6 +76,8 @@ allElements.push("#game2")
     $("#game2").fadeIn(3000);
   });
 });
+*/
+
 </script>
 </head>
 
@@ -105,7 +126,7 @@ allElements.push("#game2")
 
 <div class="row">
   <div class="col-xs-12 col-md-3">
-    <a id="gameProj1" href="#gameproj" class="thumbnail">
+    <a id="game_1" href="#gameproj" class="thumbnail" onClick="reply_click(this.id)">
       <img src="images/hackLogo.jpg" alt="...">
           </a>
         <div class="caption">
@@ -114,7 +135,7 @@ allElements.push("#game2")
            </div>
   </div>
 <div class="col-xs-12 col-md-3">
-    <a id="gameProj2" href="#gameproj" class="thumbnail">
+    <a id="game_2" href="#gameproj" class="thumbnail" onClick="reply_click(this.id)">
       <img src="images/vgdc.jpg" alt="...">
           </a>
         <div class="caption">
@@ -149,14 +170,14 @@ allElements.push("#game2")
   </div>
 </div>
 
-<div id="game1" class="row descBox" style= "display:none; background-color:red;" > <!-- style= "display:none; background-color:red;" -->
+<div id="gamewindow_1" class="row descBox" style= "display:none; background-color:red;" > <!-- style= "display:none; background-color:red;" -->
  <h3>THIS IS PROJECT BLOOD</h3>
 
  <p> and this is a placeholder for more content, imags, and happiness </p>
 
 </div>
 
-<div id="game2" class="row descBox" style= "display:none; background-color:blue;">
+<div id="gamewindow_2" class="row descBox" style= "display:none; background-color:blue;">
  <h3>THIS IS PROJECT food run</h3>
 
  <p> and this is a placeholder for more content, imags, and happiness </p>
