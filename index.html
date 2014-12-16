@@ -72,7 +72,7 @@
 
 <div class="row">
   <div class="col-xs-12 col-md-3">
-    <a href="#gameproj" class="thumbnail">
+    <a id="gameProj1" href="#gameproj" class="thumbnail">
       <img src="images/hackLogo.jpg" alt="...">
           </a>
         <div class="caption">
@@ -81,7 +81,7 @@
            </div>
   </div>
 <div class="col-xs-12 col-md-3">
-    <a href="#gameproj" class="thumbnail">
+    <a id="gameProj2" href="#gameproj" class="thumbnail">
       <img src="images/vgdc.jpg" alt="...">
           </a>
         <div class="caption">
@@ -115,6 +115,23 @@
 
   </div>
 </div>
+
+<div id="game1" class="row descBox" style="display:none">
+ <h3>THIS IS PROJECT BLOOD</h3>
+
+ <p> and this is a placeholder for more content, imags, and happiness </p>
+
+</div>
+
+<div id="game2" class="row descBox" style="display:none">
+ <h3>THIS IS PROJECT food run</h3>
+
+ <p> and this is a placeholder for more content, imags, and happiness </p>
+
+</div>
+
+
+
 </div>
 
 <div id="gameproj2" class="bogus"> <!-- using this to push down the page -->
@@ -206,6 +223,24 @@
 </div>
 
 <!-- jQuery through CDN, currently using 1.8.3 -->
+
+<script>
+  $(document).ready(function(){
+  $("gameProj1").click(function(){
+    $("#gameproj").fadeIn();
+    $("#gameproj").fadeIn("slow");
+    $("#gameproj").fadeIn(3000);
+  });
+  $("gameProj2").click(function(){
+    $("#gameproj2").fadeIn();
+    $("#gameproj2").fadeIn("slow");
+    $("#gameproj2").fadeIn(3000);
+  });
+});
+
+
+
+</script>
 
 </body>
 
