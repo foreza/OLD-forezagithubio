@@ -29,15 +29,15 @@
 <script>
 
 var allElements = [] // Array of all elements on the pages.
- //allElements.push("#game1")
- //allElements.push("#game2")
+ allElements.push("#game1")
+ allElements.push("#game2")
 
 var currentActiveElement = "none"
 
 
 function reply_click(clicked_id)
 {
-  $("#" + currentActiveElement).fadeOut(); // fades out all elements in case multiple are open.
+ // $("#" + currentActiveElement).fadeOut(); // fades out all elements in case multiple are open.
 
 
     var getID = "#gamewindow_" + ((clicked_id).split("_"))[1] 
@@ -46,7 +46,7 @@ function reply_click(clicked_id)
     // gets the id of the button, should be of the format game_1, game_2.. etc
     // then splits it into an array with game and number
     // accesses the second element which should be the number
-    currentActiveElement = getID; // set currentActive element to the one that we've just faded in
+   //  currentActiveElement = getID; // set currentActive element to the one that we've just faded in
     $(getID).fadeIn();
     $(getID).fadeIn("slow");
     $(getID).fadeIn(3000);
