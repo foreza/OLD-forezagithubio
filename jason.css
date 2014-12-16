@@ -72,6 +72,21 @@ text-align: center;
 
   @media (max-width: 480px)  {
 
+  	h1{
+  		text-align: center;
+
+  	}
+
+  	p{
+  		text-align: justify;
+  	}
+
+  	.bogus
+{
+	height: 200px;
+	width:100%;
+}
+
 
 }
  
