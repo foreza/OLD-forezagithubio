@@ -37,10 +37,8 @@ function reply_click(clicked_id)
     {
      $("#gamewindow_" + i).fadeOut();  // loops through and fades all of them out.
     }
-
-
     var getID = "#gamewindow_" + ((clicked_id).split("_"))[1] 
-    alert("Alert: " + getID);
+    // alert("Alert: " + getID); // Use this for debugging.
 
     // gets the id of the button, should be of the format game_1, game_2.. etc
     // then splits it into an array with game and number
@@ -76,21 +74,28 @@ function reply_click(clicked_id)
    
       <div class="collapse navbar-collapse navbar-ex1-collapse">
         <ul class="nav navbar-nav">
-          <li><a href="#">About</a></li>
-          <li><a href="#">Game Projects</a></li>
-          <li><a href="#">Other Projects</a></li>
-          <li><a href="#">Resume</a></li>
-          <li><a href="#">Blog</a></li>
+          <li><a href="#">About</a></li>        
           <li class="dropdown">
-            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <span class="caret"></span></a>
+            <a href="#gameproj" class="dropdown-toggle" data-toggle="dropdown">Game Projects<span class="caret"></span></a>
             <ul class="dropdown-menu">
-              <li><a href="#">Action</a></li>
-              <li><a href="#">Another action</a></li>
-              <li><a href="#">Something else here</a></li>
-              <li><a href="#">Separated link</a></li>
-              <li><a href="#">One more separated link</a></li>
+              <li><a href="#gameproj" onClick="reply_click(this.id)" id="game_1" >Project: Blood</a></li>
+              <li><a href="#gameproj" onClick="reply_click(this.id)" id="game_2" >Food Run</a></li>
+              <li><a href="#gameproj" onClick="reply_click(this.id)" id="game_3" >On with the Show!</a></li>
+              <li><a href="#gameproj" onClick="reply_click(this.id)" id="game_4" >PainBuddy</a></li>
+              <li><a href="#gameproj" onClick="reply_click(this.id)" id="game_5" >Loki</a></li>
+              <li><a href="#gameproj" onClick="reply_click(this.id)" id="game_6" >Temple Zal</a></li>
             </ul>
           </li>
+        <li class="dropdown">
+          <a href="#otherproj" class="dropdown-toggle" data-toggle="dropdown">Other Work<span class="caret"></span></a>
+            <ul class="dropdown-menu">
+              <li><a href="#otherproj" onClick="reply_click(this.id)" id="other_1" >HackUCI</a></li>
+              <li><a href="#otherproj" onClick="reply_click(this.id)" id="other_2" >VGDC </a></li>
+              <li><a href="#otherproj" onClick="reply_click(this.id)" id="other_3" >ReadyForce</a></li>
+            </ul>
+          </li>
+          <li><a href="#resume">Resume</a></li>
+          <li><a href="https://medium.com/@jasonchiu">Blog</a></li>
         </ul>
       </div>
     </nav>
@@ -111,6 +116,8 @@ function reply_click(clicked_id)
       </p>
     </div> 
    </div>
+
+
    
 <div id="gameproj" class="bogus"> <!-- using this to push down the page -->
 </div>
@@ -157,7 +164,8 @@ function reply_click(clicked_id)
 </div>
 
 
-<div class="well well-sm"> 
+<div class="well well-sm">
+<div class="container">
 <div id="gamewindow_1" class="row descBox" style= "display:none; background-color:red;" > <!-- style= "display:none; background-color:red;" -->
  <h3>THIS IS PROJECT BLOOD</h3>
 
@@ -186,8 +194,7 @@ function reply_click(clicked_id)
 
 </div>
 </div>
-
-
+</div>
 
 
 <div id="gameproj2" class="bogus"> <!-- using this to push down the page -->
@@ -197,7 +204,7 @@ function reply_click(clicked_id)
 
 <div class="row">
   <div class="col-xs-12 col-md-3">
-    <a href="#gameproj2" class="thumbnail">
+    <a href="#gameproj2" class="thumbnail" onClick="reply_click(this.id)" id="game_5" >
       <img src="images/hackLogo.jpg" alt="...">
           </a>
         <div class="caption">
@@ -206,7 +213,7 @@ function reply_click(clicked_id)
            </div>
   </div>
 <div class="col-xs-12 col-md-3">
-    <a href="#" class="thumbnail">
+    <a href="#gameproj2" class="thumbnail" onClick="reply_click(this.id)" id="game_6" >
       <img src="images/vgdc.jpg" alt="...">
           </a>
         <div class="caption">
@@ -217,6 +224,24 @@ function reply_click(clicked_id)
 
   </div>
   
+</div>
+</div>
+
+<div class="well well-sm">
+<div class="container">
+<div id="gamewindow_5" class="row descBox" style= "display:none; background-color:yellow;" > <!-- style= "display:none; background-color:red;" -->
+ <h3>THIS IS PROJECT Loki</h3>
+
+ <p> and this is a placeholder for more content, imags, and happiness </p>
+
+</div>
+
+<div id="gamewindow_6" class="row descBox" style= "display:none; background-color:pink;">
+ <h3>THIS IS Temple Zal</h3>
+
+ <p> and this is a placeholder for more content, imags, and happiness </p>
+
+</div>
 </div>
 </div>
 
@@ -232,7 +257,7 @@ function reply_click(clicked_id)
 
 <div class="row">
   <div class="col-xs-12 col-md-3">
-    <a href="#" class="thumbnail">
+    <a href="#hackUCI" class="thumbnail" onClick="reply_click(this.id)" id="game_7">
       <img src="images/hackLogo.jpg" alt="...">
           </a>
         <div class="caption">
@@ -242,7 +267,7 @@ function reply_click(clicked_id)
         </div>
   </div>
 <div class="col-xs-12 col-md-3">
-    <a href="#" class="thumbnail">
+    <a href="#vgdc" class="thumbnail" onClick="reply_click(this.id)" id="game_8">
       <img src="images/vgdc.jpg" alt="...">
           </a>
         <div class="caption">
@@ -253,7 +278,7 @@ function reply_click(clicked_id)
 
   </div>
   <div class="col-xs-12 col-md-3">
-    <a href="#" class="thumbnail">
+    <a href="#readyforce" class="thumbnail" onClick="reply_click(this.id)" id="game_9">
       <img src="images/moreready.jpg" alt="...">
           </a>
         <div class="caption">
@@ -264,6 +289,34 @@ function reply_click(clicked_id)
   </div>
 </div>
 </div>
+
+<div class="well well-sm">
+<div class="container">
+<div id="gamewindow_7" class="row descBox" style= "display:none; background-color:yellow;" > <!-- style= "display:none; background-color:red;" -->
+ <h3>THIS IS hackuci</h3>
+
+ <p> and this is a placeholder for more content, imags, and happiness </p>
+
+</div>
+
+<div id="gamewindow_8" class="row descBox" style= "display:none; background-color:pink;">
+ <h3>THIS IS vgdc</h3>
+
+ <p> and this is a placeholder for more content, imags, and happiness </p>
+
+</div>
+
+<div id="gamewindow_9" class="row descBox" style= "display:none; background-color:yellow;" > <!-- style= "display:none; background-color:red;" -->
+ <h3>THIS IS readyforce</h3>
+
+ <p> and this is a placeholder for more content, imags, and happiness </p>
+
+</div>
+</div>
+</div>
+
+
+
 
 <div class="bogus"> <!-- using this to push down the page -->
 </div>
