@@ -27,18 +27,34 @@
 
   <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 <script>
+
+var allElements = [] // Array of all elements on the pages.
+allElements.push("#game1")
+allElements.push("#game2")
+
   $(document).ready(function(){
   $("#gameProj1").click(function(){
+
+    for(var i = 0; i < allElements.length; i++)
+    {
+      $(allElements[i]).fadeOut();
+    }
+
     $("#game1").fadeIn();
     $("#game1").fadeIn("slow");
     $("#game1").fadeIn(3000);
-    $("#game2").fadeOut();
+    
   });
   $("#gameProj2").click(function(){
+
+      for(var i = 0; i < allElements.length; i++)
+    {
+      $(allElements[i]).fadeOut();
+    }
+
     $("#game2").fadeIn();
     $("#game2").fadeIn("slow");
     $("#game2").fadeIn(3000);
-    $("#game1").fadeOut();
   });
 });
 </script>
@@ -133,7 +149,7 @@
   </div>
 </div>
 
-<div id="game1" class="row descBox"> <!-- style= "display:none; background-color:red;" -->
+<div id="game1" class="row descBox" style= "display:none; background-color:red;" > <!-- style= "display:none; background-color:red;" -->
  <h3>THIS IS PROJECT BLOOD</h3>
 
  <p> and this is a placeholder for more content, imags, and happiness </p>
