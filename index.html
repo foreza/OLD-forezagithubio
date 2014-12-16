@@ -28,9 +28,9 @@
   <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 <script>
 
-// var allElements = [] // Array of all elements on the pages.
-// allElements.push("#game1")
-// allElements.push("#game2")
+var allElements = [] // Array of all elements on the pages.
+ //allElements.push("#game1")
+ //allElements.push("#game2")
 
 var currentActiveElement = "none"
 
@@ -41,6 +41,8 @@ function reply_click(clicked_id)
 
 
     var getID = "gamewindow_" + ((clicked_id).split("_"))[1] 
+    alert("Alert: " + getID);
+
     // gets the id of the button, should be of the format game_1, game_2.. etc
     // then splits it into an array with game and number
     // accesses the second element which should be the number
