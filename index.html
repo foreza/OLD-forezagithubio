@@ -28,22 +28,23 @@
   <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 <script>
 
-var allElements = [] // Array of all elements on the pages.
-allElements.push("#game1")
-allElements.push("#game2")
+// var allElements = [] // Array of all elements on the pages.
+// allElements.push("#game1")
+// allElements.push("#game2")
+
+var currentActiveElement = "none"
+
 
 function reply_click(clicked_id)
 {
- for(var i = 0; i < allElements.length; i++)
-    {
-      $(allElements[i]).fadeOut(); // fades out all elements in case multiple are open.
-    }
+  $(currentActiveElement).fadeOut(); // fades out all elements in case multiple are open.
+
 
     var getID = "gamewindow_" + ((clicked_id).split("_"))[1] 
     // gets the id of the button, should be of the format game_1, game_2.. etc
     // then splits it into an array with game and number
     // accesses the second element which should be the number
-
+    currentActiveElement = getID; // set currentActive element to the one that we've just faded in
     $(getID).fadeIn();
     $(getID).fadeIn("slow");
     $(getID).fadeIn(3000);
@@ -146,7 +147,7 @@ function reply_click(clicked_id)
 
   </div>
   <div class="col-xs-12 col-md-3">
-    <a href="#gameproj" class="thumbnail">
+    <a href="#gameproj" class="thumbnail" onClick="reply_click(this.id)" id="game_3" >
       <img src="images/moreready.jpg" alt="...">
           </a>
         <div class="caption">
@@ -158,7 +159,7 @@ function reply_click(clicked_id)
   </div>
 
   <div class="col-xs-12 col-md-3">
-    <a href="#gameproj" class="thumbnail">
+    <a href="#gameproj" class="thumbnail" onClick="reply_click(this.id)" id="game_4" >
       <img src="images/moreready.jpg" alt="...">
           </a>
         <div class="caption">
@@ -179,6 +180,20 @@ function reply_click(clicked_id)
 
 <div id="gamewindow_2" class="row descBox" style= "display:none; background-color:blue;">
  <h3>THIS IS PROJECT food run</h3>
+
+ <p> and this is a placeholder for more content, imags, and happiness </p>
+
+</div>
+
+<div id="gamewindow_3" class="row descBox" style= "display:none; background-color:green;" > <!-- style= "display:none; background-color:red;" -->
+ <h3>THIS IS PROJECT On with the show!</h3>
+
+ <p> and this is a placeholder for more content, imags, and happiness </p>
+
+</div>
+
+<div id="gamewindow_4" class="row descBox" style= "display:none; background-color:black;">
+ <h3>THIS IS PROJECT Painbuddy!</h3>
 
  <p> and this is a placeholder for more content, imags, and happiness </p>
 
