@@ -37,10 +37,10 @@ var currentActiveElement = "none"
 
 function reply_click(clicked_id)
 {
-  $(currentActiveElement).fadeOut(); // fades out all elements in case multiple are open.
+  $("#" + currentActiveElement).fadeOut(); // fades out all elements in case multiple are open.
 
 
-    var getID = "gamewindow_" + ((clicked_id).split("_"))[1] 
+    var getID = "#gamewindow_" + ((clicked_id).split("_"))[1] 
     alert("Alert: " + getID);
 
     // gets the id of the button, should be of the format game_1, game_2.. etc
