@@ -23,6 +23,7 @@ var time = new Date(); // init a date object for time
 
 var visitCount = 0; // initialize
 var currNumberOnline = 0; // initialize
+var mySessionClicks = 0;
 
 var myTimeOut = 1; // timeout before a user is marked as inactive.
 
@@ -49,6 +50,9 @@ document.getElementById("setDeath").innerHTML=totalDeaths;
 document.getElementById("setDate").innerHTML=date;
 document.getElementById("setTime").innerHTML=time;
 document.getElementById("setVisitor").innerHTML=visitCount;
+document.getElementById("setMyKills").innerHTML=mySessionClicks;
+document.getElementById("setMyKills2").innerHTML=mySessionClicks;
+
 
 currentAudioSrc = document.getElementById(currentAudio).innerHTML;
 // window.alert(currentAudioSrc);
@@ -99,8 +103,15 @@ function play(){
 	  	visitCount++; // update visit count
 
 	 mainRef.update({"visitorCount" : visitCount}) 	
-	 myPacket = connectRef.push({"user" : currNumberOnline});
+	 mySessionClicks = 1; // begin session clicks
+	 myPacket = connectRef.push({"userHasThisMany" : mySessionClicks});
 	 deletePacket(); // call delete packet! Will die after ~seconds.
+	}
+
+	else // if packet already exists
+	{
+		mySessionClicks++; // increment
+	myPacket.set({"userHasThisMany" : mySessionClicks});	// update
 	}
 
 	   var num = Math.floor((Math.random() * 5) + 1);
@@ -136,11 +147,11 @@ function play(){
 
 <body class="grey lighten-2" >
 <!--  AUDIO HERE -->
-<audio id="audio1" src="audio/eyesnoselips.mp3"><b>Eyes, Nose, Lips</b> by Taeyang</audio>
-<audio id="audio2" src="audio/letItGo.mp3"><b>Let It Go</b> by Idina Menzel</audio>
-<audio id="audio3" src="audio/rude.mp3"><b>Rude</b> by MAGIC! </audio>
-<audio id="audio4" src="audio/turndownforwhat.mp3"><b>Turn Down for What</b> by DJ Snake ft. Lil Jon</audio>
-<audio id="audio5" src="audio/amiwrong.mp3"><b>Am I wrong?</b> Nico & Vinz</audio>
+<audio id="audio1" src="audio/eyesnoselips.mp3">[<b>Eyes, Nose, Lips</b>] by: Taeyang</audio>
+<audio id="audio2" src="audio/letItGo.mp3">[<b>Let It Go</b>] by: Idina Menzel</audio>
+<audio id="audio3" src="audio/rude.mp3">[<b>Rude</b>] by: MAGIC! </audio>
+<audio id="audio4" src="audio/turndownforwhat.mp3">[<b>Turn Down for What</b>] by: DJ Snake ft. Lil Jon</audio>
+<audio id="audio5" src="audio/amiwrong.mp3">[<b>Am I wrong?</b>] by :Nico & Vinz</audio>
 
 <audio id="scream" src="audio/scream.mp3" ></audio>
 
@@ -164,24 +175,27 @@ function play(){
         </div>
       <div class="row center">
         <h5 class="header col s12 light"></h5>Tired of me? Let me know by hitting the button below. <br>
-        <p>Disclaimer: I will probably not die. But the thought counts. <br> I claim no credit for the music or sound effects; they are the property of their respective artists.</p>
       </div>
       <div class="row center ">
   <!-- Modal Trigger -->
 	          <a href="#modal1" onclick="play()" id="download-button" class="btn-large waves-effect waves-light black modal-trigger">Jason, please kill yourself</a>
 
-	    
+	    <h2>You've contributed: <span id="setMyKills"></span> kills</h2>
         
         <!-- Modal Structure -->
   <div id="modal1" class="modal">
     <h4>Jason? Go kill yourself.</h4>
-    <p> -- STATISTICS -- <br>
+    <h3>-- STATISTICS --</h3>
+    <p>
+    <h2>You've contributed: <span id="setMyKills2"></span> kills</h2>
     I was last told to die at: <span id="setTime"></span> at: <span id="setDate"></span><br>
     Number of people who told me to go die since last reset: <span id="setVisitor"></span> <br> <br>
 
     Current Song: <span id="setSongName"></span> <br> <br>
 
-    <a href="#modal1" class="waves-effect black btn-flat modal-close">KILL ME AGAIN</a>
+    <p><i>Disclaimer: I will probably not die. But the thought counts. <br> I claim no credit for the music or sound effects; they are the property of their respective artists.</i></p>
+
+    <a href="#modal1" class="waves-effect waves-light white btn-flat modal-close">KILL ME AGAIN</a>
   </div>
         
 
