@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no"/>
+  <title>Jason, go kill yourself.</title>
+
+  <!-- CSS  -->
+  <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+
+
+<!-- FIREBASE + FUN STUFF-->
+
+<script src="https://cdn.firebase.com/js/client/2.1.1/firebase.js"></script>
+
+
+<script>
+	// set global variable here. 
+var totalDeaths = 0; // temporarily at 0 for initialization 
+var date = new Date(); // initialize a date object
+var time = new Date(); // init a date object for time
+
+// ref to databases.
+
+var mainRef = new Firebase("https://jasonmurder.firebaseio.com/");
+
+// Callback functions
+mainRef.on("value", function(snapshot) {
+ 
+ var captureFirst = snapshot.val();
+totalDeaths = captureFirst.totalDeathCount;
+document.getElementById("setDeath").innerHTML=totalDeaths;
+document.getElementById("setDate").innerHTML=date;
+document.getElementById("setTime").innerHTML=time;
+
+}, function (errorObject) {
+  console.log("The read failed: " + errorObject.code);
+});
+
+// INIT VARIABLES
+
+
+
+
+function play(){
+       var audio = document.getElementById("audio"); // get the audio
+       audio.currentTime = 0; // stop it 
+       audio.play(); // replay
+
+       var uploadDate = new Date();// get the current date
+       date = (uploadDate.getMonth()+1) + "/" + uploadDate.getDate() + "/" + uploadDate.getFullYear() + " ";
+
+
+ 
+       time = uploadDate.getHours() + ":" + uploadDate.getMinutes() + ":" + uploadDate.getSeconds() + " ";
+      totalDeaths++; // increment Death Counter
+
+       mainRef.update({"totalDeathCount" : totalDeaths, "visitorCount" : date, "visitorSpam" : time}); // update to server
+
+
+                 }
+
+</script>
+
+
+</head>
+
+
+
+
+<body class="grey lighten-2" >
+<!-- SET AUDIO HERE -->
+<audio id="audio" src="eyesnoselips.mp3" ></audio>
+
+  <nav class="black darken-1" role="navigation">
+    <div class="container">
+      <div class="nav-wrapper"><a id="logo-container" href="#" class="brand-logo">Death Counter</a>
+        <ul id="nav-mobile" class="right side-nav">
+          <li><a href="http://jasonthechiu.com">Back to Projects</a></li>
+        </ul><a href="#" data-activates="nav-mobile" class="button-collapse"><i class="mdi-navigation-menu"></i></a>
+      </div>
+    </div>
+  </nav>
+  <div class="section no-pad-bot" id="index-banner">
+    <div class="container">
+      <br><br>
+      <h1 class="header center blue-text">Jason, go kill yourself</h1> 
+        <div class="row center">
+         <h2>KILL COUNT: <span id="setDeath"></span></h2><img class="responsive-img circle" src="images/jason_face.jpg">
+        </div>
+      <div class="row center">
+        <h5 class="header col s12 light"></h5>Tired of me? Let me know by hitting the button below.<br>
+        <p>Disclaimer: I will probably not die. But the thought counts.</p>
+      </div>
+      <div class="row center ">
+  <!-- Modal Trigger -->
+	          <a href="#modal1" onclick="play()" id="download-button" class="btn-large waves-effect waves-light black modal-trigger">Jason, please kill yourself</a>
+
+	    
+        
+        <!-- Modal Structure -->
+  <div id="modal1" class="modal">
+    <h4>Jason? Go kill yourself.</h4>
+    <p> -- IN PROGRESS -- <br>
+    I was last told to die at: <span id="setTime"></span> at: <span id="setDate"></span><br>
+    <a href="#modal1" class="waves-effect btn-flat modal-close">KILL ME AGAIN</a>
+  </div>
+        
+
+
+
+        </div>
+      </div>
+      <br><br>
+
+    </div>
+  </div>
+
+
+  <div class="container">
+  
+
+    <br><br>
+
+     <div class="row center">
+        <h5 class="header col s12 light"><b>Credits:</b></h5> <br>
+        <p> <ul>
+        <li>Jason Chiu - Developer</li>
+          <li>Jim To - Inspiration</li>
+          <li>Ren Hung - Executioner</li>
+        </ul></p>
+      </div>
+
+    <div class="section">
+
+    </div>
+  </div>
+
+  <footer class="black">
+    <div class="container">
+      <div class="row">
+        <div class="col l12 s12">
+          <h5 class="white-text">Bio</h5>
+          <p class="grey-text text-lighten-4">Just a fun site I made to practice some web development.</p>
+        </div>
+        
+      
+      </div>
+    </div>
+    <div class="footer-copyright">
+      <div class="container">
+      Made by <a class="orange-text lighten-3" href="http://materializecss.com">Materialize. Please check out their work!</a>
+      </div>
+    </div>
+  </footer>
+
+
+  <!--  Scripts-->
+  <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+  <script src="js/materialize.js"></script>
+  <script src="js/init.js"></script>
+
+  <script type="text/javascript">
+    // the "href" attribute of .modal-trigger must specify the modal ID that wants to be triggered
+    // the "href" attribute of .modal-trigger must specify the modal ID that wants to be triggered
+  
+  $(document).ready(function(){
+    // the "href" attribute of .modal-trigger must specify the modal ID that wants to be triggered
+    $('.modal-trigger').leanModal();
+  });
+          
+          </script>
+
+
+
+
+
+
+  </body>
+</html>
+
+
