@@ -43,7 +43,11 @@ document.getElementById("setTime").innerHTML=time;
 // INIT VARIABLES
 
 
+function scream() {
 
+	screaming = document.getElementById("scream"); // get the audio
+	screaming.play();
+}
 
 function play(){
 	  
@@ -88,6 +92,8 @@ function play(){
 <audio id="audio4" src="audio/turndownforwhat.mp3" ></audio>
 <audio id="audio5" src="audio/amiwrong.mp3" ></audio>
 
+<audio id="scream" src="audio/scream.mp3" ></audio>
+
 
   <nav class="black darken-1" role="navigation">
     <div class="container">
@@ -103,11 +109,11 @@ function play(){
       <br><br>
       <h1 class="header center blue-text">Jason? Go kill yourself.</h1> 
         <div class="row center">
-         <h2>KILL COUNT: <span id="setDeath"></span></h2><img class="responsive-img circle" src="images/jason_face.jpg">
+         <h2>KILL COUNT: <span id="setDeath"></span></h2><a class ="waves-effect waves-dark"><img onclick="scream()" class="responsive-img circle" src="images/jason_face.jpg"></a>
         </div>
       <div class="row center">
         <h5 class="header col s12 light"></h5>Tired of me? Let me know by hitting the button below.<br>
-        <p>Disclaimer: I will probably not die. But the thought counts.</p>
+        <p>Disclaimer: I will probably not die. But the thought counts. <br> I claim no credit for the music or sound effects; they are the property of their respective artists.</p>
       </div>
       <div class="row center ">
   <!-- Modal Trigger -->
