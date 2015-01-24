@@ -21,6 +21,7 @@ var totalDeaths = 0; // temporarily at 0 for initialization
 var date = new Date(); // initialize a date object
 var time = new Date(); // init a date object for time
 
+var visitCount = 0; // initialize
 var currNumberOnline = 0; // initialize
 
 var myTimeOut = 1; // timeout before a user is marked as inactive.
@@ -29,6 +30,7 @@ var myPacket = null; // null variable for now.
 
   var audio = document.getElementById("audio1"); // get the audio
   var currentAudio = "audio1";
+  var currentAudioSrc = "";
 // ref to databases.
 
 var mainRef = new Firebase("https://jasonmurder.firebaseio.com/");
@@ -46,10 +48,16 @@ totalDeaths = captureFirst.totalDeathCount;
 document.getElementById("setDeath").innerHTML=totalDeaths;
 document.getElementById("setDate").innerHTML=date;
 document.getElementById("setTime").innerHTML=time;
+document.getElementById("setVisitor").innerHTML=visitCount;
+
+currentAudioSrc = document.getElementById(currentAudio).innerHTML;
+// window.alert(currentAudioSrc);
+document.getElementById("setSongName").innerHTML= currentAudioSrc;
 
 var tempRef = snapshot.child('connectViewPort');
 
 currNumberOnline = snapshot.child('connectViewPort').numChildren();
+visitCount = snapshot.child('visitorCount').val();
 
 document.getElementById("setOnline").innerHTML=currNumberOnline-1;
 
@@ -67,7 +75,7 @@ myPacket.onDisconnect().remove();
 // INIT VARIABLES
 
 
-function deletePacket()
+function deletePacket() // just in case of packet loss or whatnot, for safe practices.
 {
 
 setTimeout(function () {
@@ -86,18 +94,21 @@ function scream() {
 function play(){
 	  if(myPacket == null)
 	  {
-	 myPacket = connectRef.push({"user" : 100, });
+	  	// Update statistics per visitor for the first time, and create the packet.
+
+	  	visitCount++; // update visit count
+
+	 mainRef.update({"visitorCount" : visitCount}) 	
+	 myPacket = connectRef.push({"user" : currNumberOnline});
 	 deletePacket(); // call delete packet! Will die after ~seconds.
 	}
-	
-
 
 	   var num = Math.floor((Math.random() * 5) + 1);
 	  // window.alert("audio" + num);
 		
 		// find the current audio
 		audio = document.getElementById(currentAudio); // get the audio
-		audio.currentTime = 5000;
+		audio.currentTime = 5000; // set it to a place where it has to loop
 
 		currentAudio = "audio" + num;	
        audio = document.getElementById(currentAudio); // get the audio
@@ -106,13 +117,11 @@ function play(){
 
        var uploadDate = new Date();// get the current date
        date = (uploadDate.getMonth()+1) + "/" + uploadDate.getDate() + "/" + uploadDate.getFullYear() + " ";
-
-
  
        time = uploadDate.getHours() + ":" + uploadDate.getMinutes() + ":" + uploadDate.getSeconds() + " ";
       totalDeaths++; // increment Death Counter
 
-       mainRef.update({"totalDeathCount" : totalDeaths, "visitorCount" : date, "visitorSpam" : time}); // update to server
+       mainRef.update({"totalDeathCount" : totalDeaths, "lastPressDate" : date, "visitorSpam" : time}); // update to server
 
 
                  }
@@ -126,12 +135,12 @@ function play(){
 
 
 <body class="grey lighten-2" >
-<!-- SET AUDIO HERE -->
-<audio id="audio1" src="audio/eyesnoselips.mp3" ></audio>
-<audio id="audio2" src="audio/letItGo.mp3" ></audio>
-<audio id="audio3" src="audio/rude.mp3" ></audio>
-<audio id="audio4" src="audio/turndownforwhat.mp3" ></audio>
-<audio id="audio5" src="audio/amiwrong.mp3" ></audio>
+<!--  AUDIO HERE -->
+<audio id="audio1" src="audio/eyesnoselips.mp3"><b>Eyes, Nose, Lips</b> by Taeyang</audio>
+<audio id="audio2" src="audio/letItGo.mp3"><b>Let It Go</b> by Idina Menzel</audio>
+<audio id="audio3" src="audio/rude.mp3"><b>Rude</b> by MAGIC! </audio>
+<audio id="audio4" src="audio/turndownforwhat.mp3"><b>Turn Down for What</b> by DJ Snake ft. Lil Jon</audio>
+<audio id="audio5" src="audio/amiwrong.mp3"><b>Am I wrong?</b> Nico & Vinz</audio>
 
 <audio id="scream" src="audio/scream.mp3" ></audio>
 
@@ -166,9 +175,13 @@ function play(){
         <!-- Modal Structure -->
   <div id="modal1" class="modal">
     <h4>Jason? Go kill yourself.</h4>
-    <p> -- IN PROGRESS -- <br>
+    <p> -- STATISTICS -- <br>
     I was last told to die at: <span id="setTime"></span> at: <span id="setDate"></span><br>
-    <a href="#modal1" class="waves-effect btn-flat modal-close">KILL ME AGAIN</a>
+    Number of people who told me to go die since last reset: <span id="setVisitor"></span> <br> <br>
+
+    Current Song: <span id="setSongName"></span> <br> <br>
+
+    <a href="#modal1" class="waves-effect black btn-flat modal-close">KILL ME AGAIN</a>
   </div>
         
 
@@ -196,6 +209,7 @@ function play(){
         <li>Albert Chao - Audio Engineer</li>
         <li>Andrew Sy - Creative Director</li>
         <li>Andrew Ooi - Network Ops</li>
+        <li>Eric Lai - Marketing Director</li>
         </ul></p>
       </div>
 
