@@ -21,11 +21,22 @@ var totalDeaths = 0; // temporarily at 0 for initialization
 var date = new Date(); // initialize a date object
 var time = new Date(); // init a date object for time
 
+var currNumberOnline = 0; // initialize
+
+var myTimeOut = 1; // timeout before a user is marked as inactive.
+
+var myPacket = null; // null variable for now.
+
   var audio = document.getElementById("audio1"); // get the audio
   var currentAudio = "audio1";
 // ref to databases.
 
 var mainRef = new Firebase("https://jasonmurder.firebaseio.com/");
+var connectRef = new Firebase("https://jasonmurder.firebaseio.com/connectViewPort");
+
+// We need a way to ID if a person is online/active.
+// We will accomplish this by tracking each user by sending a packet when they first access the site
+// The packet sent will then be deleted if there is no activity within the specified amt of seconds.
 
 // Callback functions
 mainRef.on("value", function(snapshot) {
@@ -36,11 +47,34 @@ document.getElementById("setDeath").innerHTML=totalDeaths;
 document.getElementById("setDate").innerHTML=date;
 document.getElementById("setTime").innerHTML=time;
 
+var tempRef = snapshot.child('connectViewPort');
+
+currNumberOnline = snapshot.child('connectViewPort').numChildren();
+
+document.getElementById("setOnline").innerHTML=currNumberOnline-1;
+
+
+
+
 }, function (errorObject) {
   console.log("The read failed: " + errorObject.code);
 });
 
+// If it disconnects prematurly, kill it.
+myPacket.onDisconnect().remove();
+
+
 // INIT VARIABLES
+
+
+function deletePacket()
+{
+
+setTimeout(function () {
+myPacket.onDisconnect().remove();
+}, myTimeOut * 1000);
+
+}
 
 
 function scream() {
@@ -50,7 +84,14 @@ function scream() {
 }
 
 function play(){
-	  
+	  if(myPacket == null)
+	  {
+	 myPacket = connectRef.push({"user" : 100, });
+	 deletePacket(); // call delete packet! Will die after ~seconds.
+	}
+	
+
+
 	   var num = Math.floor((Math.random() * 5) + 1);
 	  // window.alert("audio" + num);
 		
@@ -110,9 +151,10 @@ function play(){
       <h1 class="header center blue-text">Jason? Go kill yourself.</h1> 
         <div class="row center">
          <h2>KILL COUNT: <span id="setDeath"></span></h2><a class ="waves-effect waves-dark"><img onclick="scream()" class="responsive-img circle" src="images/jason_face.jpg"></a>
+         <h2>Hater Count: <span id="setOnline"></span></h2>
         </div>
       <div class="row center">
-        <h5 class="header col s12 light"></h5>Tired of me? Let me know by hitting the button below.<br>
+        <h5 class="header col s12 light"></h5>Tired of me? Let me know by hitting the button below. <br>
         <p>Disclaimer: I will probably not die. But the thought counts. <br> I claim no credit for the music or sound effects; they are the property of their respective artists.</p>
       </div>
       <div class="row center ">
