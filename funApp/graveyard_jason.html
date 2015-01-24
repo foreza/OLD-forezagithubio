@@ -3,7 +3,7 @@
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no"/>
-  <title>Jason, go kill yourself.</title>
+  <title>Jason? Go kill yourself.</title>
 
   <!-- CSS  -->
   <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
@@ -21,6 +21,8 @@ var totalDeaths = 0; // temporarily at 0 for initialization
 var date = new Date(); // initialize a date object
 var time = new Date(); // init a date object for time
 
+  var audio = document.getElementById("audio1"); // get the audio
+  var currentAudio = "audio1";
 // ref to databases.
 
 var mainRef = new Firebase("https://jasonmurder.firebaseio.com/");
@@ -44,8 +46,17 @@ document.getElementById("setTime").innerHTML=time;
 
 
 function play(){
-       var audio = document.getElementById("audio"); // get the audio
-       audio.currentTime = 0; // stop it 
+	  
+	   var num = Math.floor((Math.random() * 5) + 1);
+	  // window.alert("audio" + num);
+		
+		// find the current audio
+		audio = document.getElementById(currentAudio); // get the audio
+		audio.currentTime = 5000;
+
+		currentAudio = "audio" + num;	
+       audio = document.getElementById(currentAudio); // get the audio
+ 
        audio.play(); // replay
 
        var uploadDate = new Date();// get the current date
@@ -71,7 +82,12 @@ function play(){
 
 <body class="grey lighten-2" >
 <!-- SET AUDIO HERE -->
-<audio id="audio" src="eyesnoselips.mp3" ></audio>
+<audio id="audio1" src="audio/eyesnoselips.mp3" ></audio>
+<audio id="audio2" src="audio/letItGo.mp3" ></audio>
+<audio id="audio3" src="audio/rude.mp3" ></audio>
+<audio id="audio4" src="audio/turndownforwhat.mp3" ></audio>
+<audio id="audio5" src="audio/amiwrong.mp3" ></audio>
+
 
   <nav class="black darken-1" role="navigation">
     <div class="container">
@@ -85,7 +101,7 @@ function play(){
   <div class="section no-pad-bot" id="index-banner">
     <div class="container">
       <br><br>
-      <h1 class="header center blue-text">Jason, go kill yourself</h1> 
+      <h1 class="header center blue-text">Jason? Go kill yourself.</h1> 
         <div class="row center">
          <h2>KILL COUNT: <span id="setDeath"></span></h2><img class="responsive-img circle" src="images/jason_face.jpg">
         </div>
@@ -127,10 +143,11 @@ function play(){
         <h5 class="header col s12 light"><b>Credits:</b></h5> <br>
         <p> <ul>
         <li>Jason Chiu - Lead Developer</li>
-          <li>Jim To - Assistant Producer</li>
-          <li>Ren Hung - Producer</li>
-          <li>Andrew Sy - Creative Director</li>
-          <li>Andrew Ooi - Network Ops</li>
+        <li>Jim To -  Producer</li>
+        <li>Ren Hung - UX Designer</li>
+        <li>Albert Chao - Audio Engineer</li>
+        <li>Andrew Sy - Creative Director</li>
+        <li>Andrew Ooi - Network Ops</li>
         </ul></p>
       </div>
 
