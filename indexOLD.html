@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <meta name="author" content="Jason Chiu">
+    <meta property="og:title" content="Jason Chiu">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="images/tao_logo.gif"> <!-- need a logo. -->
+    <meta property="og:url" content="foreza.github.io">
+    <meta property="og:site_name" content="Jason Chiu">
+    <meta property="og:description" content="Check out what I do!"> <!-- change as you see fit -->
+<!-- -->
+  <link href='http://fonts.googleapis.com/css?family=Lato:300' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Kaushan+Script' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Economica' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+  
+
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
+  <link rel="shortcut icon" href="images/omu.ico"> <!-- used http://www.favicongenerator.com/ --> 
+      <!-- Stylesheet for website -->
+  <link rel="stylesheet" type="text/css" media="screen" href="jason.css"/>
+      <!-- Website title -->
+<!-- -->
+  <title>Jason Chiu</title>
+
+
+<script>
+/*
+var numberOfElements = 9; // change this when you add new content.
+
+function reply_click(clicked_id)
+{
+ // $("#" + currentActiveElement).fadeOut(); // fades out all elements in case multiple are open.
+    for (var i = 1; i <= numberOfElements; i++)
+    {
+     $("#gamewindow_" + i).fadeOut();  // loops through and fades all of them out.
+    }
+    var getID = "#gamewindow_" + ((clicked_id).split("_"))[1] 
+    // alert("Alert: " + getID); // Use this for debugging.
+
+    // gets the id of the button, should be of the format game_1, game_2.. etc
+    // then splits it into an array with game and number
+    // accesses the second element which should be the number
+   //  currentActiveElement = getID; // set currentActive element to the one that we've just faded in
+    $(getID).fadeIn();
+    $(getID).fadeIn("slow");
+    $(getID).fadeIn(3000);
+
+}
+*/
+
+</script>
+</head>
+
+<body>
+
+
+
+<div class="container">
+    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+      
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+      </div>
+
+   
+      <div class="collapse navbar-collapse navbar-ex1-collapse">
+        <ul class="nav navbar-nav">
+          <li><a href="#">About</a></li>        
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Game Projects<span class="caret"></span></a>
+            <ul class="dropdown-menu">
+              <li><a href="projectPages/blood.html" onClick="reply_click(this.id)" id="game_1" >Project: Blood</a></li>
+              <li><a href="#gameproj" onClick="reply_click(this.id)" id="game_2" >Food Run</a></li>
+              <li><a href="#gameproj" onClick="reply_click(this.id)" id="game_3" >On with the Show!</a></li>
+              <li><a href="#gameproj" onClick="reply_click(this.id)" id="game_4" >PainBuddy</a></li>
+            </ul>
+          </li>
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown">Other Work<span class="caret"></span></a>
+            <ul class="dropdown-menu">
+              <li><a href="#otherproj" onClick="reply_click(this.id)" id="game_7" >HackUCI</a></li>
+              <li><a href="#otherproj" onClick="reply_click(this.id)" id="game_8" >VGDC </a></li>
+              <li><a href="#otherproj" onClick="reply_click(this.id)" id="other_3" >ReadyForce</a></li>
+            </ul>
+          </li>
+          <li><a href="#resume">Resume</a></li>
+          <li><a href="https://medium.com/@jasonchiu">Blog</a></li>
+        </ul>
+      </div>
+    </nav>
+    </div>
+
+
+<div class="jumbotron"> <br>
+
+  <div class="row"> <!-- Intro  row! -->
+    <div class="col-xs-12 col-md-4"> <!-- Image Div -->
+      <img src="images/jaydom.jpg" alt="..." class="img-circle center-block" id="elementSmall">
+    </div>
+    <div class="col-xs-12 col-md-8"> <!-- Info Div -->
+     <h1 id="centerSmall">I'm Jason!</h1>
+      <p id="centerSmall">
+        Passionate developer. Serious gamer. <br>
+        Check out what I have below.
+      </p>
+    </div> 
+   </div>
+
+
+   
+<div id="gameproj" class="bogus"> <!-- using this to push down the page -->
+</div>
+ <h1>Game Projects</h1>
+ <div class="well well-sm"> 
+<div class="row">
+  <div class="col-xs-12 col-md-3">
+    <a id="game_1" href="#gameproj" class="thumbnail" onClick="reply_click(this.id)">
+      <img src="images/projectblood.png" alt="...">
+          </a>
+        <div class="caption">
+          <h3>Project: Blood</h3>
+          <p> [PLACEHOLDER] </p>
+        </div>
+  </div>
+<div class="col-xs-12 col-md-3">
+    <a id="game_2" href="#gameproj" class="thumbnail" onClick="reply_click(this.id)">
+      <img src="images/foodRun.jpg" alt="...">
+          </a>
+        <div class="caption">
+          <h3>Project: Food Run</h3>
+          <p> [PLACEHOLDER]  </p>
+        </div>
+    </div>
+  <div class="col-xs-12 col-md-3">
+    <a href="#gameproj" class="thumbnail" onClick="reply_click(this.id)" id="game_3" >
+      <img src="images/onwiththeshow.png" alt="...">
+          </a>
+        <div class="caption">
+          <h3>Project: On with the Show! </h3>
+          <p> [PLACEHOLDER] </p>
+        </div>
+  </div>
+  <div class="col-xs-12 col-md-3">
+    <a href="#gameproj" class="thumbnail" onClick="reply_click(this.id)" id="game_4" >
+      <img src="images/moreready.jpg" alt="...">
+          </a>
+        <div class="caption">
+          <h3>Project: Painbuddy </h3>
+          <p> [PLACEHOLDER] </p>
+        </div>
+  </div>
+</div>
+</div>
+
+<!--
+<div class="well well-sm">
+<div class="container">
+<div id="gamewindow_1" class="row descBox" style= "display:none; background-color:red;" > 
+ <h3>THIS IS PROJECT BLOOD</h3>
+
+ <p> and this is a placeholder for more content, imags, and happiness </p>
+
+</div>
+
+<div id="gamewindow_2" class="row descBox" style= "display:none; background-color:blue;">
+ <h3>THIS IS PROJECT food run</h3>
+
+ <p> and this is a placeholder for more content, imags, and happiness </p>
+
+</div>
+
+<div id="gamewindow_3" class="row descBox" style= "display:none; background-color:green;" >
+ <h3>THIS IS PROJECT On with the show!</h3>
+
+ <p> and this is a placeholder for more content, imags, and happiness </p>
+
+</div>
+
+<div id="gamewindow_4" class="row descBox" style= "display:none; background-color:black;">
+ <h3>THIS IS PROJECT Painbuddy!</h3>
+
+ <p> and this is a placeholder for more content, imags, and happiness </p>
+
+</div>
+</div>
+</div>
+-->
+
+<!--
+
+<div class="well well-sm">
+<div class="container">
+<div id="gamewindow_5" class="row descBox" style= "display:none; background-color:yellow;" > 
+ <h3>THIS IS PROJECT Loki</h3>
+
+ <p> and this is a placeholder for more content, imags, and happiness </p>
+
+</div>
+
+<div id="gamewindow_6" class="row descBox" style= "display:none; background-color:pink;">
+ <h3>THIS IS Temple Zal</h3>
+
+ <p> and this is a placeholder for more content, imags, and happiness </p>
+
+</div>
+</div>
+</div>
+
+-->
+
+<div  id="otherproj" class="bogus"> <!-- using this to push down the page -->
+</div>
+
+ <h1>Other Projects, Work Experience</h1>
+
+<div class="well well-sm"> 
+
+<div class="row">
+  <div class="col-xs-12 col-md-3">
+    <a href="#hackUCI" class="thumbnail" onClick="reply_click(this.id)" id="game_7">
+      <img src="images/hackLogo.jpg" alt="...">
+          </a>
+        <div class="caption">
+          <h3>HackUCI</h3>
+          <p> I was one of the organizers of UCI's first hackathon.</p>
+           
+        </div>
+  </div>
+<div class="col-xs-12 col-md-3">
+    <a href="#vgdc" class="thumbnail" onClick="reply_click(this.id)" id="game_8">
+      <img src="images/vgdc.jpg" alt="...">
+          </a>
+        <div class="caption">
+          <h3>VGDC</h3>
+          <p> I'm the VP of the Video Game Development Club @ UCI.</p>
+      
+        </div>
+
+  </div>
+  <div class="col-xs-12 col-md-3">
+    <a href="#readyforce" class="thumbnail" onClick="reply_click(this.id)" id="game_9">
+      <img src="images/moreready.jpg" alt="...">
+          </a>
+        <div class="caption">
+          <h3>ReadyForce</h3>
+          <p> I interned for ReadyForce as their campus ambassador to UCI. </p>
+      
+        </div>
+  </div>
+</div>
+</div>
+
+<!-- 
+<div class="well well-sm">
+<div class="container">
+<div id="gamewindow_7" class="row descBox" style= "display:none; background-color:yellow;" > 
+ <h3>THIS IS hackuci</h3>
+
+ <p> and this is a placeholder for more content, imags, and happiness
+ held for the first time ever - 300+ students for a 36 hour long coding event.  </p>
+
+</div>
+
+<div id="gamewindow_8" class="row descBox" style= "display:none; background-color:pink;">
+ <h3>THIS IS vgdc</h3>
+
+ <p> and this is a placeholder for more content, imags, and happiness
+ I organize and run game projects, run and assist with programming/development workshops, and host speaker events and game jams.  </p>
+
+</div>
+
+<div id="gamewindow_9" class="row descBox" style= "display:none; background-color:yellow;" > 
+ <h3>THIS IS readyforce</h3>
+
+ <p> and this is a placeholder for more content, imags, and happiness
+ As an intern, I marketed the professional networking platform to UCI students through Facebook, and represented ReadyForce at the Engineering Career fair. </p>
+
+</div>
+</div>
+</div>
+
+-->
+
+
+<!-- this is an attempt to save space on the repo, may come in handy later 
+<div>
+
+    <p>Testing some other images from the server so we can use them </p>
+
+   <img src="http://foreza.github.io/Shopkeeper/CodeRoosevelt/jasonTeachin!.jpg" alt="...">
+
+</div>
+-->
+
+
+<div class="bogus"> <!-- using this to push down the page -->
+</div>
+
+<div class="row"> <!-- putting resume near the bottom -->
+    <div id="resume" class="well well-sm" style="width:50%"> 
+      <a id="resume" class="btn btn-primary btn-block btn-lg" href="resume.pdf" role="button" style="width:80%" > Download Resume (PDF)</a>
+    </div>
+  </div>
+
+
+
+</div>
+
+</body>
+
