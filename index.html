@@ -7,61 +7,44 @@
   <!-- CSS  -->
   <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
   <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
-
-<!-- angular JS for ease of footer -->
-  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.10/angular.min.js"></script>
-     <script type="text/javascript" src="footer.js"></script>
 </head>
 
 <body class="grey lighten-2" >
 
-<nav class="grey darken-4" role="navigation">    
+<nav class="grey darken-4" role="navigation" ng-controller="FooterController as nava">    
   <div class="container">
-      <div class="nav-wrapper"><a id="logo-container" href="#" class="brand-logo">Jason Chiu</a>
+      <div class="nav-wrapper"><a id="logo-container" ng-href="{{nava.nav.nav1Link}}" class="brand-logo">{{nava.nav.nav1Name}}</a>
         <ul id="nav-mobile" class="right side-nav">
-          <li><a href="projects.html">Game Projects</a></li>
-           <li><a href="projectsOther.html">Other Projects/Work</a></li>
-           <li><a href="clubsOrgs.html">Clubs/Orgs</a></li>
-            <li><a href="#resumeModal" id="download-button" class="waves-effect modal-trigger">Resume</a></li>
+          <li><a ng-href="{{nava.nav.nav2Link}}">{{nava.nav.nav2Name}}</a></li>
+           <li><a ng-href="{{nava.nav.nav3Link}}">{{nava.nav.nav3Name}}</a></li>
+           <li><a ng-href="{{nava.nav.nav4Link}}">{{nava.nav.nav4Name}}</a></li>
+            <li><a ng-href="{{nava.resumeLink}}">Resume</a></li>
         </ul><a href="#" data-activates="nav-mobile" class="button-collapse"><i class="mdi-navigation-menu"></i></a>
       </div>
     </div>
   </nav>
-        <!-- Modal for Resume -->
-  <div id="resumeModal" class="modal">
-    <h3>Resume:</h3>
-    <p>
-      
-    [LINK IS BROKEN PLS FIX] <br><br>
-
-    <a href="#resumeModal" class="waves-effect btn-flat modal-close orange">Back</a>
-  </div>
-        
-
 
 
   <div class="section no-pad-bot" id="index-banner">
     <div class="container">
-      <h1 class="header center grey-text">Producer. Developer. Gamer.</h1>
+      <h1 class="header center grey-text">Produce. Develop. Game.</h1>
         <div class="row center">
-         <img class="responsive-img circle" src="images/jaydom.jpg">
+         <img class="responsive-img circle" onclick="aToastToYou()" src="images/jaydom.jpg">
         </div>
       <div class="row center">
-        <h5 class="header col s12 light">
+        <h3 class="header col s12 light">
          I'm Jason Chiu.
-       
-        </h5> <p>
+        </h3> <p class="heavy">
         I'm a student at the University of California, Irvine.
          <br>
          I'm passionate about games and web development.
          <br>
-         I learn and utilize software production methodologies and tools.
-
+I challenge myself to learn more every day. 
         </p>
       </div>
       </div>
     </div>
-  </div>
+
 
 <h2 class=" center header col s12 light">
         </h2>
@@ -69,40 +52,49 @@
 
   <div class="container">
     <div class="section">
-
       <!--   Icon Section   -->
-      <div class="row">
+      <div class="row center">
         <div class="col s12 m4">
+         <div class="card blue-grey darken-1">
+            <div class="card-content white-text">
           <div class="icon-block">            
-          <h5 class="center">GAME PROJECTS</h5>
-            <h2 class="center"> <a href="projects.html"><img class="responsive-img circle" src="images/projectblood.png"></a></h2>
-            <p class="light">The character is a vampire who can stealth. Stealthing will cost a certain amount of energy to maintain, so use it in tight spots. Enemies can't chase stealthed targets.</p>
+          <a href="projects.html"><img class="responsive-img" src="images/onwiththeshow.png"></a>
+             <span class="card-title">///GAMEPROJECTS</span>
+            <p class="light">Check out the various game projects I work on.</p>
+          </div>
+        </div>
+        </div>
+        </div>
+
+        <div class="col s12 m4">
+          <div class="card blue-grey darken-1">
+            <div class="card-content white-text">
+          <div class="icon-block">
+<a href="projectsOther.html"> <img class="responsive-img " src="images/jason2.jpg"></a>
+              <span class="card-title">///OTHERPROJECTS</span>
+            <p class="light">Hackathons, volunteering, sideprojects. </p>
+          </div>
+          </div>
           </div>
         </div>
 
         <div class="col s12 m4">
-          <div class="icon-block">
-               <h5 class="center">WORK & VOLUNTEERING</h5>
-             <h2 class="center"> <a href="projects.html"> <img class="responsive-img circle" src="images/jason2.jpg"></a></h2>
-            <p class="light">You can't see what you aren't in range of, and they can't see you either! Similarily, if there is a torch or other light source, both you and your enemies can see further. </p>
+          
+          <div class="card blue-grey darken-1">
+            <div class="card-content white-text">
+            <div class="icon-block">
+              <a href="clubsOrgs.html"> <img class="responsive-img " src="images/jason1.jpg"></a>
+                <span class="card-title">///MYCLUBORGS</span>
+            <p class="light">Clubs at UCI that I lead and contribute to.</p>
           </div>
+          </div></div>
         </div>
 
-        <div class="col s12 m4">
-          <div class="icon-block">
-          <h5 class="center">CLUB ORGANIZATIONS</h5>
-             <h2 class="center"> <a href="projects.html"> <img class="responsive-img circle" src="images/jason1.jpg"></a></h2>
-            <p class="light">You're a badass vampire, and you can kill anything with a touch of your blade. Stealth and approach from the shadows for a stealth kill, or run at them with your blade - your choice.</p>
-          </div>
-        </div>
       </div>
 
     </div>
-    <br><br>
-
-    <div class="section">
-
     </div>
+    <br><br>
   </div>
 
   <footer ng-controller="FooterController as footer" class="grey darken-4">
@@ -139,30 +131,29 @@
 
 
   <!--  Scripts-->
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.10/angular.min.js"></script>
+  <script type="text/javascript" src="footer.js"></script>
   <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
   <script src="js/materialize.js"></script>
   <script src="js/init.js"></script>
+  <script>
 
-  <script type="text/javascript">
-    // the "href" attribute of .modal-trigger must specify the modal ID that wants to be triggered
-    // the "href" attribute of .modal-trigger must specify the modal ID that wants to be triggered
-  
-  $(document).ready(function(){
+      $(document).ready(function(){
+      $('.slider').slider({full_width: true, indicators: false, interval: returnRandomValue()});
+      //$('.slider').slider({full_width: true, indicators: false, transition: 200});
+      //$('.slider').slider({full_width: true, indicators: false, transition: 300});
+    });
+        
+  function aToastToYou()
+  {
+      toast('Nice to meet you!', 3000, 'rounded') // 'rounded' is the class I'm applying to the toast
+  }
 
+  function returnRandomValue()
+  {
+    return Math.floor((Math.random() * 6000) + 3000);
+  }
 
-
-     $('ul.tabs').tabs(); // initialize tabs.
-    // the "href" attribute of .modal-trigger must specify the modal ID that wants to be triggered
-    $('.modal-trigger').leanModal();
-  });
-
-
-         function changeImage(img){
-                  document.getElementById('bigImage').src=img;
-                }
-            </script>
-          
-          </script>
-
+  </script>
   </body>
 </html>
