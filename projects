@@ -45,7 +45,7 @@
           <td></td>
           <td>A stealth rogue-like crawler featuring a vampire as he takes on contracts to kill.
           <br>Developed/written in Unity/C#, with use of Tiled2D. <br><br>
-<a href="projectPages/blood.html" id="download-button" class="btn-large waves-effect waves-light grey">View Project Blood Page</a>
+<a href="projectPages/blood" id="download-button" class="btn-large waves-effect waves-light grey">View Project Blood Page</a>
 
 
           </td>
@@ -63,7 +63,7 @@
             <td></td>
             <td>A puzzle platformer where the magician takes on an ardous task of bringing back color to the world.<br>Developed in C# XNA.
             <br><br>
-<a href="projectPages/onwiththeshow.html" id="download-button" class="btn-large waves-effect waves-light grey">View "On with the Show!""
+<a href="projectPages/onwiththeshow" id="download-button" class="btn-large waves-effect waves-light grey">View "On with the Show!""
           </tr>
         </tbody>
       </table>

@@ -50,7 +50,7 @@
           <td></td>
           <td>A sample description that tells me something about the project that hopefully will not exceed two lines!
           <br>A sample description that tells me something about the project that hopefully will not exceed two lines! <br><br>
-<a href="projectPages/blood.html" id="download-button" class="btn-large waves-effect waves-light red">View Project Blood Project Page</a>
+<a href="projectPages/blood" id="download-button" class="btn-large waves-effect waves-light red">View Project Blood Project Page</a>
 
 
           </td>
