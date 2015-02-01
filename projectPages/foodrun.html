@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="footerGem">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no"/>
+  <title>Jason Chiu: Projects</title>
+  <!-- CSS  -->
+  <link href="../css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <link href="../css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+</head>
+
+<body class="grey lighten-2" >
+
+<nav class="grey darken-4" role="navigation" ng-controller="FooterController as nava">    
+  <div class="container">
+      <div class="nav-wrapper"><a id="logo-container" ng-href="../{{nava.nav.nav1Link}}" class="brand-logo">{{nava.nav.nav1Name}}</a>
+        <ul id="nav-mobile" class="right side-nav">
+          <li><a ng-href="../{{nava.nav.nav2Link}}">{{nava.nav.nav2Name}}</a></li>
+           <li><a ng-href="../{{nava.nav.nav3Link}}">{{nava.nav.nav3Name}}</a></li>
+           <li><a ng-href="../{{nava.nav.nav4Link}}">{{nava.nav.nav4Name}}</a></li>
+            <li><a ng-href="../{{nava.resumeLink}}">Resume</a></li>
+        </ul><a href="#" data-activates="nav-mobile" class="button-collapse"><i class="mdi-navigation-menu"></i></a>
+      </div>
+    </div>
+  </nav>
+
+  <div class="section no-pad-bot" id="index-banner">
+    <div class="container">
+      <br><br>
+      <h1 class="header center black-text">FoodRun</h1>
+        <div class="row center">
+        
+            <div class="section">
+
+      <!--   Icon Section   -->
+      <div class="row">
+        <div class="col s12 m4">
+          <div class="icon-block">
+            <h2 class="center"> <img class="responsive-img " src="../images/onwiththeshow.png"></h2>
+            <h5 class="center">Tomatoes.</h5>
+          </div>
+        </div>
+        <div class="col s12 m4">
+          <div class="icon-block hide-on-small-only">
+             <h2 class="center"> <img class="responsive-img " src="../images/projectblood.png"></h2>
+            <h5 class="center">One cafeteria.</h5>
+
+          </div>
+        </div>
+        <div class="col s12 m4">
+          <div class="icon-block hide-on-small-only">
+             <h2 class="center"> <img class="responsive-img " src="../images/projectblood.png"></h2>
+            <h5 class="center">One winner.</h5>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+        </div>
+
+
+     <div class="row center">
+  <!-- Modal Trigger -->
+            <a href="#modal1" id="download-button" class="btn-large waves-effect waves-dark grey modal-trigger">Play/Download</a>
+     </div>
+        
+        <!-- Modal Structure -->
+  <div id="modal1" class="modal">
+    <h4>Download FoodRun</h4>
+    <p>
+ <br>
+    Grab the latest build here:</p>
+
+    <a href="#modal1" class="waves-effect btn-flat modal-close">Back</a>
+  </div>
+
+
+      <div class="row">
+      <blockquote>
+        <h5 class="header col s12 light">Playing with your food can be a valuable learning experience.</h5> <br>
+        <p> In "On With the Show", the player will direct the Magician to explore a grey, dark world, and bring forth joy and color by solving puzzles through teleportation magic. <br>The player will use magic to conjure items back and forth to navigate the level and solve puzzles! <br>
+        The magician will transform the world as he interacts with it. <br>
+        Teleportation is explored as a core element in "On With the Show". The game emphasizes the use of teleportation to change the world around you. </p>
+      </div>
+      </blockquote>
+      <div class="row">
+
+  <h5>Controls:</h5>
+ <p class="light">
+   <b>Movement:</b> WASD, Arrow Keys <br>
+ <b>Jump:</b> Space Bar <br>
+ <b>Hat Trick:</b> Click an item, then the Magician. The item will reappear next to the magician.  <i>Magician cannot move while using this ability. </i><br>
+ <b>Prestidigitation:</b> Click on an item close to the Magician, then on a location in the level. The item will teleport to the mouse pointer.  <i>Magician cannot move while using this ability. </i><br>
+ <b>The Switch:</b> Click on a nearby item and another item. They will swap places.  <i>Magician cannot move while using this ability. </i><br>
+ <b>Cancel Skill:</b> After starting a magic trick/skill, right click anywhere on the stage. The Magician stops the trick and can move again.<br>
+ </p>
+
+        </div>
+     <div class="row">
+        <h5>Credits:</h5>
+         <ul class="light">
+        <li>Jason Chu - Designer </li>
+        <li>Anthony Hoang - Programmer </li>
+<li>Devin Lee - Artist </li>
+<li>Faye Jao - Programmer </li>
+<li>Justin LaForge - Producer </li>
+<li>Nathan Stengel - Designer </li>
+<li>Thomas Truong - Programmer</li>
+        </ul>
+      </div>
+
+      </div>
+      <br><br>
+
+
+    </div>
+  </div>
+
+
+<footer ng-controller="FooterController as footer" class="grey darken-4">
+    <div class="container">
+      <div class="row">
+        <div class="col l10 s12">
+          <h5 class="white-text">About Jason: </h5>
+          <p class="grey-text text-darken-2">
+          {{footer.data.footerText1}} <br>  
+          {{footer.data.footerText2}} <br>
+          {{footer.data.footerText3}} <br>
+          {{footer.data.footerText4}} <br>
+          </p>
+        </div>
+        <div class="col l2 s12">
+          <h5 class="white-text">Find me on..</h5>
+          <p class="grey-text text-darken-2">
+           <ul>
+           <li><a ng-href="{{footer.data.link1}}"> {{footer.data.name1}} </a></li>
+           <li><a ng-href="{{footer.data.link2}}"> {{footer.data.name2}} </a></li>
+           <li><a ng-href="{{footer.data.link3}}"> {{footer.data.name3}} </a></li>
+           <li><a ng-href="{{footer.data.link4}}"> {{footer.data.name4}} </a></li>
+           </ul>
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="footer-copyright">
+      <div class="container">
+      This site was made with <a class="orange-text lighten-3" href="http://materializecss.com">Materialize.</a> Please check out their work!
+      </div>
+    </div>
+  </footer>
+
+  <!--  Scripts-->
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.10/angular.min.js"></script>
+  <script type="text/javascript" src="../footer.js"></script>
+  <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+   <script src="../js/materialize.js"></script>
+  <script src="../js/init.js"></script>
+    <script>
+     $(document).ready(function(){
+    // the "href" attribute of .modal-trigger must specify the modal ID that wants to be triggered
+    $('.modal-trigger').leanModal();
+  });
+  </script>
+
+ 
+  </body>
+</html>
