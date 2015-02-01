@@ -13,7 +13,7 @@
 
 <nav class="grey darken-4" role="navigation" ng-controller="FooterController as nava">    
   <div class="container">
-      <div class="nav-wrapper"><a id="logo-container" ng-href="{{nava.nav.nav1Link}}" class="brand-logo">{{nava.nav.nav1Name}}</a>
+      <div class="nav-wrapper"><a id="logo-container" ng-href="../{{nava.nav.nav1Link}}" class="brand-logo">{{nava.nav.nav1Name}}</a>
         <ul id="nav-mobile" class="right side-nav">
           <li><a ng-href="../{{nava.nav.nav2Link}}">{{nava.nav.nav2Name}}</a></li>
            <li><a ng-href="../{{nava.nav.nav3Link}}">{{nava.nav.nav3Name}}</a></li>
@@ -29,96 +29,127 @@
       <br><br>
       <h1 class="header center red-text">Project: Blood</h1>
         <div class="row center">
-         <img class="responsive-img" src="../images/projectblood.png">
+        
+            <div class="section">
+
+      <!--   Icon Section   -->
+      <div class="row">
+        <div class="col s12 m4">
+          <div class="icon-block">
+            <h2 class="center"> <img class="responsive-img " src="../images/projectblood.png"></h2>
+            <h5 class="center">One touch, one kill.</h5>
+          </div>
         </div>
-      <div class="row center">
-        <h5 class="header col s12 light">Dungeon Crawler, Rogue-like, Vampires? We got them all.</h5> <br>
-        <p> [insert description and tools here] </p>
+        <div class="col s12 m4">
+          <div class="icon-block hide-on-small-only">
+             <h2 class="center"> <img class="responsive-img " src="../images/projectblood.png"></h2>
+            <h5 class="center">Use the shadows.</h5>
+
+          </div>
+        </div>
+        <div class="col s12 m4">
+          <div class="icon-block hide-on-small-only">
+             <h2 class="center"> <img class="responsive-img " src="../images/projectblood.png"></h2>
+            <h5 class="center">Teamwork!</h5>
+          </div>
+        </div>
       </div>
-      <div class="row center ">
+
+    </div>
+
+        </div>
+
+
+     <div class="row center">
   <!-- Modal Trigger -->
-	          <a href="#modal1" id="download-button" class="btn-large waves-effect waves-light red modal-trigger">Play/Download</a>
-     
+            <a href="#modal1" id="download-button" class="btn-large waves-effect waves-dark red modal-trigger">Play/Download</a>
+     </div>
         
         <!-- Modal Structure -->
   <div id="modal1" class="modal">
     <h4>Play/Download Project Blood</h4>
     <p>
  <br>
-    Grab the latest build here:</p>
+    Grab the build here: <br>
+
+    <br>
+
+    </p>
 
     <a href="#modal1" class="waves-effect btn-flat modal-close">Back</a>
   </div>
-        
 
 
+      <div class="row">
+      <blockquote>
+        <h5 class="header col s12 light">Valter's off on yet another errand.</h5> <br>
+        <p> In Blood, the player will direct the Valter, the protagonist and friendly vampire, on a series of assassination missions. <br> Valter starts off only with a stealth ability and his sword, but will gradually pick up more and more skills along the way. <br>
+        Each level has several minions, and a boss monster that will grant Valter an ability once defeated. <br>
+        Proper usage of light and shadows will allow players to defeat enemies with ease.</p>
+
+        Blood was developed in Unity3D with C#.
+      </div>
+      </blockquote>
+  <div class="row">
+
+        <h5>My Role and future development:</h5>
+ <p class="light">
+
+ I'm the producer on the team. I work closely with the entire team to bring the world of Project:Blood to life. My focus for the development of this game was on having a clear communication between any developer on the team; and I encouraged having weekly jam sessions together. I kept the team well equipped and informed with frequent meetings, and partitioned work and duties between myself and other team members. We burned the midnight oil many times together, and I'm proud to be able to work with such a motivated team. <br><br>
+
+
+ Most recently, I held a session with the team to build the lore and backstory of our game so we would have a better footing heading into the next quarter.
+
+
+  
+ </p>
+
+</div>
+
+
+
+
+
+
+      <div class="row">
+
+
+  <h5>Controls:</h5>
+ <p class="light">
+   <b>Movement:</b> WASD, Arrow Keys <br>
+ <b>Jump:</b> Space Bar <br>
+ <b>Hat Trick:</b> Click an item, then the Magician. The item will reappear next to the magician.  <i>Magician cannot move while using this ability. </i><br>
+ <b>Prestidigitation:</b> Click on an item close to the Magician, then on a location in the level. The item will teleport to the mouse pointer.  <i>Magician cannot move while using this ability. </i><br>
+ <b>The Switch:</b> Click on a nearby item and another item. They will swap places.  <i>Magician cannot move while using this ability. </i><br>
+ <b>Cancel Skill:</b> After starting a magic trick/skill, right click anywhere on the stage. The Magician stops the trick and can move again.<br>
+ </p>
 
         </div>
+     <div class="row">
+        <h5>Credits:</h5>
+         <ul class="light">
+        <li>Jason Chu - Producer </li>
+        <li>Khang Tran - Project Lead, Designer </li>
+        <li>Daniel Lara - Designer </li>
+<li>Rex Rockwell - Lead Programmer </li>
+<li>Kristina Wong - Audio Engineer </li>
+<li>Theodore Won - Artist </li>
+<li>Valerie Vikhliantsev - Artist </li>
+<li>Lawrence Chen - Programmer</li>
+<li>Walter Coggeshall - Programmer</li>
+<li>Alyssa Sheffler - Programmer</li>
+<li>Derek Edrich - Programmer</li>
+<li>Jeremy Rice - Programmer</li>
+        </ul>
+      </div>
+
       </div>
       <br><br>
 
-    </div>
-  </div>
-
- <div class="row center ">
-  <h5 class="center">Controls:</h5>
-
- <p class="light">The character is a vampire who can stealth. Stealthing will cost a certain amount of energy to maintain, so use it in tight spots. Enemies can't chase stealthed targets.</p>
- </div>
-
-
-
-<h5 class="center">Screenshots:</h5>
-
-  <div class="container">
-    <div class="section">
-
-      <!--   Icon Section   -->
-      <div class="row">
-        <div class="col s12 m4">
-          <div class="icon-block">
-            <h2 class="center"> <img class="responsive-img circle" src="../images/projectblood.png"></h2>
-            <h5 class="center">Stealth Elements.</h5>
-
-            <p class="light">The character is a vampire who can stealth. Stealthing will cost a certain amount of energy to maintain, so use it in tight spots. Enemies can't chase stealthed targets.</p>
-          </div>
-        </div>
-
-        <div class="col s12 m4">
-          <div class="icon-block">
-             <h2 class="center"> <img class="responsive-img circle" src="../images/projectblood.png"></h2>
-            <h5 class="center">Realistic Lighting, Shadows.</h5>
-
-            <p class="light">You can't see what you aren't in range of, and they can't see you either! Similarily, if there is a torch or other light source, both you and your enemies can see further. </p>
-          </div>
-        </div>
-
-        <div class="col s12 m4">
-          <div class="icon-block">
-             <h2 class="center"> <img class="responsive-img circle" src="../images/projectblood.png"></h2>
-            <h5 class="center">One shot, one kill.</h5>
-
-            <p class="light">You're a badass vampire, and you can kill anything with a touch of your blade. Stealth and approach from the shadows for a stealth kill, or run at them with your blade - your choice.</p>
-          </div>
-        </div>
-      </div>
-
-    </div>
-    <br><br>
-
-     <div class="row center">
-        <h5 class="header col s12 light"><b>Credits:</b></h5> <br>
-        <p> <ul>
-        <li>Jason Chiu - Producer</li>
-        <li>Khang Tran - Lead Designer</li>
-        <li>Jason Chiu - hoho.</li>
-        </ul></p>
-      </div>
-
-    <div class="section">
 
     </div>
   </div>
+
 
 <footer ng-controller="FooterController as footer" class="grey darken-4">
     <div class="container">
