@@ -16,10 +16,10 @@
 
 };
 
-  var nav = { nav1Link: "index.html"
-,nav2Link: "projects.html"
-,nav3Link: "projectsOther.html"
-,nav4Link: "clubsOrgs.html"
+  var nav = { nav1Link: "index"
+,nav2Link: "projects"
+,nav3Link: "projectsOther"
+,nav4Link: "clubsOrgs"
 ,nav1Name:  "Jason Chiu"
 ,nav2Name:  "Game Projects"
 ,nav3Name:  "Other Projects/Work"
