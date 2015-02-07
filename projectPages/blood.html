@@ -36,20 +36,20 @@
       <div class="row">
         <div class="col s12 m4">
           <div class="icon-block">
-            <h2 class="center"> <img class="responsive-img " src="../images/projectblood.png"></h2>
+            <h2 class="center"> <img class="responsive-img materialboxed " src="../images/projectblood.png"></h2>
             <h5 class="center">One touch, one kill.</h5>
           </div>
         </div>
         <div class="col s12 m4">
           <div class="icon-block hide-on-small-only">
-             <h2 class="center"> <img class="responsive-img " src="../images/projectblood.png"></h2>
+             <h2 class="center"> <img class="responsive-img materialboxed" src="../images/projectblood.png"></h2>
             <h5 class="center">Use the shadows.</h5>
 
           </div>
         </div>
         <div class="col s12 m4">
           <div class="icon-block hide-on-small-only">
-             <h2 class="center"> <img class="responsive-img " src="../images/projectblood.png"></h2>
+             <h2 class="center"> <img class="responsive-img materialboxed" src="../images/projectblood.png"></h2>
             <h5 class="center">Teamwork!</h5>
           </div>
         </div>
@@ -68,9 +68,13 @@
         <!-- Modal Structure -->
   <div id="modal1" class="modal">
     <h4>Play/Download Project Blood</h4>
-    <p>
- <br>
-    <a href="projectExecutable/BloodFallBuild2014.zip">Grab latest build here!</a> <br>
+    <p> <br>
+    <a href="projectExecutable/BloodFallBuild2014.zip">Grab latest build here!</a> 
+    <br>
+    <a href="https://github.com/foreza/ProjectBlood_VGDC2014">View the ongoing project on Github.</a>
+    </p>
+
+
 
     <br>
 
@@ -83,7 +87,7 @@
       <div class="row">
       <blockquote>
         <h5 class="header col s12 light">Valter's off on yet another errand.</h5> <br>
-        <p> In Blood, the player will direct the Valter, the protagonist and friendly vampire, on a series of assassination missions. <br> Valter starts off only with a stealth ability and his sword, but will gradually pick up more and more skills along the way. <br>
+        <p> In Blood, the player will direct Valter, the protagonist and friendly vampire, on a series of assassination missions. <br> Valter starts off only with a stealth ability and his sword, but will gradually pick up more and more skills along the way. <br>
         Each level has several minions, and a boss monster that will grant Valter an ability once defeated. <br>
         Proper usage of light and shadows will allow players to defeat enemies with ease.</p>
 
@@ -108,20 +112,15 @@
 
 
 
-
-
-
       <div class="row">
 
 
   <h5>Controls:</h5>
  <p class="light">
-   <b>Movement:</b> WASD, Arrow Keys <br>
- <b>Jump:</b> Space Bar <br>
- <b>Hat Trick:</b> Click an item, then the Magician. The item will reappear next to the magician.  <i>Magician cannot move while using this ability. </i><br>
- <b>Prestidigitation:</b> Click on an item close to the Magician, then on a location in the level. The item will teleport to the mouse pointer.  <i>Magician cannot move while using this ability. </i><br>
- <b>The Switch:</b> Click on a nearby item and another item. They will swap places.  <i>Magician cannot move while using this ability. </i><br>
- <b>Cancel Skill:</b> After starting a magic trick/skill, right click anywhere on the stage. The Magician stops the trick and can move again.<br>
+   <b>Movement:</b> Arrow Keys <br>
+ <b>Face Direction:</b> Mouse Cursor <br>
+ <b>Stealth:</b> <br>
+ <b>Spin:</b>Hit "G" for a spinning attack!<br>
  </p>
 
         </div>
@@ -193,6 +192,7 @@
      $(document).ready(function(){
     // the "href" attribute of .modal-trigger must specify the modal ID that wants to be triggered
     $('.modal-trigger').leanModal();
+    $('.materialboxed').materialbox();
   });
   </script>
 

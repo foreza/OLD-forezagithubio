@@ -36,20 +36,20 @@
       <div class="row">
         <div class="col s12 m4">
           <div class="icon-block">
-            <h2 class="center"> <img class="responsive-img " src="../images/onwiththeshow.png"></h2>
+            <h2 class="center"> <img class="responsive-img materialboxed" src="../images/onwiththeshow.png"></h2>
             <h5 class="center">Tomatoes!</h5>
           </div>
         </div>
         <div class="col s12 m4">
           <div class="icon-block hide-on-small-only">
-             <h2 class="center"> <img class="responsive-img " src="../images/projectblood.png"></h2>
+             <h2 class="center"> <img class="responsive-img materialboxed" src="../images/projectblood.png"></h2>
             <h5 class="center">Slight violence.</h5>
 
           </div>
         </div>
         <div class="col s12 m4">
           <div class="icon-block hide-on-small-only">
-             <h2 class="center"> <img class="responsive-img " src="../images/projectblood.png"></h2>
+             <h2 class="center"> <img class="responsive-img materialboxed " src="../images/projectblood.png"></h2>
             <h5 class="center">One cafeteria.</h5>
           </div>
         </div>
@@ -117,12 +117,8 @@ Development is currently in hiatus as most of the members have decided to work o
 
   <h5>Controls:</h5>
  <p class="light">
-   <b>Movement:</b> Player 1: WASD, Arrow Keys <br>
- <b>Jump:</b> Space Bar <br>
- <b>Hat Trick:</b> Click an item, then the Magician. The item will reappear next to the magician.  <i>Magician cannot move while using this ability. </i><br>
- <b>Prestidigitation:</b> Click on an item close to the Magician, then on a location in the level. The item will teleport to the mouse pointer.  <i>Magician cannot move while using this ability. </i><br>
- <b>The Switch:</b> Click on a nearby item and another item. They will swap places.  <i>Magician cannot move while using this ability. </i><br>
- <b>Cancel Skill:</b> After starting a magic trick/skill, right click anywhere on the stage. The Magician stops the trick and can move again.<br>
+   <b>Movement:</b> Player 1: Arrow Keys Player 2: X-Box Controller<br>
+ <b>Attack</b>"A" on the controller or keyboard!<br>
  </p>
 
         </div>
@@ -189,6 +185,7 @@ Development is currently in hiatus as most of the members have decided to work o
      $(document).ready(function(){
     // the "href" attribute of .modal-trigger must specify the modal ID that wants to be triggered
     $('.modal-trigger').leanModal();
+    $('.materialboxed').materialbox();
   });
   </script>
 
