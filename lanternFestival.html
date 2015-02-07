@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no"/>
+  <title>LANTERN FESTIVAL</title>
+  <!-- CSS  -->
+  <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <link rel="icon" type="image/png" href="favicon.ico"/> <!-- REPLACE -->
+</head>
+
+<body class="grey lighten-2" >
+
+<nav class="red darken-2" role="navigation">    
+  <div class="container">
+      <div class="nav-wrapper"><a id="logo-container" href="http://taouci.com/" class="brand-logo"><img src="images/tao_logo.gif" height="60" ></a>
+        <ul id="nav-mobile" class="right side-nav">
+          <li><a href="#">Home</a></li>
+           <li><a href="#about">About</a></li>
+           <li><a href="#directions">Directions</a></li>
+            <li><a href="#sponsors">Sponsors</a></li>
+        </ul><a href="#" data-activates="nav-mobile" class="button-collapse"><i class="mdi-navigation-menu"></i></a>
+      </div>
+    </div>
+  </nav>
+
+
+  <div class="section no-pad-bot" id="index-banner">
+    <div class="container">
+      <h1 class="header center grey-text">Produce. Develop. Game.</h1>
+        <div class="row center">
+         <img class="responsive-img circle" onclick="aToastToYou()" src="images/jaydom.jpg">
+        </div>
+      <div class="row center">
+        <h3 class="header col s12 red orange-text light">
+        WE HOPE TO SEE YOU THERE!!!
+        </h3> 
+      </div>
+      </div>
+    </div>
+
+<div class="row center">
+<h3 class="header col s12 red orange-text light">
+LANTERN FESTIVAL AND NIGHT MARKET</h3>
+</div>
+
+      <div class="row center">
+        <div class="col s12 m4">
+         <div class="card orange darken-4">
+            <div class="card-content white-text">
+          <div class="icon-block">            
+          <a href="projects.html"><img class="responsive-img" src="images/onwiththeshow.png"></a>
+             <span class="card-title">FOOD</span>
+            <p class="light">Check out the various game projects I work on.</p>
+          </div>
+        </div>
+        </div>
+        </div>
+
+        <div class="col s12 m4">
+          <div class="card blue-grey darken-1">
+            <div class="card-content white-text">
+          <div class="icon-block">
+<a href="projectsOther.html"> <img class="responsive-img " src="images/jason2.jpg"></a>
+              <span class="card-title">GAMES AND ACTIVITIES</span>
+            <p class="light">Hackathons, volunteering, sideprojects. </p>
+          </div>
+          </div>
+          </div>
+        </div>
+
+        <div class="col s12 m4">
+          
+          <div class="card blue-grey darken-1">
+            <div class="card-content white-text">
+            <div class="icon-block">
+              <a href="clubsOrgs.html"> <img class="responsive-img " src="images/jason1.jpg"></a>
+                <span class="card-title">PERFORMANCES</span>
+            <p class="light">Clubs at UCI that I lead and contribute to.</p>
+          </div>
+          </div></div>
+        </div>
+
+      </div>
+    <br><br>
+  </div>
+
+  <footer ng-controller="FooterController as footer" class="grey darken-4">
+    <div class="container">
+      <div class="row">
+        <div class="col l10 s12">
+          <h5 class="white-text">About Jason: </h5>
+          <p class="grey-text text-darken-2">
+          {{footer.data.footerText1}} <br>  
+          {{footer.data.footerText2}} <br>
+          {{footer.data.footerText3}} <br>
+          {{footer.data.footerText4}} <br>
+          </p>
+        </div>
+        <div class="col l2 s12">
+          <h5 class="white-text">Find me on..</h5>
+          <p class="grey-text text-darken-2">
+           <ul>
+           <li><a ng-href="{{footer.data.link1}}"> {{footer.data.name1}} </a></li>
+           <li><a ng-href="{{footer.data.link2}}"> {{footer.data.name2}} </a></li>
+           <li><a ng-href="{{footer.data.link3}}"> {{footer.data.name3}} </a></li>
+           <li><a ng-href="{{footer.data.link4}}"> {{footer.data.name4}} </a></li>
+           </ul>
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="footer-copyright">
+      <div class="container">
+      This site was made with <a class="orange-text lighten-3" href="http://materializecss.com">Materialize.</a> Please check out their work!
+      </div>
+    </div>
+  </footer>
+
+
+  <!--  Scripts-->
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.10/angular.min.js"></script>
+  <script type="text/javascript" src="footer.js"></script>
+  <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+  <script src="js/materialize.js"></script>
+  <script src="js/init.js"></script>
+  <script>
+
+      $(document).ready(function(){
+      $('.slider').slider({full_width: true, indicators: false, interval: returnRandomValue()});
+      //$('.slider').slider({full_width: true, indicators: false, transition: 200});
+      //$('.slider').slider({full_width: true, indicators: false, transition: 300});
+    });
+        
+  function aToastToYou()
+  {
+      toast('Nice to meet you!', 3000, 'rounded') // 'rounded' is the class I'm applying to the toast
+  }
+
+  function returnRandomValue()
+  {
+    return Math.floor((Math.random() * 6000) + 3000);
+  }
+
+  </script>
+  </body>
+</html>
