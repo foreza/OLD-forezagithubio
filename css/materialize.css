@@ -6828,7 +6828,7 @@ ul.side-nav.fixed {
       height: 16px;
       width: 16px;
       margin: 0 12px;
-      background-color: #e0e0e0;
+      background-color: white;
       -webkit-transition: background-color 0.3s;
       -moz-transition: background-color 0.3s;
       -o-transition: background-color 0.3s;
@@ -6839,7 +6839,7 @@ ul.side-nav.fixed {
       border-radius: 50%;
       background-clip: padding-box; }
       .slider ul.indicators li.indicator-item.active {
-        background-color: #4CAF50; }
+        background-color: orange; }
 
 /* ==========================================================================
    $BASE-PICKER

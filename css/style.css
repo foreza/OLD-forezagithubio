@@ -11,7 +11,9 @@
 }
 
 /* Allows me to resize the google maps dynamically */
-
+	.a{
+		color: yellow;
+	}
    .google-maps {
         position: relative;
         padding-bottom: 75%; // This is the aspect ratio
