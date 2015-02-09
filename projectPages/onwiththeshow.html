@@ -25,8 +25,18 @@
     </div>
   </nav>
 
+    <ul id="slide-out" class="side-nav fixed">
+    <li><a href="#home">Back to Top</a></li>
+    <li><a href="#about">About/Download</a></li>
+    <li><a href="#play">Playthrough</a></li>
+    <li><a href="#contribution">My contribution</a></li>
+    <li><a href="#control">Controls</a></li>
+    <li><a href="#credit">Team credits</a></li>
+  </ul>
+  <a href="#" data-activates="slide-out" class="button-collapse"><i class="mdi-navigation-menu"></i></a>
+
   <div class="section no-pad-bot" id="index-banner">
-    <div class="container">
+    <div id="home" class="container">
       <br><br>
       <h1 class="header center black-text">"On With the Show!"</h1>
         <div class="row center">
@@ -61,14 +71,14 @@
         </div>
 
 
-     <div class="row center">
+     <div id="about" class="row center">
   <!-- Modal Trigger -->
             <a href="#modal1" id="download-button" class="btn-large waves-effect waves-dark grey modal-trigger">Play/Download</a>
      </div>
         
         <!-- Modal Structure -->
-  <div id="modal1" class="modal">
-    <h4>Play/Download "On with the Show!</h4>
+  <div id="modal1" class="modal grey lighten-3">
+    <h4 class="blue lighten-3">Play/Download "On with the Show!</h4>
     <p>
  <br>
     <a href="https://onedrive.live.com/?cid=d42c52f680876dbd&id=D42C52F680876DBD%2117324&ithint=file,.zip&authkey=!AB2Xgns8CDrWSy0">Grab the build here:</a> <br>
@@ -78,28 +88,35 @@
 
     </p>
 
-    <a href="#modal1" class="waves-effect btn-flat modal-close">Back</a>
+    <a href="#modal1" class="blue white-text waves-effect btn-flat modal-close">Back</a>
   </div>
 
 
       <div class="row">
       <blockquote>
-        <h5 class="header col s12 light">The world has dimmed. Argo must be overthrown...</h5> <br>
-        <p> In "On With the Show", the player will direct the Magician to explore a grey, dark world, and bring forth joy and color by solving puzzles through teleportation magic. <br>The player will use magic to conjure items back and forth to navigate the level and solve puzzles! <br>
-        The magician will transform the world as he interacts with it. <br>
-        Teleportation is explored as a core element in "On With the Show". <br>The game emphasizes the use of teleportation to change the world around you. </p>
+        <h5 class="header col s12 light">The world has dimmed. Argo must be overthrown...</h5> 
+        <p class="flow-text"> In "On With the Show", the player will direct the Magician to explore a grey, dark world, and bring forth joy and color by solving puzzles through teleportation magic. The player will use magic to conjure items back and forth to navigate the level and solve puzzles! 
+        The magician will transform the world as he interacts with it. 
+        Teleportation is explored as a core element in "On With the Show". The game emphasizes the use of teleportation to change the world around you. </p>
 
         "On With the Show" was developed in C# XNA.
       </div>
       </blockquote>
-  <div class="row">
+
+<div id="play" class="row">
+  <h5>Video Runthrough: (In progress!)</h5>
+      <div class="video-container">
+        <iframe width="853" height="480" src="" frameborder="0" allowfullscreen></iframe>
+      </div>
+      </div>
+
+  <div id="contribution" class="row">
 
         <h5>My Role:</h5>
- <p class="light">
+ <p class="light flow-text">
 
- I was a designer on the team. I wrote the backstory and specified the setting of the game, created background art assets, and designed several skills of the Magician. I also organized a sound library of all the audio assets we plugged into the game, and playtested for/reported bugs in the game.<br>
-
- The game ended up being awarded 2nd place in the Winter Game Jam of 2014.
+ I was a designer on the team. I wrote the backstory and specified the setting of the game, created background art assets, and designed several skills of the Magician. I also organized a sound library of all the audio assets we plugged into the game, and playtested for/reported bugs in the game.
+ The game was awarded 2nd place in the Winter Game Jam of 2014.
 
 
   
@@ -112,11 +129,11 @@
 
 
 
-      <div class="row">
+      <div id="control" class="row">
 
 
   <h5>Controls:</h5>
- <p class="light">
+ <p class="light flow-text">
    <b>Movement:</b> WASD, Arrow Keys <br>
  <b>Jump:</b> Space Bar <br>
  <b>Hat Trick:</b> Click an item, then the Magician. The item will reappear next to the magician.  <i>Magician cannot move while using this ability. </i><br>
@@ -126,9 +143,9 @@
  </p>
 
         </div>
-     <div class="row">
+     <div id="credit" class="row">
         <h5>Credits:</h5>
-         <ul class="light">
+         <ul class="light flow-text">
         <li>Jason Chu - Designer </li>
         <li>Anthony Hoang - Programmer </li>
 <li>Devin Lee - Artist </li>
@@ -192,6 +209,46 @@
      $('.materialboxed').materialbox();
   });
   </script>
+  <script>  
+$(document).ready(function () {
+    $(document).on("scroll", onScroll);
+    
+    //smoothscroll
+    $('a[href^="#"]').on('click', function (e) {
+        e.preventDefault();
+        $(document).off("scroll");
+        
+        $('a').each(function () {
+            $(this).removeClass('active');
+        })
+        $(this).addClass('active');
+      
+        var target = this.hash,
+            menu = target;
+        $target = $(target);
+        $('html, body').stop().animate({
+            'scrollTop': $target.offset().top
+        }, 500, 'swing', function () {
+            window.location.hash = target;
+            $(document).on("scroll", onScroll);
+        });
+    });
+});
+
+function onScroll(event){
+    var scrollPos = $(document).scrollTop();
+    $('.navbar-inner a').each(function () {
+        var currLink = $(this);
+        var refElement = $(currLink.attr("href"));
+        if (refElement.position().top <= scrollPos && refElement.position().top + refElement.height() > scrollPos) {
+            currLink.addClass("active");
+        }
+        else{
+            currLink.removeClass("active");
+        }
+    });
+}
+</script>
 
  
   </body>
