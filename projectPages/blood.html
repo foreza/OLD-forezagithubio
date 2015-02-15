@@ -12,7 +12,10 @@
 
 <body class="grey lighten-2" >
 
-<nav class="grey darken-4" role="navigation" ng-controller="FooterController as nava">    
+
+
+
+<nav id="home" class="grey darken-4" role="navigation" ng-controller="FooterController as nava">    
   <div class="container">
       <div class="nav-wrapper"><a id="logo-container" ng-href="../{{nava.nav.nav1Link}}" class="brand-logo">{{nava.nav.nav1Name}}</a>
         <ul id="nav-mobile" class="right side-nav">
@@ -23,88 +26,73 @@
         </ul><a href="#" data-activates="nav-mobile" class="button-collapse"><i class="mdi-navigation-menu"></i></a>
       </div>
     </div>
-  </nav>
+</nav>
+ <div class="row">
+    <div class="col s1">
+
 
    <ul id="slide-out" class="side-nav fixed">
-    <li><a href="#home">Back to Top</a></li>
-    <li><a href="#about">About/Download</a></li>
-    <li><a href="#play">Playthrough</a></li>
-    <li><a href="#contribution">My contribution</a></li>
-    <li><a href="#control">Controls</a></li>
-    <li><a href="#credit">Team credits</a></li>
+      <li><a href="#home">Back to Top</a></li>
+      <li><a href="#about">About/Download</a></li>
+      <li><a href="#play">Playthrough</a></li>
+      <li><a href="#contribution">My contribution</a></li>
+      <li><a href="#control">Controls</a></li>
+      <li><a href="#credit">Team credits</a></li>
   </ul>
   <a href="#" data-activates="slide-out" class="button-collapse"><i class="mdi-navigation-menu"></i></a>
-
-  <div class="section no-pad-bot" id="index-banner">
-    <div class="container">
-      <br><br>
-      <h1 class="header center red-text">Project: Blood</h1>
-        <div class="row center">
-        
-            <div class="section">
-
-      <!--   Icon Section   -->
-      <div class="row">
-        <div class="col s12 m4">
-          <div class="icon-block">
-            <h2 class="center"> <img class="responsive-img materialboxed " src="../images/projectblood.png"></h2>
-            <h5 class="center">One touch, one kill.</h5>
-          </div>
-        </div>
-        <div class="col s12 m4">
-          <div class="icon-block hide-on-small-only">
-             <h2 class="center"> <img class="responsive-img materialboxed" src="../images/projectblood.png"></h2>
-            <h5 class="center">Use the shadows.</h5>
-
-          </div>
-        </div>
-        <div class="col s12 m4">
-          <div class="icon-block hide-on-small-only">
-             <h2 class="center"> <img class="responsive-img materialboxed" src="../images/projectblood.png"></h2>
-            <h5 class="center">Teamwork!</h5>
-          </div>
-        </div>
-      </div>
-
-    </div>
-
-        </div>
-
-
-     <div class="row center">
-  <!-- Modal Trigger -->
-            <a href="#modal1" id="download-button" class="btn-large waves-effect waves-dark red modal-trigger">Play/Download</a>
-     </div>
-        
-        <!-- Modal Structure -->
-  <div id="modal1" class="modal">
-    <h4>Play/Download Project Blood</h4>
-    <p> <br>
-    <a href="projectExecutable/BloodFallBuild2014.zip">Grab latest build here!</a> 
-    <br>
-    <a href="https://github.com/foreza/ProjectBlood_VGDC2014">View the ongoing project on Github.</a>
-    </p>
-
-
-
-    <br>
-
-    </p>
-
-    <a href="#modal1" class="waves-effect btn-flat red modal-close">Back</a>
   </div>
 
+    <div id="about" class="col s11">
+      <div class="section no-pad-bot" id="index-banner">
+        <div class="container">
+          <br><br>
+            <h1 class="header center red-text">Project: Blood</h1>
+              <div class="row center">
+                <div class="section">
+                  <div class="row">
+                    <div class="col s12 m4">
+                      <div class="icon-block">
+                        <h2 class="center"> <img class="responsive-img materialboxed " src="../images/projectblood.png"></h2>
+                        <h5 class="center">Flashy effects.</h5>
+                      </div>
+                    </div>
+                    <div class="col s12 m4">
+                      <div class="icon-block hide-on-small-only">
+                         <h2 class="center"> <img class="responsive-img materialboxed" src="../images/projectblood.png"></h2>
+                        <h5 class="center">Use the shadows.</h5>
+                      </div>
+                    </div>
+                  <div class="col s12 m4">
+                    <div class="icon-block hide-on-small-only">
+                       <h2 class="center"> <img class="responsive-img materialboxed" src="../images/projectblood.png"></h2>
+                      <h5 class="center">Spin to win.</h5>
+                    </div>
+                  </div>
+                </div>
+             </div>
+          </div>
+     <div class="row center">
+    <!-- Modal Trigger -->
+      <a href="#modal1" id="download-button" class="btn-large waves-effect waves-dark red modal-trigger">Play/Download</a>
+     </div>
+                    <!-- Modal Structure -->
+               <div id="modal1" class="modal">
+                    <h4>Play/Download Project Blood</h4>
+                    <p> <br> <a href="projectExecutable/BloodFallBuild2014.zip">Grab latest build here!</a> <br>
+                    <a href="https://github.com/foreza/ProjectBlood_VGDC2014">View the ongoing project on Github.</a></p><br>
+                  <a href="#modal1" class="waves-effect btn-flat red modal-close">Back</a>
+              </div>
 
       <div class="row">
       <blockquote>
         <h5 class="header col s12 light">Valter's off on yet another errand.</h5> <br>
-        <p> In Blood, the player will direct Valter, the protagonist and friendly vampire, on a series of assassination missions. <br> Valter starts off only with a stealth ability and his sword, but will gradually pick up more and more skills along the way. <br>
-        Each level has several minions, and a boss monster that will grant Valter an ability once defeated. <br>
-        Proper usage of light and shadows will allow players to defeat enemies with ease.</p>
-
-        Blood was developed in Unity3D with C#.
+          <p> In Blood, the player will direct Valter, the protagonist and friendly vampire, on a series of assassination missions. <br> Valter starts off only with a stealth ability and his sword, but will gradually pick up more and more skills along the way. <br>
+          Each level has several minions, and a boss monster that will grant Valter an ability once defeated. <br>
+          Proper usage of light and shadows will allow players to defeat enemies with ease.</p>
+          Blood was developed in Unity3D with C#. 
+          </blockquote>
       </div>
-      </blockquote>
+     
 
 <div id="play" class="row">
   <h5>Video Runthrough: (In progress!)</h5>
@@ -113,61 +101,44 @@
       </div>
       </div>
 
-  <div class="row">
-
-        <h5>My Role and future development:</h5>
- <p class="light">
-
- I'm the producer on the team. I work closely with the entire team to bring the world of Project:Blood to life. My focus for the development of this game was on having a clear communication between any developer on the team; and I encouraged having weekly jam sessions together. I kept the team well equipped and informed with frequent meetings, and partitioned work and duties between myself and other team members. We burned the midnight oil many times together, and I'm proud to be able to work with such a motivated team. <br><br>
-
-
- Most recently, I held a session with the team to build the lore and backstory of our game so we would have a better footing heading into the next quarter.
-
-
-  
- </p>
-
-</div>
-
-
-
-      <div class="row">
-
-
-  <h5>Controls:</h5>
- <p class="light">
-   <b>Movement:</b> Arrow Keys <br>
- <b>Face Direction:</b> Mouse Cursor <br>
- <b>Stealth:</b> <br>
- <b>Spin:</b>Hit "G" for a spinning attack!<br>
- </p>
-
+          <div id="contribution" class="row">
+                <h5>My Role and future development:</h5>
+         <p class="light">
+           I'm the producer on the team. I work closely with the entire team to bring the world of Project:Blood to life. My focus for the development of this game was on having a clear communication between any developer on the team; and I encouraged having weekly jam sessions together. I kept the team well equipped and informed with frequent meetings, and partitioned work and duties between myself and other team members. We burned the midnight oil many times together, and I'm proud to be able to work with such a motivated team. <br><br>
+           Most recently, I held a session with the team to build the lore and backstory of our game so we would have a better footing heading into the next quarter.
+         </p>
         </div>
-     <div class="row">
-        <h5>Credits:</h5>
-         <ul class="light">
-        <li>Jason Chu - Producer </li>
-        <li>Khang Tran - Project Lead, Designer </li>
-        <li>Daniel Lara - Designer </li>
-<li>Rex Rockwell - Lead Programmer </li>
-<li>Kristina Wong - Audio Engineer </li>
-<li>Theodore Won - Artist </li>
-<li>Valerie Vikhliantsev - Artist </li>
-<li>Lawrence Chen - Programmer</li>
-<li>Walter Coggeshall - Programmer</li>
-<li>Alyssa Sheffler - Programmer</li>
-<li>Derek Edrich - Programmer</li>
-<li>Jeremy Rice - Programmer</li>
-        </ul>
+      <div id="control" class="row">
+          <h5>Controls:</h5>
+         <p class="light">
+           <b>Movement:</b> Arrow Keys <br>
+         <b>Face Direction:</b> Mouse Cursor <br>
+         <b>Stealth:</b> <br>
+         <b>Spin:</b>Hit "G" for a spinning attack!<br>
+         </p>
       </div>
-
+            <div id="credit" class="row">
+                <h5>Credits:</h5>
+                 <ul class="light">
+                <li>Jason Chu - Producer </li>
+                <li>Khang Tran - Project Lead, Designer </li>
+                <li>Daniel Lara - Designer </li>
+                <li>Rex Rockwell - Lead Programmer </li>
+                <li>Kristina Wong - Audio Engineer </li>
+                <li>Theodore Won - Artist </li>
+                <li>Valerie Vikhliantsev - Artist </li>
+                <li>Lawrence Chen - Programmer</li>
+                <li>Walter Coggeshall - Programmer</li>
+                <li>Alyssa Sheffler - Programmer</li>
+                <li>Derek Edrich - Programmer</li>
+                <li>Jeremy Rice - Programmer</li>
+                </ul>
+            </div>
       </div>
       <br><br>
-
-
     </div>
   </div>
-
+</div>
 
 <footer ng-controller="FooterController as footer" class="grey darken-4">
     <div class="container">
@@ -214,6 +185,49 @@
     $('.materialboxed').materialbox();
   });
   </script>
+
+  <script>  
+$(document).ready(function () {
+    $(document).on("scroll", onScroll);
+    
+    //smoothscroll
+    $('a[href^="#"]').on('click', function (e) {
+        e.preventDefault();
+        $(document).off("scroll");
+        
+        $('a').each(function () {
+            $(this).removeClass('active');
+        })
+        $(this).addClass('active');
+      
+        var target = this.hash,
+            menu = target;
+        $target = $(target);
+        $('html, body').stop().animate({
+            'scrollTop': $target.offset().top
+        }, 500, 'swing', function () {
+            window.location.hash = target;
+            $(document).on("scroll", onScroll);
+        });
+    });
+});
+
+
+function onScroll(event){
+    var scrollPos = $(document).scrollTop();
+    $('.navbar-inner a').each(function () {
+        var currLink = $(this);
+        var refElement = $(currLink.attr("href"));
+        if (refElement.position().top <= scrollPos && refElement.position().top + refElement.height() > scrollPos) {
+            currLink.addClass("active");
+        }
+        else{
+            currLink.removeClass("active");
+        }
+    });
+}
+
+</script>
 
  
   </body>
