@@ -19,7 +19,7 @@ materializecss.com
 Todo:
   - Still fix project pages/deal with hosting/fix images
   - Construct the about page based off of prior content from both work/projects page.
-  - Less is good. 
+  - Less is good.
 
 - v2.0
   - Added better SEO (search engine optimization) to my site.
