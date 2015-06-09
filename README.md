@@ -1,14 +1,31 @@
 
 ===========
-This is my personal website! I use Github mainly because my website is hosted statically. 
+This is my personal website! I use Github pages for now.
 
 I make heavy use of Materialize.css; please do check out their work. :)
 
 materializecss.com
 
-### Current Version of site : v1.0 (Live)
+### Current Version of site : v2.0 (Live)
 
 ##Changelog
+
+
+- v2.0
+  - Added better SEO (search engine optimization) to my site.
+  - Actually went and understood what it actually does.
+  - Now following visitors/traffic with google sites.
+  - Updating info on the site and renaming things and sorting folders to clean it up.
+  - Updated with latest resume version
+  - Removing redundant files, updating my home image.
+  - Site now greets you when you first enter. All hail the toast!
+
+Backlog/To-do list:
+  - Fix project pages (make a new format)
+  - Thinking about moving this site off of github pages and onto an AWS server to allow for PHP and other fun things.
+  - Make all project images uniform size (my eyes hurt, make it stop.)
+  - Add more projects and compile their builds.
+  - Fix page structure, I don't like having projects/work/clubs as a main page...
 
 - v1.0
   - Started keeping track of my changes on the READme, for good habit.

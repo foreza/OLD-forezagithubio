@@ -1,52 +1,54 @@
 <!DOCTYPE html>
 
-<html lang="en" ng-app="footerGem">
+<html lang="en" ng-app="gem">
 <head>
 
-<!-- Title of webpage. Change at your own risk.-->
-<title>Jason Chiu: Developer, Coffee-Seeker.</title>
+  <!-- Title of webpage. Change at your own risk.-->
+  <title>Jason Chiu: Developer, Coffee-Seeker.</title>
 
-<!-- Brief description of web page here that shows up. -->
-<meta name="description" content="Jason is a senior at UCI studying game development, loves coffee. Jason makes cool stuff. And understands basic SEO. :)" />
+  <!-- Brief description of web page here that shows up. -->
+  <meta name="description" content="Jason is a senior at UCI studying game development, loves coffee. Jason makes cool stuff. And understands basic SEO. :)" />
 
-<!-- Allows crawlers to see things. Unnecessary for now, but can toggle options on and off as necessary in the future. -->
-<!-- https://support.google.com/webmasters/answer/79812?hl=en -->
-<meta name="robots" content="all" />
-<meta name="googlebot" content="all" />
+  <!-- Allows crawlers to see things. Unnecessary for now, but can toggle options on and off as necessary in the future. -->
+  <!-- https://support.google.com/webmasters/answer/79812?hl=en -->
+  <meta name="robots" content="all" />
+  <meta name="googlebot" content="all" />
 
-<!-- This website is in english. Don't you dare translate it! -->
-<meta name="google" content="notranslate" />
+  <!-- This website is in english. Don't you dare translate it! -->
+  <meta name="google" content="notranslate" />
 
-<!-- No search box to be found here, ladies and gents and non-coffee partakers.. -->
-<meta name="google" content="nositelinkssearchbox" />
+  <!-- No search box to be found here, ladies and gents and non-coffee partakers.. -->
+  <meta name="google" content="nositelinkssearchbox" />
 
-<!-- Verification with google pages. -->
-<meta name="google-site-verification" content="Uy0gF0wJqZ4NCjNaeqyHdAbq6R_FOmqZNgeavOVsAVA" />
+  <!-- Verification with google pages. -->
+  <meta name="google-site-verification" content="Uy0gF0wJqZ4NCjNaeqyHdAbq6R_FOmqZNgeavOVsAVA" />
 
-<!-- Specify the content type and character set of this page. -->
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
-  
-<!-- For mobile optimization, still in the works. Please stand by... -->
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no"/>
+  <!-- Specify the content type and character set of this page. -->
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+
+  <!-- For mobile optimization, still in the works. Please stand by... -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no"/>
 
   <!-- CSS  -->
   <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
   <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
   <link rel="icon" type="image/png" href="favicon.ico"/>
+
 </head>
 
 <body class="grey lighten-2" >
 
-<nav class="grey darken-4" role="navigation" ng-controller="FooterController as nava">    
-  <div class="container">
-      <div class="nav-wrapper"><a id="logo-container" ng-href="{{nava.nav.nav1Link}}" class="brand-logo">{{nava.nav.nav1Name}}</a>
-        <ul id="nav-mobile" class="right side-nav">
-          <li><a ng-href="{{nava.nav.nav2Link}}">{{nava.nav.nav2Name}}</a></li>
-           <li><a ng-href="{{nava.nav.nav3Link}}">{{nava.nav.nav3Name}}</a></li>
-           <li><a ng-href="{{nava.nav.nav4Link}}">{{nava.nav.nav4Name}}</a></li>
+<!-- Nav bar. I use angular to sort of simulate SSI -->
+  <nav class="grey darken-4" role="navigation" ng-controller="FooterController as nava">
+    <div class="container">
+        <div class="nav-wrapper"><a id="logo-container" ng-href="{{nava.nav.nav1Link}}" class="brand-logo">{{nava.nav.nav1Name}}</a>
+          <ul id="nav-mobile" class="right side-nav">
+            <li><a ng-href="{{nava.nav.nav2Link}}">{{nava.nav.nav2Name}}</a></li>
+            <li><a ng-href="{{nava.nav.nav3Link}}">{{nava.nav.nav3Name}}</a></li>
+            <li><a ng-href="{{nava.nav.nav4Link}}">{{nava.nav.nav4Name}}</a></li>
             <li><a ng-href="{{nava.resumeLink}}">Resume</a></li>
-        </ul><a href="#" data-activates="nav-mobile" class="button-collapse"><i class="mdi-navigation-menu"></i></a>
-      </div>
+          </ul><a href="#" data-activates="nav-mobile" class="button-collapse"><i class="mdi-navigation-menu"></i></a>
+        </div>
     </div>
   </nav>
 
@@ -54,11 +56,12 @@
   <div class="section no-pad-bot" id="index-banner">
     <div class="container">
       <div class="row center">
-        <img class="responsive-img circle" onclick="aToastToYou()" src="images/jaydom.jpg">
+        <img id="MainImg" class="responsive-img circle" onclick="aToastToYou()" src="images/jason.jpg">
       </div>
       <div class="row center">
         <h3 class="header col s12 light">I'm Jason.</h3> 
-        <p class="heavy">I'm a student at the University of California, Irvine.<br>I'm passionate about games and web development.<br>I challenge myself to learn more every day. 
+        <p class="heavy">I'm a student at UCI.<br>I'm passionate about game development, network programming, and web apps.
+          <br> Check out some of my projects below.
         </p>
       </div>
     </div>
@@ -72,7 +75,7 @@
             <div class="card-content white-text">
               <div class="icon-block">            
                 <a href="projects.html"><img class="responsive-img" src="images/onwiththeshow.png"></a>
-                  <span class="card-title">GAME PROJECTS</span>
+                  <span class="card-title">PROJECTS</span>
              </div>
             </div>
           </div>
@@ -83,7 +86,7 @@
             <div class="card-content white-text">
               <div class="icon-block">
               <a href="projectsOther.html"> <img class="responsive-img " src="images/jason2.jpg"></a>
-                <span class="card-title">WORK</span>
+                <span class="card-title">WORK EXP</span>
               </div>
             </div>
           </div>
@@ -99,6 +102,7 @@
             </div>
           </div>
         </div>
+
     </div>
 
   <footer ng-controller="FooterController as footer" class="grey darken-4">
@@ -128,7 +132,7 @@
     </div>
     <div class="footer-copyright">
       <div class="container">
-      This site was made with <a class="orange-text lighten-3" href="http://materializecss.com">Materialize.</a> Please check out their work!
+      This site was made with <a class="orange-text lighten-3" href="http://materializecss.com">Materialize.</a> <br>Please check out their work!
       </div>
     </div>
   </footer>
@@ -136,19 +140,13 @@
 
   <!--  Scripts-->
   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.10/angular.min.js"></script>
-  <script type="text/javascript" src="footer.js"></script>
+  <script type="text/javascript" src="gem.js"></script>
   <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
   <script src="js/materialize.js"></script>
   <script src="js/init.js"></script>
   <script>
 
-      $(document).ready(function(){
-      $('.slider').slider({full_width: true, indicators: false, interval: returnRandomValue()});
-      //$('.slider').slider({full_width: true, indicators: false, transition: 200});
-      //$('.slider').slider({full_width: true, indicators: false, transition: 300});
-    });
-        
-  function aToastToYou()
+    function aToastToYou()
   {
       toast('Nice to meet you!', 3000, 'rounded') // 'rounded' is the class I'm applying to the toast
   }
@@ -157,6 +155,12 @@
   {
     return Math.floor((Math.random() * 6000) + 3000);
   }
+
+    $(document).ready(function(){
+        aToastToYou();
+    });
+        
+
 
   </script>
   </body>

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" ng-app="footerGem">
+<html lang="en" ng-app="gem">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no"/>
@@ -12,33 +12,31 @@
 
 <body class="grey lighten-2" >
 
-<nav class="grey darken-4" role="navigation" ng-controller="FooterController as nava">    
-  <div class="container">
-      <div class="nav-wrapper"><a id="logo-container" ng-href="{{nava.nav.nav1Link}}" class="brand-logo">{{nava.nav.nav1Name}}</a>
-        <ul id="nav-mobile" class="right side-nav">
-          <li><a ng-href="{{nava.nav.nav2Link}}">{{nava.nav.nav2Name}}</a></li>
-           <li><a ng-href="{{nava.nav.nav3Link}}">{{nava.nav.nav3Name}}</a></li>
-           <li><a ng-href="{{nava.nav.nav4Link}}">{{nava.nav.nav4Name}}</a></li>
-            <li><a ng-href="{{nava.resumeLink}}">Resume</a></li>
-        </ul><a href="#" data-activates="nav-mobile" class="button-collapse"><i class="mdi-navigation-menu"></i></a>
+    <nav class="grey darken-4" role="navigation" ng-controller="FooterController as nava">
+      <div class="container">
+          <div class="nav-wrapper"><a id="logo-container" ng-href="{{nava.nav.nav1Link}}" class="brand-logo">{{nava.nav.nav1Name}}</a>
+            <ul id="nav-mobile" class="right side-nav">
+                <li><a ng-href="{{nava.nav.nav2Link}}">{{nava.nav.nav2Name}}</a></li>
+                <li><a ng-href="{{nava.nav.nav3Link}}">{{nava.nav.nav3Name}}</a></li>
+                <li><a ng-href="{{nava.nav.nav4Link}}">{{nava.nav.nav4Name}}</a></li>
+                <li><a ng-href="{{nava.resumeLink}}">Resume</a></li>
+            </ul><a href="#" data-activates="nav-mobile" class="button-collapse"><i class="mdi-navigation-menu"></i></a>
+          </div>
       </div>
-    </div>
-  </nav>
+    </nav>
 
 
-<div class="section no-pad-bot" id="index-banner">
-    <div class="container">
-      <h1 class="header center grey-text">GAME PROJECTS</h1>
-
-
-      <table class="hoverable">
-        <thead>
-          <tr>
-              <th data-field="id">Project Name</th>
-              <th data-field="id"></th> <!-- Placeholder -->
-              <th data-field="name">Summary</th>
-          </tr>
-        </thead>
+    <div class="section no-pad-bot" id="index-banner">
+        <div class="container">
+        <h1 class="header center grey-text">GAME PROJECTS</h1>
+        <table class="hoverable">
+            <thead>
+                <tr>
+                  <th data-field="id">Project Name</th>
+                  <th data-field="id"></th> <!-- Placeholder -->
+                  <th data-field="name">Summary</th>
+              </tr>
+            </thead>
 
         <tbody>
           
@@ -69,6 +67,16 @@
           </tr>
 
 <!-- Under construction 
+            <tr>
+            <td>
+              <h5>Project: Werewolf</h5>
+              <img class="responsive-img" src="images/projectblood.png">
+            </td>
+            <td>A stealth rogue-like crawler featuring a vampire as he takes on contracts to kill.<br>Developed/written in Unity/C#, with use of Tiled2D. Still under development!<br><br>
+            <a href="projectPages/blood" id="download-button" class="btn-large waves-effect waves-light grey">View Project Blood Page</a>
+            </td>
+          </tr>
+
 
           <tr>
             <td>
@@ -148,7 +156,7 @@
 
   <!--  Scripts-->
   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.10/angular.min.js"></script>
-  <script type="text/javascript" src="footer.js"></script>
+  <script type="text/javascript" src="gem.js"></script>
   <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
   <script src="js/materialize.js"></script>
   <script src="js/init.js"></script>
