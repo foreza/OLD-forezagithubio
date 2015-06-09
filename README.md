@@ -11,6 +11,16 @@ materializecss.com
 ##Changelog
 
 
+- v2.1
+  - Added more helpful comments to the index.
+  - Cleared up on of the sections, and reduced overall vanity (who cares about coffee lover? seriously.)
+  - Made an about page that mirrors the index.
+
+Todo:
+  - Still fix project pages/deal with hosting/fix images
+  - Construct the about page based off of prior content from both work/projects page.
+  - Less is good. 
+
 - v2.0
   - Added better SEO (search engine optimization) to my site.
   - Actually went and understood what it actually does.
