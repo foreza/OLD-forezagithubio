@@ -7,12 +7,12 @@
 	// Navigation bar info goes here.
 	var nav = { nav1Link: "index"
 		,nav2Link: "projects"
-		,nav3Link: "projectsOther"
-		,nav4Link: "clubsOrgs"
-		,nav1Name:  "Jason Chiu"
-		,nav2Name:  "My Projects"
-		,nav3Name:  "Work/Other"
-		,nav4Name:  "Extracurriculars"
+		,nav3Link: "about"
+		,nav4Link: "process"
+		,nav1Name:  ""
+		,nav2Name:  "Projects"
+		,nav3Name:  "About"
+		,nav4Name:  "Process"
 	};
 
 

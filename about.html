@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+
+<html lang="en" ng-app="gem">
+<head>
+
+    <!-- Title of webpage. Change at your own risk.-->
+    <title>Jason Chiu - About</title>
+
+    <!-- Brief description of web page here that shows up. -->
+    <meta name="description" content="Jason is a senior at UCI studying game development, loves coffee. Jason makes cool stuff. And understands basic SEO. :)" />
+
+    <!-- Allows crawlers to see things. Unnecessary for now, but can toggle options on and off as necessary in the future. -->
+    <!-- https://support.google.com/webmasters/answer/79812?hl=en -->
+    <meta name="robots" content="all" />
+    <meta name="googlebot" content="all" />
+
+    <!-- This website is in english. Don't you dare translate it! -->
+    <meta name="google" content="notranslate" />
+
+    <!-- No search box to be found here, ladies and gents and non-coffee partakers.. -->
+    <meta name="google" content="nositelinkssearchbox" />
+
+    <!-- Verification with google pages. -->
+    <meta name="google-site-verification" content="Uy0gF0wJqZ4NCjNaeqyHdAbq6R_FOmqZNgeavOVsAVA" />
+
+    <!-- Specify the content type and character set of this page. -->
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+
+    <!-- For mobile optimization, still in the works. Please stand by... -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no"/>
+
+    <!-- CSS  -->
+    <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+    <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+    <link rel="icon" type="image/png" href="favicon.ico"/>
+
+</head>
+
+<body class="center grey lighten-2" >
+
+<!-- Nav bar. I use angular to sort of simulate SSI -->
+<nav class="grey darken-4" role="navigation" ng-controller="FooterController as nava">
+    <div class="container">
+        <div class="nav-wrapper"><a id="logo-container" ng-href="{{nava.nav.nav1Link}}" class="brand-logo">{{nava.nav.nav1Name}}</a>
+            <ul id="nav-mobile" class="right side-nav">
+                <li><a ng-href="{{nava.nav.nav2Link}}">{{nava.nav.nav2Name}}</a></li>
+                <li><a ng-href="{{nava.nav.nav3Link}}">{{nava.nav.nav3Name}}</a></li>
+                <li><a ng-href="{{nava.nav.nav4Link}}">{{nava.nav.nav4Name}}</a></li>
+                <li><a ng-href="{{nava.resumeLink}}">Resume</a></li>
+            </ul><a href="#" data-activates="nav-mobile" class="button-collapse"><i class="mdi-navigation-menu"></i></a>
+        </div>
+    </div>
+</nav>
+
+
+<!-- Structure it with an image on the side, text on the left for the first container -->
+<div class="section no-pad-bot" id="index-banner">
+    <div class="container row">
+        <h1 class="center">About Jason Chiu</h1>
+        <div class="col s12 m8">
+            <p>Some information about me! (coming soon)</p>
+        </div>
+        <div class="col s12 m4"> <!-- Replace/change the image -->
+            <img id="MainImg" class="responsive-img circle" onclick="aToastToYou()" src="images/jason.jpg">
+        </div>
+
+    </div>
+</div>
+
+
+<!-- Skills and experience container -->
+    <div class="container row">
+
+        <div class="col s12 m6">
+            <h4 class="white-text black">Skills:</h4>
+            <ul><!-- List your skills (what you're amazing at) here -->
+                <li>JavaScript</li>
+                <li>HTML/CSS</li>
+                <li>Agile Development</li>
+                <li>JQuery/JavaScript</li>
+                <li>Unity 3D</li>
+                <li>Git/Version Control</li>
+            </ul>
+        </div>
+
+        <div class="col s12 m6">
+            <h4 class="white-text black">Experience with:</h4>
+            <ul><!-- List your experience (still learning) here -->
+                <li>Python</li>
+                <li>Java</li>
+                <li>C++</li>
+                <li>Wireframes</li>
+                <li>Issue Tracking</li>
+            </ul>
+        </div>
+    </div>
+
+<!-- Work and clubs container -->
+
+    <div class="container row">
+
+        <div class="col s12 m6">
+            <h4 class="white-text black">Work Experience:</h4>
+            <ul><!-- List your work exp (what you working at) here -->
+                <li>Student Ambassador Lead at The Portal</li>
+                <li>Research Assistant at Calit2</li>
+                <li>Campus Ambassador at ReadyForce</li>
+                <li>General Intern at DynaSafe Cisco</li>
+            </ul>
+        </div>
+
+        <div class="col s12 m6">
+            <h4 class="white-text black">Extracurriculars:</h4>
+            <ul><!-- List your extracurriculars (may remove eventually) here -->
+                <li>Vice President at VGDC UCI</li>
+                <li>Webmaster, Taiwanese American Organization</li>
+                <li>Lead Organizer, HackUCI</li>
+            </ul>
+        </div>
+
+    </div>
+
+
+
+
+</div>
+
+<!--  Scripts-->
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.10/angular.min.js"></script>
+<script type="text/javascript" src="gem.js"></script>
+<script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+<script src="js/materialize.js"></script>
+<script src="js/init.js"></script>
+<script>
+
+    function aToastToYou()
+    {
+        toast('Nice to meet you!', 3000, 'rounded') // 'rounded' is the class I'm applying to the toast
+    }
+
+    function returnRandomValue()
+    {
+        return Math.floor((Math.random() * 6000) + 3000);
+    }
+
+    $(document).ready(function(){
+        aToastToYou();
+    });
+
+
+
+</script>
+
+<!-- Testing out google's richtext/structured data for more SEO -->
+<!-- THIS IS NOT MINE -->
+<script type="application/ld+json">
+{
+  "@context": "http://schema.org/",
+  "@type": "SoftwareApplication",
+  "name": "Angry Birds",
+  "operatingSystem": "ANDROID",
+  "applicationCategory": "http://schema.org/GameApplication",
+  "aggregateRating":{
+    "@type": "AggregateRating",
+    "ratingValue": "4.6",
+    "ratingCount": "8864"
+  },
+  "offers":{
+    "@type": "Offer",
+    "price": "1.00",
+    "priceCurrency": "USD"
+  }
+}
+</script>
+</body>
+</html>

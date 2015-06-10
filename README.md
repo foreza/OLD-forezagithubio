@@ -11,6 +11,21 @@ materializecss.com
 ##Changelog
 
 
+
+-v2.2
+  - Reverted a commit which affected both master and development branch. Whoops. Won't do that again.
+  - Made several renames to make the website more professional.
+  - Had to redo the index html change.
+  - Added about page and initial formatting/placeholders.
+
+
+Todo:
+  - Remake projects page entirely so it's just one long page.
+  - Add search bar to search my own website (maybe)
+  - Change images on main page to a uniform size + update them.
+  - Finish up about page / add links and content.
+
+
 - v2.1
   - Added more helpful comments to the index.
   - Cleared up on of the sections, and reduced overall vanity (who cares about coffee lover? seriously.)
