@@ -24,6 +24,7 @@ Todo:
   - Add search bar to search my own website (maybe)
   - Change images on main page to a uniform size + update them.
   - Finish up about page / add links and content.
+  - getting a div to float to the bottom is hard. more on this later.
 
 
 - v2.1

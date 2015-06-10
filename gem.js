@@ -9,7 +9,7 @@
 		,nav2Link: "projects"
 		,nav3Link: "about"
 		,nav4Link: "process"
-		,nav1Name:  ""
+		,nav1Name:  "Home"
 		,nav2Name:  "Projects"
 		,nav3Name:  "About"
 		,nav4Name:  "Process"
