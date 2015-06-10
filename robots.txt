@@ -1,0 +1,4 @@
+User-agent: *
+Disallow: /otherProjects/
+Disallow: /tmp/
+Disallow: /~joe/
