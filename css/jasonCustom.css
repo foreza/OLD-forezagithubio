@@ -1,0 +1,36 @@
+
+
+/* CSS for navigation */
+
+#nav-container{
+	display: block;
+	position: relative;
+}
+
+#nav-constrain{
+	display: block;
+	position: relative;
+	max-width: 1000px;
+	margin: 0 auto;
+}
+
+#page-header-main{
+	max-width: 1000px;
+	position: relative;
+}
+
+@media screen and (max-width: 756px) {
+
+	#nav-container{
+		max-width: 756px;
+		display: block;
+		position: relative;
+	}
+
+	#nav-constrain{
+		display: block;
+		position: relative;
+		margin: 0 auto;
+	}
+}
+

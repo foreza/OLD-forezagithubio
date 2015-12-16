@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no"/>
+  
+  <title>What did I do today? (Temporary)</title>
+
+  <!-- CSS  -->
+  <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+
+
+<!-- FIREBASE + FUN STUFF-->
+
+<script src="https://cdn.firebase.com/js/client/2.1.1/firebase.js"></script>
+<!-- To look at: https://github.com/egil/pomodoro-timer -->
+</head>
+
+
+
+
+<body class="yellow lighten-4" >
+<!--  AUDIO HERE -->
+
+
+  <nav class="blue lighten-1" role="navigation">
+    <div class="container">
+      <div class="nav-wrapper"><a id="logo-container" href="#" class="brand-logo">Task Tracker/Beater</a>
+        <ul id="nav-mobile" class="right side-nav">
+          <li><a href="../index.html">Back to Projects</a></li>
+        </ul><a href="#" data-activates="nav-mobile" class="button-collapse"><i class="mdi-navigation-menu"></i></a>
+      </div>
+    </div>
+  </nav>
+  <div class="section no-pad-bot" id="index-banner">
+    <div class="container">
+      <h1 class="header center blue-text"></h1> 
+        <div class="row center">
+         <h2>What have you done today?<span id="setDeath"></span></h2><a class ="waves-effect waves-light"><img class="responsive-img circle" src="images/tasksBegone.gif"></a>
+        </div>
+      <div class="row center ">
+  
+  <!-- Most recent goes on top -->
+
+      <div id="entry1" class="entry">
+        <h3> 2/15/14 </h3>
+        <ul class="flow-text">
+        <li> Worked out today! (Day 1)
+        <li> Finished 131 group work; updated group mates.
+        <li> Sent out VGDC email updates to my Mentee. Coaching underway!
+        <li> Arranged schedule for Project Blood meet-up times.
+        <li> Checked officer apps. Worried about future of VGDC.
+        <li> [decision] Dropping down to staff for TAO next year, may/may not take president role for VGDC.
+        <li> Made this uh. Handy app.
+        <li> Fixed my main website bugs, added more images.
+        <li> More incoming! I also plan to add a pomodoro timer + client side adding functionality.
+        </ul>
+      </div>
+      <div id="entry2" class="entry">
+        <h3> 2/16/14 </h3>
+        <ul class="flow-text">
+        <li> Worked out today!! (Day 2)
+        <li> Started on 122 group work; updated group mates. Will be working on that more.
+        <li> Sent out/edited VGDC email. (Slightly lied, it's almost ready...)
+        <li> Met up with Masha to talk about Painbuddy things.
+        <li> Updated TAO website, working on TAO lantern festival logistics, marketed it out to more people.
+
+        </ul>
+      </div>
+
+
+
+
+        </div>
+      </div>
+      <br><br>
+
+    </div>
+  </div>
+
+
+  <div class="container">
+  
+
+    <br><br>
+
+     <div class="row center">
+        <h5 class="header col s12 light"><b>Credits:</b></h5> <br>
+        <p> <ul>
+        <li>Jason Chiu - Developer</li>
+        </ul></p>
+      </div>
+
+    <div class="section">
+
+    </div>
+  </div>
+
+  <footer class="black">
+    <div class="container">
+      <div class="row">
+        <div class="col l12 s12">
+          <h5 class="white-text">Bio</h5>
+          <p class="grey-text text-lighten-4">Just a fun site I made to practice some web development.</p>
+        </div>
+        
+      
+      </div>
+    </div>
+    <div class="footer-copyright">
+      <div class="container">
+      Made by <a class="orange-text lighten-3" href="http://materializecss.com">Materialize. Please check out their work!</a>
+      </div>
+    </div>
+  </footer>
+
+
+  <!--  Scripts-->
+  <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+  <script src="js/materialize.js"></script>
+  <script src="js/init.js"></script>
+
+  <script type="text/javascript">
+    // the "href" attribute of .modal-trigger must specify the modal ID that wants to be triggered
+    // the "href" attribute of .modal-trigger must specify the modal ID that wants to be triggered
+  
+  $(document).ready(function(){
+    // the "href" attribute of .modal-trigger must specify the modal ID that wants to be triggered
+    $('.modal-trigger').leanModal();
+  });
+          
+          </script>
+
+
+
+
+
+
+  </body>
+</html>
+
+

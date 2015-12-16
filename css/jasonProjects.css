@@ -1,0 +1,34 @@
+
+/*div#page-header-search{*/
+    /*height: 55px;*/
+    /*padding: 0px;*/
+    /*margin-bottom: 10px;*/
+/*}*/
+
+input#project-search{
+    position: absolute;
+    border: solid 1px #BBBBBB;
+    width: 200px;
+    height: 15px;
+    right: 0;
+    padding: 10px;
+}
+
+div.project-row{
+    margin-bottom: 0px;
+}
+
+div.project-card{
+    min-height: 300px;
+    position: relative;
+}
+
+div.card-action{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+h5.project-date, h5.project-tech{
+    font-size: small;
+}

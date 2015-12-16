@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="gem">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no"/>
+  <title>Jason Chiu: Projects</title>
+  <!-- CSS  -->
+  <link href="../css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <link href="../css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+   <link rel="icon" type="image/png" href="../favicon.ico"/>
+</head>
+
+<body class="grey lighten-2" >
+
+
+
+<nav id="home" class="grey darken-4" role="navigation" ng-controller="FooterController as nava">    
+  <div class="container">
+      <div class="nav-wrapper"><a id="logo-container" ng-href="../{{nava.nav.nav1Link}}" class="brand-logo">{{nava.nav.nav1Name}}</a>
+        <ul id="nav-mobile" class="right side-nav">
+          <li><a ng-href="../{{nava.nav.nav2Link}}">{{nava.nav.nav2Name}}</a></li>
+           <li><a ng-href="../{{nava.nav.nav3Link}}">{{nava.nav.nav3Name}}</a></li>
+           <li><a ng-href="../{{nava.nav.nav4Link}}">{{nava.nav.nav4Name}}</a></li>
+            <li><a ng-href="../{{nava.resumeLink}}">Resume</a></li>
+        </ul><a href="#" data-activates="nav-mobile" class="button-collapse"><i class="mdi-navigation-menu"></i></a>
+      </div>
+    </div>
+  </nav>
+
+ <div class="row">
+    <div class="col s1">
+
+  
+  <ul id="slide-out" class="side-nav fixed">
+    <li><a href="#home">Back to Top</a></li>
+    <li><a href="#about">About/Download</a></li>
+    <li><a href="#play">Playthrough</a></li>
+    <li><a href="#contribution">My contribution</a></li>
+    <li><a href="#control">Controls</a></li>
+    <li><a href="#credit">Team credits</a></li>
+  </ul>
+  <a href="#" data-activates="slide-out" class="button-collapse"><i class="mdi-navigation-menu"></i></a>
+</div>
+    <div class="col s11">
+  <div class="section no-pad-bot" id="index-banner">
+    <div class="container">
+      <br><br>
+      <h1 class="header center orange-text">FoodRun</h1>
+        <div class="row center">
+        
+            <div class="section">
+
+      <!--   Icon Section   -->
+      <div class="row">
+        <div class="col s12 m4">
+          <div class="icon-block">
+            <h2 class="center"> <img class="responsive-img materialboxed" src="../images/foodRun.jpg"></h2>
+            <h5 class="center">Food art!</h5>
+          </div>
+        </div>
+        <div class="col s12 m4">
+          <div class="icon-block hide-on-small-only">
+             <h2 class="center"> <img class="responsive-img materialboxed" src="../images/foodRun2.png"></h2>
+            <h5 class="center">For victory.</h5>
+
+          </div>
+        </div>
+        <div class="col s12 m4">
+          <div class="icon-block hide-on-small-only">
+             <h2 class="center"> <img class="responsive-img materialboxed " src="../images/foodRun3.png"></h2>
+            <h5 class="center">Carbs and sugars.</h5>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+        </div>
+
+
+     <div id="about" class="row center">
+  <!-- Modal Trigger -->
+            <a href="#modal1" id="download-button" class="btn-large waves-effect waves-dark orange modal-trigger">Play/Download</a>
+     </div>
+        
+        <!-- Modal Structure -->
+  <div id="modal1" class="modal">
+    <h4 class="orange white-text">Download FoodRun</h4>
+    <p>
+ <br>
+    <a href="https://drive.google.com/file/d/0BwkwsfaC_cAkSFgyelNRQ3BBblk/view?usp=sharing">Grab the build here:</a> <br>
+
+    <a href="https://www.python.org/download/releases/3.2/">You'll need Python 3.2 (download)</a> <br>
+    and <a href="http://pygame.org/ftp/pygame-1.9.2a0.win32-py3.2.msi">Pygame-1.9.2a0 (install)</a>
+
+    <br> Only Windows build available.
+
+ <br>
+
+    </p>
+
+    <a href="#modal1" class="waves-effect btn-flat orange modal-close">Back</a>
+  </div>
+
+
+      <div class="row">
+      <blockquote class="orange lighten-4">
+        <h5 class="header col s12 light">Playing with your food can be a valuable learning experience.</h5> <br>
+        <p class="flow-text"> In "FoodRun", two players will direct their respective characters in a battle to show each other who is the new cool kid in town. Both players will have tomatoes and (soon!) other articles of food as their disposal to lob at each other to reduce their health totals.
+       
+        The game encourages smart usage of your artillery - every time you throw something, you consume a bit of energy! One player holds a controller, and another person uses the keyboard.</p>
+
+        FoodRun was developed in Python, utilizing the Pygame library.
+      </div>
+      </blockquote>
+
+<div id="play" class="row">
+  <h5>Video Runthrough:</h5>
+      <div class="video-container">
+        <iframe width="853" height="480" src="https://www.youtube.com/embed/H8T3Z64i9Sw?rel=0" frameborder="0" allowfullscreen></iframe>
+      </div>
+      </div>
+
+
+  <div id="contribution" class="row">
+
+        <h5>My Role, and future development:</h5>
+ <p class="light flow-text">
+
+ I was the producer on the team. Originally, this project came into being when several students new to the Video Game Development club were unable to find projects. I stepped up and lead several of these students in a quarter long project to make a game just for them and equip them with weapons they could use for making games in the future.
+
+ I introduced food as an icebreaker at our first meeting, and this ended up becoming our focus for the development of this game. I kept the team well equipped with frequent discussions and the tools they needed to succeed, such as introducing a repository and having weekly jam sessions as a team. 
+
+Development is currently in hiatus as most of the members have decided to work on a different project in Unity, at my suggestion. 
+
+
+  
+ </p>
+
+</div>
+
+
+
+
+
+
+      <div id="control" class="row">
+
+
+  <h5>Controls:</h5>
+ <p class="light flow-text">
+<i>Note: You'll need a keyboard and controller to play the game. </i> <br>
+
+   <b>Movement:</b> <br>
+   Player 1: WASD on keyboard <br>Player 2: X-Box Controller - Left Joystick<br>
+ <b>Attack:</b><br>
+ Player 1: Arrow keys to throw object in that direction<br>
+ Player 2: XABY to throw object in that direction
+
+
+ </p>
+
+        </div>
+     <div id="credit" class="row">
+        <h5>Credits:</h5>
+         <ul class="light flow-text">
+        <li>Jason Chu - Producer </li>
+        <li>Daeyong Kim - Lead Programmer </li>
+        <li>Linh Ly - Artist </li>
+<li>Testu Kobayashi - Programmer </li>
+<li>Jeremiah Carillo - Programmer </li>
+<li>Andrew Govea - Programmer </li>
+<li>James Huynh - Programmer</li>
+        </ul>
+      </div>
+
+      </div>
+      <br><br>
+
+
+    </div>
+  </div>
+</div>
+
+<footer ng-controller="FooterController as footer" class="grey darken-4">
+    <div class="container">
+      <div class="row">
+        <div class="col l10 s12">
+          <h5 class="white-text">About Jason: </h5>
+          <p class="grey-text text-darken-2">
+          {{footer.data.footerText1}} <br>  
+          {{footer.data.footerText2}} <br>
+          {{footer.data.footerText3}} <br>
+          {{footer.data.footerText4}} <br>
+          </p>
+        </div>
+        <div class="col l2 s12">
+          <h5 class="white-text">Find me on..</h5>
+          <p class="grey-text text-darken-2">
+           <ul>
+           <li><a ng-href="{{footer.data.link1}}"> {{footer.data.name1}} </a></li>
+           <li><a ng-href="{{footer.data.link2}}"> {{footer.data.name2}} </a></li>
+           <li><a ng-href="{{footer.data.link3}}"> {{footer.data.name3}} </a></li>
+           <li><a ng-href="{{footer.data.link4}}"> {{footer.data.name4}} </a></li>
+           </ul>
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="footer-copyright">
+      <div class="container">
+      This site was made with <a class="orange-text lighten-3" href="http://materializecss.com">Materialize.</a> Please check out their work!
+      </div>
+    </div>
+  </footer>
+
+  <!--  Scripts-->
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.10/angular.min.js"></script>
+  <script type="text/javascript" src="../gem.js"></script>
+  <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+   <script src="../js/materialize.js"></script>
+  <script src="../js/init.js"></script>
+    <script>
+     $(document).ready(function(){
+    // the "href" attribute of .modal-trigger must specify the modal ID that wants to be triggered
+    $('.modal-trigger').leanModal();
+    $('.materialboxed').materialbox();
+        
+  });
+  </script>
+  <!-- Script for smoothscroll! -->
+<script>  
+$(document).ready(function () {
+    $(document).on("scroll", onScroll);
+    
+    //smoothscroll
+    $('a[href^="#"]').on('click', function (e) {
+        e.preventDefault();
+        $(document).off("scroll");
+        
+        $('a').each(function () {
+            $(this).removeClass('active');
+        })
+        $(this).addClass('active');
+      
+        var target = this.hash,
+            menu = target;
+        $target = $(target);
+        $('html, body').stop().animate({
+            'scrollTop': $target.offset().top
+        }, 500, 'swing', function () {
+            window.location.hash = target;
+            $(document).on("scroll", onScroll);
+        });
+    });
+});
+
+function onScroll(event){
+    var scrollPos = $(document).scrollTop();
+    $('.navbar-inner a').each(function () {
+        var currLink = $(this);
+        var refElement = $(currLink.attr("href"));
+        if (refElement.position().top <= scrollPos && refElement.position().top + refElement.height() > scrollPos) {
+            currLink.addClass("active");
+        }
+        else{
+            currLink.removeClass("active");
+        }
+    });
+}
+</script>
+
+ 
+  </body>
+</html>

@@ -1,164 +1,255 @@
-<!DOCTYPE html>
-<html lang="en" ng-app="gem">
+<!doctype html>
+<html lang="en">
 <head>
-  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no"/>
-  <title>Jason Chiu: Projects</title>
-  <!-- CSS  -->
-  <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
-  <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
-    <link rel="icon" type="image/png" href="favicon.ico"/>
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <title>Jason Chiu - Projects</title>
+    <meta name="description" content="Hi, I'm a senior at the University of Calfornia, and I work as a web developer and project manager. I study computer science and develop games." />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="google" content="notranslate" />
+    <meta name="robots" content="all" />
+    <meta name="googlebot" content="all" />
+
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+
+    <!-- Used a nice free favicon here! -->
+    <link rel="shortcut icon" href="favicon.ico" />
+
+    <!-- JQuery CDN -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+
+    <!-- Materialize - Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.3/css/materialize.min.css">
+
+    <!-- Materialize Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.3/js/materialize.min.js"></script>
+
+    <!-- Custom JavaScript Theme (Applied to all pages) -->
+    <script src="js/jasonCustom.js"></script>
+
+    <!-- Custom Styles (Applied to all pages) -->
+    <link rel="stylesheet" href="css/jasonCustom.css">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/jasonProjects.css"/>
+
 </head>
+<body>
 
-<body class="grey lighten-2" >
 
-    <nav class="grey darken-4" role="navigation" ng-controller="FooterController as nava">
-      <div class="container">
-          <div class="nav-wrapper"><a id="logo-container" ng-href="{{nava.nav.nav1Link}}" class="brand-logo">{{nava.nav.nav1Name}}</a>
-            <ul id="nav-mobile" class="right side-nav">
-                <li><a ng-href="{{nava.nav.nav2Link}}">{{nava.nav.nav2Name}}</a></li>
-                <li><a ng-href="{{nava.nav.nav3Link}}">{{nava.nav.nav3Name}}</a></li>
-                <li><a ng-href="{{nava.nav.nav4Link}}">{{nava.nav.nav4Name}}</a></li>
-                <li><a ng-href="{{nava.resumeLink}}">Resume</a></li>
-            </ul><a href="#" data-activates="nav-mobile" class="button-collapse"><i class="mdi-navigation-menu"></i></a>
-          </div>
-      </div>
+    <!-- Navigation -->
+    <nav id="nav-container" class="grey darken-4">
+        <div id="nav-constrain">
+            <div class="nav-wrapper">
+                <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">Menu</i></a>
+                <ul class="right hide-on-med-and-down">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="projects.html">Projects</a></li>
+                    <li><a href="experience.html">Experience</a></li>
+                </ul>
+                <ul class="side-nav" id="mobile-demo">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="projects.html">Projects</a></li>
+                    <li><a href="experience.html">Experience</a></li>
+                </ul>
+            </div>
+        </div>
     </nav>
 
 
-    <div class="section no-pad-bot" id="index-banner">
-        <div class="container">
-        <h1 class="header center grey-text">GAME PROJECTS</h1>
-        <table class="hoverable">
-            <thead>
-                <tr>
-                  <th data-field="id">Project Name</th>
-                  <th data-field="id"></th> <!-- Placeholder -->
-                  <th data-field="name">Summary</th>
-              </tr>
-            </thead>
+    <!--Page header-->
+    <div id="page-header-main" class="container left-align">
 
-        <tbody>
-          
-          <tr>
-            <td>
-              <h5>Project Blood</h5>
-              <img class="responsive-img" src="images/projectblood.png">
-            </td><td></td> <!-- Adds an additional column -->
-            <td>A stealth rogue-like crawler featuring a vampire as he takes on contracts to kill.<br>Developed/written in Unity/C#, with use of Tiled2D. <b>Still under development!</b><br><br>
-            <a href="projectPages/blood" id="download-button" class="btn-large waves-effect waves-light grey">View Project Blood Page</a>
-            </td>
-          </tr>
+        <input id="project-search" type="text" placeholder="Search">
+        <h2>Projects</h2>
 
 
-          <tr>
-            <td><h5>FoodRun</h5><img class="responsive-img" src="images/foodRun.jpg"></td>
-            <td></td>
-            <td>A food-fighting game where tomatoes are thrown, and where playing with food takes on a whole new meaning. <br>Developed/written in Python, using the Pygame library.
-            <br><br>
-<a href="projectPages/foodrun" id="download-button" class="btn-large waves-effect waves-light grey">View FoodRun Page</a></td>
-          </tr>
-          <tr>
-            <td><h5>"On with the Show!"</h5><img class="responsive-img" src="images/onwiththeshow.png"></td>
-            <td></td>
-            <td>A puzzle platformer where the magician takes on an ardous task of bringing back color to the world.<br>Developed in C# XNA.
-            <br><br>
-<a href="projectPages/onwiththeshow" id="download-button" class="btn-large waves-effect waves-light grey">View "On with the Show!""
-          </tr>
+    </div>
 
-<!-- Under construction 
-            <tr>
-            <td>
-              <h5>Project: Werewolf</h5>
-              <img class="responsive-img" src="images/projectblood.png">
-            </td>
-            <td>A stealth rogue-like crawler featuring a vampire as he takes on contracts to kill.<br>Developed/written in Unity/C#, with use of Tiled2D. Still under development!<br><br>
-            <a href="projectPages/blood" id="download-button" class="btn-large waves-effect waves-light grey">View Project Blood Page</a>
-            </td>
-          </tr>
+    <div class="divider"></div>
+
+    <!-- Project container -->
+    <div id="page-container-main" class="container">
+
+        <div class="row">
+
+            <div class="col s12 m6">
+                <div class="card blue-grey darken-1 project-card">
+                    <div class="card-content white-text">
+                        <div class="row project-row">
+                            <div class="card-title col s6">
+                                <h5 class="left-align project-name">ScreeningNOW</h5>
+                            </div>
+                            <div class="card-date col s6">
+                                <h5 class="right-align project-date">Nov 2015</h5>
+                                <h5 class="right-align project-tech">MongoDB, Express.js, Node.js</h5>
+                            </div>
+                        </div>
+                        <p class="project-description"> A platform that provides indie content owners to easily distribute and share their content.
+                        </p>
+                        <p class="project-contribution">I wrote routes for customer purchases and worked with the team to update user data models and write more efficient queries to our DB.
+                        </p>
+                    </div>
+                    <div class="card-action">
+                        <a class="project-link" href="https://screeningnow.com/">See ScreeningNow</a>
+                        <a class="project-link" href="#">Dev Post</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col s12 m6">
+                <div class="card blue-grey darken-1 project-card">
+                    <div class="card-content white-text">
+                        <div class="row project-row">
+                            <div class="card-title col s6">
+                                <h5 class="left-align project-name">CustomerFocus PPE</h5>
+                            </div>
+                            <div class="card-date col s6">
+                                <h5 class="right-align project-date">Sept 2015</h5>
+                                <h5 class="right-align project-tech">Drupal, HTML/CSS, JavaScript</h5>
+                            </div>
+                        </div>
+                        <p class="project-description"> A responsive promotional info site aimed at providing expo exhibitors and attendees with event information.
+                        </p>
+                        <p class="project-contribution">I implemented client designs as specified, utilizing JavaScript for various small animations/activities/interactions on the site.
+                        </p>
+                    </div>
+                    <div class="card-action">
+                        <a class="project-link" href="customerfocus.com/en/ppe-info-home">See PPE</a>
+                        <a class="project-link" href="#">Dev Post</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col s12 m6">
+                <div class="card blue-grey darken-1 project-card">
+                    <div class="card-content white-text">
+                        <div class="row project-row">
+                            <div class="card-title col s6">
+                                <h5 class="left-align project-name">Project: Gilligan</h5>
+                            </div>
+                            <div class="card-date col s6">
+                                <h5 class="right-align project-date">October 2015</h5>
+                                <h5 class="right-align project-tech">Unreal Engine, Trello</h5>
+                            </div>
+                        </div>
+                        <p class="project-description"> A 3D first person shooter game featuring magical exploration. You play as an abandoned sailor seeking to unravel the mysteries and defeating the monsters that seek to destroy intruders.
+                        </p>
+                        <p class="project-contribution">I directed stand-ups, worked with the team to create and reach milestone goals, managed issue tracking, and kept the project within scope.
+                        </p>
+                    </div>
+                    <div class="card-action">
+                        <a class="project-link" href="#">More about Project Gilligan</a>
+                    </div>
+                </div>
+            </div>
+
+            <!--<div class="col s12 m6">-->
+                <!--<div class="card blue-grey darken-1 project-card">-->
+                    <!--<div class="card-content white-text">-->
+                        <!--<div class="row project-row">-->
+                            <!--<div class="card-title col s6">-->
+                                <!--<h5 class="left-align project-name">Project: Gilligan</h5>-->
+                            <!--</div>-->
+                            <!--<div class="card-date col s6">-->
+                                <!--<h5 class="right-align project-date">October 2015</h5>-->
+                                <!--<h5 class="right-align project-tech">Unreal Engine, Trello</h5>-->
+                            <!--</div>-->
+                        <!--</div>-->
+                        <!--<p class="project-description"> A 3D first person shooter game featuring magical exploration. You play as an abandoned sailor seeking to unravel the mysteries and defeating the monsters that seek to destroy intruders.-->
+                        <!--</p>-->
+                        <!--<p class="project-contribution">I directed stand-ups, worked with the team to create and reach milestone goals, managed issue tracking, and kept the project within scope.-->
+                        <!--</p>-->
+                    <!--</div>-->
+                    <!--<div class="card-action">-->
+                        <!--<a class="project-link" href="#">More about Project Gilligan</a>-->
+                    <!--</div>-->
+                <!--</div>-->
+            <!--</div>-->
 
 
-          <tr>
-            <td>
-              <h5>Project: Werewolf</h5>
-              <img class="responsive-img" src="images/projectblood.png">
-            </td>
-            <td>A stealth rogue-like crawler featuring a vampire as he takes on contracts to kill.<br>Developed/written in Unity/C#, with use of Tiled2D. Still under development!<br><br>
-            <a href="projectPages/blood" id="download-button" class="btn-large waves-effect waves-light grey">View Project Blood Page</a>
-            </td>
-          </tr>
-
-          <tr>
-            <td>
-              <h5>Project: Flower</h5>
-              <img class="responsive-img" src="images/projectblood.png">
-            </td>
-            <td>A stealth rogue-like crawler featuring a vampire as he takes on contracts to kill.<br>Developed/written in Unity/C#, with use of Tiled2D. Still under development!<br><br>
-            <a href="projectPages/blood" id="download-button" class="btn-large waves-effect waves-light grey">View Project Blood Page</a>
-            </td>
-          </tr>
-
--->
-
-        </tbody>
-      </table>
-            
-
-
-      </div>
+            <div class="col s12 m6">
+                <div class="card blue-grey darken-1 project-card">
+                    <div class="card-content white-text">
+                        <div class="row project-row">
+                            <div class="card-title col s6">
+                                <h5 class="left-align project-name">More soon!</h5>
+                            </div>
+                            <div class="card-date col s6">
+                                <h5 class="right-align project-date"> Date</h5>
+                                <h5 class="right-align project-tech">Tech</h5>
+                            </div>
+                        </div>
+                        <!--<p class="project-description"> A 3D first person shooter game featuring magical exploration. You play as an abandoned sailor seeking to unravel the mysteries and defeating the monsters that seek to destroy intruders.-->
+                        <!--</p>-->
+                        <!--<p class="project-contribution">I directed stand-ups, worked with the team to create and reach milestone goals, managed issue tracking, and kept the project within scope.-->
+                        <!--</p>-->
+                    </div>
+                    <div class="card-action">
+                        <a class="project-link" href="#">More</a>
+                    </div>
+                </div>
+            </div>
 
 
 
 
-      </div>
+        </div>
+    </div>
 
 
 
 
+</body>
 
-
-
-
-  </div>
-
- <footer ng-controller="FooterController as footer" class="grey darken-4">
+<footer class="grey darken-4 page-footer">
     <div class="container">
-      <div class="row">
-        <div class="col l10 s12">
-          <h5 class="white-text">About Jason: </h5>
-          <p class="grey-text text-darken-2">
-          {{footer.data.footerText1}} <br>  
-          {{footer.data.footerText2}} <br>
-          {{footer.data.footerText3}} <br>
-          {{footer.data.footerText4}} <br>
-          </p>
+        <div class="row">
+            <div class="col l7 s12">
+                <h5 class="white-text">About Jason -</h5>
+                <p class="grey-text text-lighten-4">
+                    I was born in the United States, but I spent most of my life in Taipei, Taiwan!
+                    <br/> I enjoy dark coffee, unsweetened green tea, and hot dog rolls from 85C.
+                    <br/>Drop me an email at <a href="mailto:jason@theportal.io">jason@theportal.io</a> if you like what you see here!
+                </p>
+            </div>
+            <div class="col l2 offset-l3 s12">
+                <h5 class="white-text">Find me on:</h5>
+                <ul>
+                    <li><a class="text-lighten-3" href="https://www.linkedin.com/in/jasonthechiu
+              ">LinkedIn</a></li>
+                    <li><a class="text-lighten-3" href="https://github.com/foreza">Github</a></li>
+                </ul>
+            </div>
         </div>
-        <div class="col l2 s12">
-          <h5 class="white-text">Find me on..</h5>
-          <p class="grey-text text-darken-2">
-           <ul>
-           <li><a ng-href="{{footer.data.link1}}"> {{footer.data.name1}} </a></li>
-           <li><a ng-href="{{footer.data.link2}}"> {{footer.data.name2}} </a></li>
-           <li><a ng-href="{{footer.data.link3}}"> {{footer.data.name3}} </a></li>
-           <li><a ng-href="{{footer.data.link4}}"> {{footer.data.name4}} </a></li>
-           </ul>
-          </p>
-        </div>
-      </div>
     </div>
     <div class="footer-copyright">
-      <div class="container">
-      This site was made with <a class="orange-text lighten-3" href="http://materializecss.com">Materialize.</a> Please check out their work!
-      </div>
+        <div class="container">
+            This site was made with <a class="orange-text lighten-3" href="http://materializecss.com">Materialize.</a>
+        </div>
     </div>
-  </footer>
+</footer>
 
-
-  <!--  Scripts-->
-  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.10/angular.min.js"></script>
-  <script type="text/javascript" src="gem.js"></script>
-  <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-  <script src="js/materialize.js"></script>
-  <script src="js/init.js"></script>
-  </body>
-</html>
+<!--<div class="col s12 m6">-->
+    <!--<div class="card blue-grey darken-1 project-card">-->
+        <!--<div class="card-content white-text">-->
+            <!--<div class="row project-row">-->
+                <!--<div class="card-title col s6">-->
+                    <!--<h5 class="left-align project-name">ScreeningNOW</h5>-->
+                <!--</div>-->
+                <!--<div class="card-date col s6">-->
+                    <!--<h5 class="right-align project-date">Nov 2015</h5>-->
+                    <!--<h5 class="right-align project-tech">MongoDB, Express.js, Node.js</h5>-->
+                <!--</div>-->
+            <!--</div>-->
+            <!--<p class="project-description"> A platform that provides indie content owners to easily distribute and share their content.-->
+            <!--</p>-->
+            <!--<p class="project-contribution">I wrote routes for customer purchases and worked with the team to update user data models and write more efficient queries to our DB.-->
+            <!--</p>-->
+        <!--</div>-->
+        <!--<div class="card-action">-->
+            <!--<a class="project-link" href="https://screeningnow.com/">See ScreeningNow</a>-->
+            <!--<a class="project-link" href="#">Dev Post</a>-->
+        <!--</div>-->
+    <!--</div>-->
+<!--</div>-->

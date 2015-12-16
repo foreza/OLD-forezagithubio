@@ -1,189 +1,138 @@
-<!DOCTYPE html>
-
-<html lang="en" ng-app="gem">
+<!doctype html>
+<html lang="en">
 <head>
+	<meta charset="utf-8">
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+	<title>Jason Chiu - Home</title>
+	<meta name="description" content="Hi, I'm a senior at the University of Calfornia, and I work as a web developer and project manager. I study computer science and develop games." />
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="google" content="notranslate" />
+	<meta name="robots" content="all" />
+	<meta name="googlebot" content="all" />
 
-  <!-- Title of webpage. Change at your own risk.-->
-  <title>Jason Chiu: Developer, Coffee-Seeker.</title>
+	<link rel="apple-touch-icon" href="apple-touch-icon.png">
 
-  <!-- Brief description of web page here that shows up. -->
-  <meta name="description" content="Jason is a senior at UCI studying game development, loves coffee. Jason makes cool stuff. And understands basic SEO. :)" />
+	<!-- Used a nice free favicon here! -->
+	<link rel="shortcut icon" href="favicon.ico" />
 
-  <!-- Allows crawlers to see things. Unnecessary for now, but can toggle options on and off as necessary in the future. -->
-  <!-- https://support.google.com/webmasters/answer/79812?hl=en -->
-  <meta name="robots" content="all" />
-  <meta name="googlebot" content="all" />
+	<!-- JQuery CDN -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 
-  <!-- This website is in english. Don't you dare translate it! -->
-  <meta name="google" content="notranslate" />
+	<!-- Materialize - Compiled and minified CSS -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.3/css/materialize.min.css">
 
-  <!-- No search box to be found here, ladies and gents and non-coffee partakers.. -->
-  <meta name="google" content="nositelinkssearchbox" />
+	<!-- Materialize Compiled and minified JavaScript -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.3/js/materialize.min.js"></script>
 
-  <!-- Verification with google pages. -->
-  <meta name="google-site-verification" content="Uy0gF0wJqZ4NCjNaeqyHdAbq6R_FOmqZNgeavOVsAVA" />
+	<!-- Custom JavaScript Theme (Applied to all pages) -->
+	<script src="js/jasonCustom.js"></script>
 
-  <!-- Specify the content type and character set of this page. -->
-  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+	<!-- Custom Styles (Applied to all pages) -->
+	<link rel="stylesheet" href="css/jasonCustom.css">
 
-  <!-- For mobile optimization, still in the works. Please stand by... -->
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no"/>
+	<!-- Specific CSS f0r page (Index) -->
+	<link rel="stylesheet" href="css/jasonIndex.css">
 
-  <!-- CSS  -->
-  <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
-  <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
-  <link rel="icon" type="image/png" href="favicon.ico"/>
+
 
 </head>
-
-<body class="grey lighten-2" >
-
-<!-- Nav bar. I use angular to sort of simulate SSI -->
-  <nav class="grey darken-4" role="navigation" ng-controller="FooterController as nava">
-    <div class="container">
-        <div class="nav-wrapper"><a id="logo-container" ng-href="{{nava.nav.nav1Link}}" class="brand-logo">{{nava.nav.nav1Name}}</a>
-          <ul id="nav-mobile" class="right side-nav">
-            <li><a ng-href="{{nava.nav.nav2Link}}">{{nava.nav.nav2Name}}</a></li>
-            <li><a ng-href="{{nava.nav.nav3Link}}">{{nava.nav.nav3Name}}</a></li>
-            <li><a ng-href="{{nava.nav.nav4Link}}">{{nava.nav.nav4Name}}</a></li>
-            <li><a ng-href="{{nava.resumeLink}}">Resume</a></li>
-          </ul><a href="#" data-activates="nav-mobile" class="button-collapse"><i class="mdi-navigation-menu"></i></a>
-        </div>
-    </div>
-  </nav>
-
-
-  <div class="section no-pad-bot" id="index-banner">
-    <div class="container">
-      <div class="row center">
-        <img id="MainImg" class="responsive-img circle" onclick="aToastToYou()" src="images/jason.jpg">
-      </div>
-      <div class="row center">
-        <h3 class="header col s12 light">I'm Jason.</h3> 
-        <p class="heavy">I'm a student at UCI.<br>I'm passionate about game development, network programming, and web apps.
-          <br> Check out some of my projects below.
-        </p>
-      </div>
+<body>
+	<!-- Navigation -->
+	  <nav id="nav-container" class="grey darken-4">
+  <div id="nav-constrain">
+    <div class="nav-wrapper">
+    <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">Menu</i></a>
+    <ul class="right hide-on-med-and-down">
+         <li><a href="index.html">Home</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="experience.html">Experience</a></li>
+      </ul>
+      <ul class="side-nav" id="mobile-demo">
+         <li><a href="index.html">Home</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="experience.html">Experience</a></li>
+      </ul>
     </div>
   </div>
+  </nav>
+
+	<div class="container">
+		<div class="row">
+			<div class="col l6">
+				<div id="home-img" class="container">
+					<img src="http://i.imgur.com/BOKx3G7m.jpg" title="source: imgur.com" />   			
+				</div>
+			</div>
+			<div class="col l6">
+				<div class="divider"></div>
+				<div class="section">
+					<h5>I'm Jason Chiu!</h5>
+					<p>I'm a senior at the University of Calfornia, and I study computer science and develop games. I graduate in June 2016.</p>
+				</div>
+				<div class="divider"></div>
+				<div class="section">
+					<h5>Work</h5>
+					<p>I currently work as a web developer and project manager at 
+						<a href="http://theportal.io">The Portal.</a>
+					</p>
+				</div>
+				<div class="divider"></div>
+				<div class="section">
+					<h5>Clubs / Activities</h5>
+					<p>I'm the Vice President of the Video Game Development Club @ UCI, where I work with industry and faculty to introduce students to game development and hone their talents.</p>
+				</div>
+
+				<div class="divider"></div>
+				<div class="section">
+					<h5>Interests</h5>
+					<p>I'm obsessed about the latest Hearthstone expansion. <br/>I'm improving at League of Legends. <br/>In OverWatch, I spam Bastion.</p>
+				</div>	
+
+			</div>
+		</div>
+	</div>
 
 
-  <div class="row center">        
+	
+	<!-- TODO: Add Google Analytics -->
+	<!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
+	<script>
+		(function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
+			function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
+		e=o.createElement(i);r=o.getElementsByTagName(i)[0];
+		e.src='https://www.google-analytics.com/analytics.js';
+		r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
+		ga('create','UA-XXXXX-X','auto');ga('send','pageview');
+	</script>
 
-        <div class="col s12 m4">
-          <div class="card blue-grey darken-1">
-            <div class="card-content white-text">
-              <div class="icon-block">            
-                <a href="projects.html"><img class="responsive-img" src="images/onwiththeshow.png"></a>
-                  <span class="card-title">PROJECTS</span>
-             </div>
-            </div>
-          </div>
-        </div>
+</body>
 
-        <div class="col s12 m4">
-          <div class="card blue-grey darken-1">
-            <div class="card-content white-text">
-              <div class="icon-block">
-              <a href="projectsOther.html"> <img class="responsive-img " src="images/jason2.jpg"></a>
-                <span class="card-title">WORK EXP</span>
-              </div>
-            </div>
-          </div>
-        </div>
+<footer class="grey darken-4 page-footer">
+	<div class="container">
+		<div class="row">
+			<div class="col l7 s12">
+				<h5 class="white-text">About Jason -</h5>
+				<p class="grey-text text-lighten-4">
+					I was born in the United States, but I spent most of my life in Taipei, Taiwan!
+					<br/> I enjoy dark coffee, unsweetened green tea, and hot dog rolls from 85C.
+					<br/>Drop me an email at <a href="mailto:jason@theportal.io">jason@theportal.io</a> if you like what you see here!
+				</p>
+			</div>
+			<div class="col l2 offset-l3 s12">
+				<h5 class="white-text">Find me on:</h5>
+				<ul>
+					<li><a class="text-lighten-3" href="https://www.linkedin.com/in/jasonthechiu
+              ">LinkedIn</a></li>
+					<li><a class="text-lighten-3" href="https://github.com/foreza">Github</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<div class="footer-copyright">
+		<div class="container">
+			This site was made with <a class="orange-text lighten-3" href="http://materializecss.com">Materialize.</a>
+		</div>
+	</div>
+</footer>
 
-        <div class="col s12 m4">
-          <div class="card blue-grey darken-1">
-            <div class="card-content white-text">
-              <div class="icon-block">
-                <a href="clubsOrgs.html"> <img class="responsive-img " src="images/jason1.jpg"></a>
-                  <span class="card-title">CLUBS</span>
-              </div>
-            </div>
-          </div>
-        </div>
-
-    </div>
-
-  <footer ng-controller="FooterController as footer" class="grey darken-4">
-    <div class="container">
-      <div class="row">
-        <div class="col l10 s12">
-          <h5 class="white-text">About: </h5>
-          <p class="grey-text text-darken-2">
-          {{footer.data.footerText1}} <br>  
-          {{footer.data.footerText2}} <br>
-          {{footer.data.footerText3}} <br>
-          {{footer.data.footerText4}} <br>
-          </p>
-        </div>
-        <div class="col l2 s12">
-          <h5 class="white-text">Find me:</h5>
-          <p class="grey-text text-darken-2">
-           <ul>
-           <li><a ng-href="{{footer.data.link1}}"> {{footer.data.name1}} </a></li>
-           <li><a ng-href="{{footer.data.link2}}"> {{footer.data.name2}} </a></li>
-           <li><a ng-href="{{footer.data.link3}}"> {{footer.data.name3}} </a></li>
-           <li><a ng-href="{{footer.data.link4}}"> {{footer.data.name4}} </a></li>
-           </ul>
-          </p>
-        </div>
-      </div>
-    </div>
-    <div class="footer-copyright">
-      <div class="container">
-      This site was made with <a class="orange-text lighten-3" href="http://materializecss.com">Materialize.</a> <br>Please check out their work!
-      </div>
-    </div>
-  </footer>
-
-
-  <!--  Scripts-->
-  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.10/angular.min.js"></script>
-  <script type="text/javascript" src="gem.js"></script>
-  <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-  <script src="js/materialize.js"></script>
-  <script src="js/init.js"></script>
-  <script>
-
-    function aToastToYou()
-  {
-      toast('Nice to meet you!', 3000, 'rounded') // 'rounded' is the class I'm applying to the toast
-  }
-
-  function returnRandomValue()
-  {
-    return Math.floor((Math.random() * 6000) + 3000);
-  }
-
-    $(document).ready(function(){
-        aToastToYou();
-    });
-        
-
-
-  </script>
-
-<!-- Testing out google's richtext/structured data for more SEO -->
-<!-- THIS IS NOT MINE -->
-  <script type="application/ld+json">
-{
-  "@context": "http://schema.org/",
-  "@type": "SoftwareApplication",
-  "name": "Angry Birds",
-  "operatingSystem": "ANDROID",
-  "applicationCategory": "http://schema.org/GameApplication",
-  "aggregateRating":{
-    "@type": "AggregateRating",
-    "ratingValue": "4.6",
-    "ratingCount": "8864"
-  },
-  "offers":{
-    "@type": "Offer",
-    "price": "1.00",
-    "priceCurrency": "USD"
-  }
-}
-</script>
-  </body>
-</html>
+	</html>

@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no"/>
+  
+  <title>Jason? Go kill yourself.</title>
+
+  <!-- CSS  -->
+  <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+
+
+<!-- FIREBASE + FUN STUFF-->
+
+<script src="https://cdn.firebase.com/js/client/2.1.1/firebase.js"></script>
+
+
+<script>
+	// set global variable here. 
+var totalDeaths = 0; // temporarily at 0 for initialization 
+var date = new Date(); // initialize a date object
+var time = new Date(); // init a date object for time
+
+var visitCount = 0; // initialize
+var currNumberOnline = 0; // initialize
+var mySessionClicks = 0;
+
+var myTimeOut = 1; // timeout before a user is marked as inactive.
+
+var myPacket = null; // null variable for now.
+
+  var audio = document.getElementById("audio1"); // get the audio
+  var currentAudio = "audio1";
+  var currentAudioSrc = "";
+// ref to databases.
+
+var mainRef = new Firebase("https://jasonmurder.firebaseio.com/");
+var connectRef = new Firebase("https://jasonmurder.firebaseio.com/connectViewPort");
+
+// We need a way to ID if a person is online/active.
+// We will accomplish this by tracking each user by sending a packet when they first access the site
+// The packet sent will then be deleted if there is no activity within the specified amt of seconds.
+
+// Callback functions
+mainRef.on("value", function(snapshot) {
+ 
+ var captureFirst = snapshot.val();
+totalDeaths = captureFirst.totalDeathCount;
+document.getElementById("setDeath").innerHTML=totalDeaths;
+document.getElementById("setDate").innerHTML=date;
+document.getElementById("setTime").innerHTML=time;
+document.getElementById("setVisitor").innerHTML=visitCount;
+document.getElementById("setMyKills").innerHTML=mySessionClicks;
+document.getElementById("setMyKills2").innerHTML=mySessionClicks;
+
+
+currentAudioSrc = document.getElementById(currentAudio).innerHTML;
+// window.alert(currentAudioSrc);
+document.getElementById("setSongName").innerHTML= currentAudioSrc;
+
+var tempRef = snapshot.child('connectViewPort');
+
+currNumberOnline = snapshot.child('connectViewPort').numChildren();
+visitCount = snapshot.child('visitorCount').val();
+
+document.getElementById("setOnline").innerHTML=currNumberOnline-1;
+
+
+
+
+}, function (errorObject) {
+  console.log("The read failed: " + errorObject.code);
+});
+
+// If it disconnects prematurly, kill it.
+myPacket.onDisconnect().remove();
+
+
+// INIT VARIABLES
+
+
+function deletePacket() // just in case of packet loss or whatnot, for safe practices.
+{
+
+setTimeout(function () {
+myPacket.onDisconnect().remove();
+}, myTimeOut * 1000);
+
+}
+
+
+function scream() {
+
+	screaming = document.getElementById("scream"); // get the audio
+	screaming.play();
+}
+
+function play(){
+	  if(myPacket == null)
+	  {
+	  	// Update statistics per visitor for the first time, and create the packet.
+
+	  	visitCount++; // update visit count
+
+	 mainRef.update({"visitorCount" : visitCount}) 	
+	 mySessionClicks = 1; // begin session clicks
+	 myPacket = connectRef.push({"userHasThisMany" : mySessionClicks});
+	 deletePacket(); // call delete packet! Will die after ~seconds.
+	}
+
+	else // if packet already exists
+	{
+		mySessionClicks++; // increment
+	myPacket.set({"userHasThisMany" : mySessionClicks});	// update
+	}
+
+	   var num = Math.floor((Math.random() * 5) + 1);
+	  // window.alert("audio" + num);
+		
+		// find the current audio
+		audio = document.getElementById(currentAudio); // get the audio
+		audio.currentTime = 5000; // set it to a place where it has to loop
+
+		currentAudio = "audio" + num;	
+       audio = document.getElementById(currentAudio); // get the audio
+ 
+       audio.play(); // replay
+
+       var uploadDate = new Date();// get the current date
+       date = (uploadDate.getMonth()+1) + "/" + uploadDate.getDate() + "/" + uploadDate.getFullYear() + " ";
+ 
+       time = uploadDate.getHours() + ":" + uploadDate.getMinutes() + ":" + uploadDate.getSeconds() + " ";
+      totalDeaths++; // increment Death Counter
+
+       mainRef.update({"totalDeathCount" : totalDeaths, "lastPressDate" : date, "visitorSpam" : time}); // update to server
+
+
+                 }
+
+</script>
+
+
+</head>
+
+
+
+
+<body class="grey lighten-2" >
+<!--  AUDIO HERE -->
+<audio id="audio1" src="audio/eyesnoselips.mp3">[<b>Eyes, Nose, Lips</b>] by: Taeyang</audio>
+<audio id="audio2" src="audio/letItGo.mp3">[<b>Let It Go</b>] by: Idina Menzel</audio>
+<audio id="audio3" src="audio/rude.mp3">[<b>Rude</b>] by: MAGIC! </audio>
+<audio id="audio4" src="audio/turndownforwhat.mp3">[<b>Turn Down for What</b>] by: DJ Snake ft. Lil Jon</audio>
+<audio id="audio5" src="audio/amiwrong.mp3">[<b>Am I wrong?</b>] by :Nico & Vinz</audio>
+
+<audio id="scream" src="audio/scream.mp3" ></audio>
+
+
+  <nav class="black darken-1" role="navigation">
+    <div class="container">
+      <div class="nav-wrapper"><a id="logo-container" href="#" class="brand-logo">Death Counter</a>
+        <ul id="nav-mobile" class="right side-nav">
+          <li><a href="../index.html">Back to Projects</a></li>
+        </ul><a href="#" data-activates="nav-mobile" class="button-collapse"><i class="mdi-navigation-menu"></i></a>
+      </div>
+    </div>
+  </nav>
+  <div class="section no-pad-bot" id="index-banner">
+    <div class="container">
+      <br><br>
+      <h1 class="header center blue-text">Jason? Go kill yourself.</h1> 
+        <div class="row center">
+         <h2>KILL COUNT: <span id="setDeath"></span></h2><a class ="waves-effect waves-dark"><img onclick="scream()" class="responsive-img circle" src="images/jason_face.jpg"></a>
+         <h2>Hater Count: <span id="setOnline"></span></h2>
+        </div>
+      <div class="row center">
+        <h5 class="header col s12 light"></h5>Tired of me? Let me know by hitting the button below. <br>
+      </div>
+      <div class="row center ">
+  <!-- Modal Trigger -->
+	          <a href="#modal1" onclick="play()" id="download-button" class="btn-large waves-effect waves-light black modal-trigger">Jason, please kill yourself</a>
+
+	    <h2>You've contributed: <span id="setMyKills"></span> kills</h2>
+        
+        <!-- Modal Structure -->
+  <div id="modal1" class="modal">
+    <h4>Jason? Go kill yourself.</h4>
+    <h3>-- STATISTICS --</h3>
+    <p>
+    <h2>You've contributed: <span id="setMyKills2"></span> kills</h2>
+    I was last told to die at: <span id="setTime"></span> at: <span id="setDate"></span><br>
+    Number of people who told me to go die since last reset: <span id="setVisitor"></span> <br> <br>
+
+    Current Song: <span id="setSongName"></span> <br> <br>
+
+    <p><i>Disclaimer: I will probably not die. But the thought counts. <br> I claim no credit for the music or sound effects; they are the property of their respective artists.</i></p>
+
+    <a href="#modal1" class="waves-effect waves-light white btn-flat modal-close">KILL ME AGAIN</a>
+  </div>
+        
+
+
+
+        </div>
+      </div>
+      <br><br>
+
+    </div>
+  </div>
+
+
+  <div class="container">
+  
+
+    <br><br>
+
+     <div class="row center">
+        <h5 class="header col s12 light"><b>Credits:</b></h5> <br>
+        <p> <ul>
+        <li>Jason Chiu - Lead Developer</li>
+        <li>Jim To -  Producer</li>
+        <li>Ren Hung - UX Designer</li>
+        <li>Albert Chao - Audio Engineer</li>
+        <li>Andrew Sy - Creative Director</li>
+        <li>Andrew Ooi - Network Ops</li>
+        <li>Eric Lai - Marketing Director</li>
+        </ul></p>
+      </div>
+
+    <div class="section">
+
+    </div>
+  </div>
+
+  <footer class="black">
+    <div class="container">
+      <div class="row">
+        <div class="col l12 s12">
+          <h5 class="white-text">Bio</h5>
+          <p class="grey-text text-lighten-4">Just a fun site I made to practice some web development.</p>
+        </div>
+        
+      
+      </div>
+    </div>
+    <div class="footer-copyright">
+      <div class="container">
+      Made by <a class="orange-text lighten-3" href="http://materializecss.com">Materialize. Please check out their work!</a>
+      </div>
+    </div>
+  </footer>
+
+
+  <!--  Scripts-->
+  <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+  <script src="js/materialize.js"></script>
+  <script src="js/init.js"></script>
+
+  <script type="text/javascript">
+    // the "href" attribute of .modal-trigger must specify the modal ID that wants to be triggered
+    // the "href" attribute of .modal-trigger must specify the modal ID that wants to be triggered
+  
+  $(document).ready(function(){
+    // the "href" attribute of .modal-trigger must specify the modal ID that wants to be triggered
+    $('.modal-trigger').leanModal();
+  });
+          
+          </script>
+
+
+
+
+
+
+  </body>
+</html>
+
+

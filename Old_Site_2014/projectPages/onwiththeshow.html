@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="gem">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no"/>
+  <title>Jason Chiu: Projects</title>
+  <!-- CSS  -->
+  <link href="../css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <link href="../css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <link rel="icon" type="image/png" href="../favicon.ico"/>
+</head>
+
+<body class="grey lighten-2" >
+
+<nav class="grey darken-4" role="navigation" ng-controller="FooterController as nava">    
+  <div class="container">
+      <div class="nav-wrapper"><a id="logo-container" ng-href="../{{nava.nav.nav1Link}}" class="brand-logo">{{nava.nav.nav1Name}}</a>
+        <ul id="nav-mobile" class="right side-nav">
+          <li><a ng-href="../{{nava.nav.nav2Link}}">{{nava.nav.nav2Name}}</a></li>
+           <li><a ng-href="../{{nava.nav.nav3Link}}">{{nava.nav.nav3Name}}</a></li>
+           <li><a ng-href="../{{nava.nav.nav4Link}}">{{nava.nav.nav4Name}}</a></li>
+            <li><a ng-href="../{{nava.resumeLink}}">Resume</a></li>
+        </ul><a href="#" data-activates="nav-mobile" class="button-collapse"><i class="mdi-navigation-menu"></i></a>
+      </div>
+    </div>
+  </nav>
+
+   <div class="row">
+    <div class="col s1">
+
+
+    <ul id="slide-out" class="side-nav fixed">
+    <li><a href="#home">Back to Top</a></li>
+    <li><a href="#about">About/Download</a></li>
+    <li><a href="#play">Playthrough</a></li>
+    <li><a href="#contribution">My contribution</a></li>
+    <li><a href="#control">Controls</a></li>
+    <li><a href="#credit">Team credits</a></li>
+  </ul>
+  <a href="#" data-activates="slide-out" class="button-collapse"><i class="mdi-navigation-menu"></i></a>
+</div>
+<div class="col s11">
+  <div class="section no-pad-bot" id="index-banner">
+    <div id="home" class="container">
+      <br><br>
+      <h1 class="header center black-text">"On With the Show!"</h1>
+        <div class="row center">
+        
+            <div class="section">
+
+      <!--   Icon Section   -->
+      <div class="row">
+        <div class="col s12 m4">
+          <div class="icon-block">
+            <h2 class="center"> <img class="responsive-img materialboxed" src="../images/OnWithTheShow1.jpg"></h2>
+            <h5 class="center">A display of magic.</h5>
+          </div>
+        </div>
+        <div class="col s12 m4">
+          <div class="icon-block hide-on-small-only">
+             <h2 class="center"> <img class="responsive-img materialboxed" src="../images/OnWithTheShow3.jpg"></h2>
+            <h5 class="center">Evil bosses? Included.</h5>
+
+          </div>
+        </div>
+        <div class="col s12 m4">
+          <div class="icon-block hide-on-small-only">
+             <h2 class="center"> <img class="responsive-img materialboxed" src="../images/OnWithTheShow2.jpg"></h2>
+            <h5 class="center">Try not to perish.</h5>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+        </div>
+
+
+     <div id="about" class="row center">
+  <!-- Modal Trigger -->
+            <a href="#modal1" id="download-button" class="btn-large waves-effect waves-dark grey modal-trigger">Play/Download</a>
+     </div>
+        
+        <!-- Modal Structure -->
+  <div id="modal1" class="modal grey lighten-3">
+    <h4 class="blue lighten-3">Play/Download "On with the Show!</h4>
+    <p>
+ <br>
+    <a href="https://onedrive.live.com/?cid=d42c52f680876dbd&id=D42C52F680876DBD%2117324&ithint=file,.zip&authkey=!AB2Xgns8CDrWSy0">Grab the build here:</a> <br>
+
+    Grab the dependencies (required to run the game!) here. <br>
+    <a href="http://www.microsoft.com/en-us/download/details.aspx?id=27598">Microsoft XNA Framework Redistributable 4.0</a> <br>
+
+    </p>
+
+    <a href="#modal1" class="blue white-text waves-effect btn-flat modal-close">Back</a>
+  </div>
+
+
+      <div class="row">
+      <blockquote>
+        <h5 class="header col s12 light">The world has dimmed. Argo must be overthrown...</h5> 
+        <p class="flow-text"> In "On With the Show", the player will direct the Magician to explore a grey, dark world, and bring forth joy and color by solving puzzles through teleportation magic. The player will use magic to conjure items back and forth to navigate the level and solve puzzles! 
+        The magician will transform the world as he interacts with it. 
+        Teleportation is explored as a core element in "On With the Show". The game emphasizes the use of teleportation to change the world around you. </p>
+
+        "On With the Show" was developed in C# XNA.
+      </div>
+      </blockquote>
+
+<div id="play" class="row">
+  <h5>Video Runthrough: (In progress!)</h5>
+      <div class="video-container">
+        <iframe width="853" height="480" src="" frameborder="0" allowfullscreen></iframe>
+      </div>
+      </div>
+
+  <div id="contribution" class="row">
+
+        <h5>My Role:</h5>
+ <p class="light flow-text">
+
+ I was a designer on the team. I wrote the backstory and specified the setting of the game, created background art assets, and designed several skills of the Magician. I also organized a sound library of all the audio assets we plugged into the game, and playtested for/reported bugs in the game.
+ The game was awarded 2nd place in the Winter Game Jam of 2014.
+
+
+  
+ </p>
+
+</div>
+
+
+
+
+
+
+      <div id="control" class="row">
+
+
+  <h5>Controls:</h5>
+ <p class="light flow-text">
+   <b>Movement:</b> WASD, Arrow Keys <br>
+ <b>Jump:</b> Space Bar <br>
+ <b>Hat Trick:</b> Click an item, then the Magician. The item will reappear next to the magician.  <i>Magician cannot move while using this ability. </i><br>
+ <b>Prestidigitation:</b> Click on an item close to the Magician, then on a location in the level. The item will teleport to the mouse pointer.  <i>Magician cannot move while using this ability. </i><br>
+ <b>The Switch:</b> Click on a nearby item and another item. They will swap places.  <i>Magician cannot move while using this ability. </i><br>
+ <b>Cancel Skill:</b> After starting a magic trick/skill, right click anywhere on the stage. The Magician stops the trick and can move again.<br>
+ </p>
+
+        </div>
+     <div id="credit" class="row">
+        <h5>Credits:</h5>
+         <ul class="light flow-text">
+        <li>Jason Chu - Designer </li>
+        <li>Anthony Hoang - Programmer </li>
+<li>Devin Lee - Artist </li>
+<li>Faye Jao - Programmer </li>
+<li>Justin LaForge - Producer </li>
+<li>Nathan Stengel - Designer </li>
+<li>Thomas Truong - Programmer</li>
+        </ul>
+      </div>
+
+      </div>
+      <br><br>
+
+
+    </div>
+  </div>
+  </div>
+
+<footer ng-controller="FooterController as footer" class="grey darken-4">
+    <div class="container">
+      <div class="row">
+        <div class="col l10 s12">
+          <h5 class="white-text">About Jason: </h5>
+          <p class="grey-text text-darken-2">
+          {{footer.data.footerText1}} <br>  
+          {{footer.data.footerText2}} <br>
+          {{footer.data.footerText3}} <br>
+          {{footer.data.footerText4}} <br>
+          </p>
+        </div>
+        <div class="col l2 s12">
+          <h5 class="white-text">Find me on..</h5>
+          <p class="grey-text text-darken-2">
+           <ul>
+           <li><a ng-href="{{footer.data.link1}}"> {{footer.data.name1}} </a></li>
+           <li><a ng-href="{{footer.data.link2}}"> {{footer.data.name2}} </a></li>
+           <li><a ng-href="{{footer.data.link3}}"> {{footer.data.name3}} </a></li>
+           <li><a ng-href="{{footer.data.link4}}"> {{footer.data.name4}} </a></li>
+           </ul>
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="footer-copyright">
+      <div class="container">
+      This site was made with <a class="orange-text lighten-3" href="http://materializecss.com">Materialize.</a> Please check out their work!
+      </div>
+    </div>
+  </footer>
+  
+
+  <!--  Scripts-->
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.10/angular.min.js"></script>
+  <script type="text/javascript" src="../gem.js"></script>
+  <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+   <script src="../js/materialize.js"></script>
+  <script src="../js/init.js"></script>
+    <script>
+     $(document).ready(function(){
+    // the "href" attribute of .modal-trigger must specify the modal ID that wants to be triggered
+    $('.modal-trigger').leanModal();
+     $('.materialboxed').materialbox();
+  });
+  </script>
+  <script>  
+$(document).ready(function () {
+    $(document).on("scroll", onScroll);
+    
+    //smoothscroll
+    $('a[href^="#"]').on('click', function (e) {
+        e.preventDefault();
+        $(document).off("scroll");
+        
+        $('a').each(function () {
+            $(this).removeClass('active');
+        })
+        $(this).addClass('active');
+      
+        var target = this.hash,
+            menu = target;
+        $target = $(target);
+        $('html, body').stop().animate({
+            'scrollTop': $target.offset().top
+        }, 500, 'swing', function () {
+            window.location.hash = target;
+            $(document).on("scroll", onScroll);
+        });
+    });
+});
+
+function onScroll(event){
+    var scrollPos = $(document).scrollTop();
+    $('.navbar-inner a').each(function () {
+        var currLink = $(this);
+        var refElement = $(currLink.attr("href"));
+        if (refElement.position().top <= scrollPos && refElement.position().top + refElement.height() > scrollPos) {
+            currLink.addClass("active");
+        }
+        else{
+            currLink.removeClass("active");
+        }
+    });
+}
+</script>
+
+ 
+  </body>
+</html>
