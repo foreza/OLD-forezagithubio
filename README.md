@@ -1,14 +1,22 @@
 
 ===========
-This is my personal website! I use Github pages for now.
 
-I make heavy use of Materialize.css; please do check out their work. :)
-
-materializecss.com
-
-### Current Version of site : v2.0 (Live)
+### Current Version: v3.0
 
 ##Changelog
+
+- v3.0
+    Redid the entire site.
+    Updated with most relevant information
+
+    Todo:
+    - Add more content
+    - Link blog/dev posts and content
+    - Make nav more responsive
+
+
+
+-------
 
 
 - v2.1
